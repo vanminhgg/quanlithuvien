@@ -65,11 +65,29 @@
     <Compile Include="FmMuon.Designer.cs">
       <DependentUpon>FmMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FmNXB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmNXB.Designer.cs">
+      <DependentUpon>FmNXB.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmSach.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FmSach.Designer.cs">
       <DependentUpon>FmSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmTacGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmTacGia.Designer.cs">
+      <DependentUpon>FmTacGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmTheLoai.Designer.cs">
+      <DependentUpon>FmTheLoai.cs</DependentUpon>
     </Compile>
     <Compile Include="FmTheTV.cs">
       <SubType>Form</SubType>
@@ -106,8 +124,17 @@
     <EmbeddedResource Include="FmMuon.resx">
       <DependentUpon>FmMuon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FmNXB.resx">
+      <DependentUpon>FmNXB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FmSach.resx">
       <DependentUpon>FmSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmTacGia.resx">
+      <DependentUpon>FmTacGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmTheLoai.resx">
+      <DependentUpon>FmTheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FmTheTV.resx">
       <DependentUpon>FmTheTV.cs</DependentUpon>

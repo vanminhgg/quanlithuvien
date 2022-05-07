@@ -52,5 +52,23 @@ namespace QUANLITHUVIENWINFORM
             fmTTTaiKhoan.Show();
 
         }
+
+        private void theeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FmTheLoai fmTheLoai = new FmTheLoai();
+            fmTheLoai.Show();
+        }
+
+        private void tácGiảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FmTacGia fmTacGia = new FmTacGia();
+            fmTacGia.Show();
+        }
+
+        private void nXBToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FmNXB fmNXB = new FmNXB();
+            fmNXB.Show();
+        }
     }
 }

@@ -114,18 +114,21 @@ namespace QUANLITHUVIENWINFORM
             this.theeToolStripMenuItem.Name = "theeToolStripMenuItem";
             this.theeToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.theeToolStripMenuItem.Text = "Thể Loại";
+            this.theeToolStripMenuItem.Click += new System.EventHandler(this.theeToolStripMenuItem_Click);
             // 
             // tácGiảToolStripMenuItem
             // 
             this.tácGiảToolStripMenuItem.Name = "tácGiảToolStripMenuItem";
             this.tácGiảToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.tácGiảToolStripMenuItem.Text = "Tác Giả";
+            this.tácGiảToolStripMenuItem.Click += new System.EventHandler(this.tácGiảToolStripMenuItem_Click);
             // 
             // nXBToolStripMenuItem
             // 
             this.nXBToolStripMenuItem.Name = "nXBToolStripMenuItem";
             this.nXBToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
             this.nXBToolStripMenuItem.Text = "NXB";
+            this.nXBToolStripMenuItem.Click += new System.EventHandler(this.nXBToolStripMenuItem_Click);
             // 
             // FmMain
             // 
