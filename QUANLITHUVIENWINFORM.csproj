@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,11 +56,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChiTietMuon.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
     <Compile Include="CRUD.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CRUD.Designer.cs">
       <DependentUpon>CRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocGia.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
     <Compile Include="FmDocgia.cs">
       <SubType>Form</SubType>
@@ -113,8 +128,41 @@
     <Compile Include="FmMain.Designer.cs">
       <DependentUpon>FmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModelQLTV.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelQLTV.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelQLTV.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelQLTV.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelQLTV.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Muon.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NXB.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sach.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TacGia.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="The.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TheLoai.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CRUD.resx">
       <DependentUpon>CRUD.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +206,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="ModelQLTV.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelQLTV.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelQLTV.edmx.diagram">
+      <DependentUpon>ModelQLTV.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -173,6 +229,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\49116.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelQLTV.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelQLTV.Context.cs</LastGenOutput>
+      <DependentUpon>ModelQLTV.edmx</DependentUpon>
+    </Content>
+    <Content Include="ModelQLTV.edmx.sql" />
+    <Content Include="ModelQLTV.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelQLTV.cs</LastGenOutput>
+      <DependentUpon>ModelQLTV.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
