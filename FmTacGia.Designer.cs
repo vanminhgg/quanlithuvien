@@ -37,15 +37,15 @@ namespace QUANLITHUVIENWINFORM
             this.lbId = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.ptbSearch = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvTacgia = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.ptbSearch = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTacgia)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -60,9 +60,10 @@ namespace QUANLITHUVIENWINFORM
             this.panel2.Controls.Add(this.ptbSearch);
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Controls.Add(this.dgvTacgia);
-            this.panel2.Location = new System.Drawing.Point(0, 77);
+            this.panel2.Location = new System.Drawing.Point(0, 95);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(679, 373);
+            this.panel2.Size = new System.Drawing.Size(905, 459);
             this.panel2.TabIndex = 4;
             // 
             // btnXoa
@@ -72,9 +73,10 @@ namespace QUANLITHUVIENWINFORM
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnXoa.Location = new System.Drawing.Point(543, 229);
+            this.btnXoa.Location = new System.Drawing.Point(724, 282);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(61, 29);
+            this.btnXoa.Size = new System.Drawing.Size(81, 36);
             this.btnXoa.TabIndex = 26;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -86,9 +88,10 @@ namespace QUANLITHUVIENWINFORM
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnSua.Location = new System.Drawing.Point(449, 229);
+            this.btnSua.Location = new System.Drawing.Point(599, 282);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(61, 29);
+            this.btnSua.Size = new System.Drawing.Size(81, 36);
             this.btnSua.TabIndex = 25;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -100,9 +103,10 @@ namespace QUANLITHUVIENWINFORM
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnThem.Location = new System.Drawing.Point(353, 229);
+            this.btnThem.Location = new System.Drawing.Point(471, 282);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(61, 29);
+            this.btnThem.Size = new System.Drawing.Size(81, 36);
             this.btnThem.TabIndex = 24;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -111,9 +115,10 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(335, 171);
+            this.lbName.Location = new System.Drawing.Point(447, 210);
+            this.lbName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(63, 15);
+            this.lbName.Size = new System.Drawing.Size(81, 20);
             this.lbName.TabIndex = 21;
             this.lbName.Text = "Tên tác giả";
             // 
@@ -121,39 +126,56 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.lbId.AutoSize = true;
             this.lbId.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbId.Location = new System.Drawing.Point(335, 125);
+            this.lbId.Location = new System.Drawing.Point(447, 154);
+            this.lbId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(62, 15);
+            this.lbId.Size = new System.Drawing.Size(79, 20);
             this.lbId.TabIndex = 20;
             this.lbId.Text = "Mã tác giả";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(407, 166);
+            this.txtName.Location = new System.Drawing.Point(543, 204);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(210, 20);
+            this.txtName.Size = new System.Drawing.Size(279, 22);
             this.txtName.TabIndex = 17;
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(407, 125);
+            this.txtId.Location = new System.Drawing.Point(543, 154);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(210, 20);
+            this.txtId.Size = new System.Drawing.Size(279, 22);
             this.txtId.TabIndex = 16;
+            // 
+            // ptbSearch
+            // 
+            this.ptbSearch.Image = global::QUANLITHUVIENWINFORM.Properties.Resources._49116;
+            this.ptbSearch.Location = new System.Drawing.Point(247, 18);
+            this.ptbSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptbSearch.Name = "ptbSearch";
+            this.ptbSearch.Size = new System.Drawing.Size(35, 25);
+            this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbSearch.TabIndex = 5;
+            this.ptbSearch.TabStop = false;
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(0, 15);
+            this.txtSearch.Location = new System.Drawing.Point(0, 18);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(179, 20);
+            this.txtSearch.Size = new System.Drawing.Size(237, 22);
             this.txtSearch.TabIndex = 4;
             // 
             // dgvTacgia
             // 
             this.dgvTacgia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTacgia.Location = new System.Drawing.Point(0, 41);
+            this.dgvTacgia.Location = new System.Drawing.Point(0, 50);
+            this.dgvTacgia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvTacgia.Name = "dgvTacgia";
-            this.dgvTacgia.Size = new System.Drawing.Size(321, 320);
+            this.dgvTacgia.RowHeadersWidth = 51;
+            this.dgvTacgia.Size = new System.Drawing.Size(428, 394);
             this.dgvTacgia.TabIndex = 3;
             // 
             // panel1
@@ -161,45 +183,39 @@ namespace QUANLITHUVIENWINFORM
             this.panel1.BackColor = System.Drawing.Color.Lime;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(679, 55);
+            this.panel1.Size = new System.Drawing.Size(905, 68);
             this.panel1.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 15);
+            this.label1.Location = new System.Drawing.Point(4, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 25);
+            this.label1.Size = new System.Drawing.Size(96, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tác Giả";
             // 
-            // ptbSearch
-            // 
-            this.ptbSearch.Image = global::QUANLITHUVIENWINFORM.Properties.Resources._49116;
-            this.ptbSearch.Location = new System.Drawing.Point(185, 15);
-            this.ptbSearch.Name = "ptbSearch";
-            this.ptbSearch.Size = new System.Drawing.Size(26, 20);
-            this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbSearch.TabIndex = 5;
-            this.ptbSearch.TabStop = false;
-            // 
             // FmTacGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 450);
+            this.ClientSize = new System.Drawing.Size(908, 554);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FmTacGia";
             this.Text = "FmTacGia";
+            this.Load += new System.EventHandler(this.FmTacGia_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTacgia)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).EndInit();
             this.ResumeLayout(false);
 
         }
