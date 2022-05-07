@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelQLTVStoreContainer" CdmEntityContainer="QLTVContext">
+    <EntitySetMapping Name="NXBs">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.NXB)">
+        <MappingFragment StoreEntitySet="NXBs">
+          <ScalarProperty Name="MaNXB" ColumnName="MaNXB" />
+          <ScalarProperty Name="TenNXB" ColumnName="TenNXB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TheLoais">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.TheLoai)">
+        <MappingFragment StoreEntitySet="TheLoais">
+          <ScalarProperty Name="MaTheLoai" ColumnName="MaTheLoai" />
+          <ScalarProperty Name="TenTheLoai" ColumnName="TenTheLoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TacGias">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.TacGia)">
+        <MappingFragment StoreEntitySet="TacGias">
+          <ScalarProperty Name="MaTacGia" ColumnName="MaTacGia" />
+          <ScalarProperty Name="TenTacGia" ColumnName="TenTacGia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Saches">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.Sach)">
+        <MappingFragment StoreEntitySet="Saches">
+          <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+          <ScalarProperty Name="MaNXB" ColumnName="MaNXB" />
+          <ScalarProperty Name="MaTheLoai" ColumnName="MaTheLoai" />
+          <ScalarProperty Name="MaTacGia" ColumnName="MaTacGia" />
+          <ScalarProperty Name="TenSach" ColumnName="TenSach" />
+          <ScalarProperty Name="NamXB" ColumnName="NamXB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Thes">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.The)">
+        <MappingFragment StoreEntitySet="Thes">
+          <ScalarProperty Name="MaThe" ColumnName="MaThe" />
+          <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+          <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Muons">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.Muon)">
+        <MappingFragment StoreEntitySet="Muons">
+          <ScalarProperty Name="MaMuon" ColumnName="MaMuon" />
+          <ScalarProperty Name="MaThe" ColumnName="MaThe" />
+          <ScalarProperty Name="NgayMuon" ColumnName="NgayMuon" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocGias">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.DocGia)">
+        <MappingFragment StoreEntitySet="DocGias">
+          <ScalarProperty Name="MaDG" ColumnName="MaDG" />
+          <ScalarProperty Name="TenDG" ColumnName="TenDG" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="MaThe" ColumnName="MaThe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietMuons">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.ChiTietMuon)">
+        <MappingFragment StoreEntitySet="ChiTietMuons">
+          <ScalarProperty Name="SachMaSach" ColumnName="SachMaSach" />
+          <ScalarProperty Name="MaMuon" ColumnName="MaMuon" />
+          <ScalarProperty Name="DaTra" ColumnName="DaTra" />
+          <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
+          <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="TheDocGia" TypeName="ModelQLTV.TheDocGia" StoreEntitySet="Thes">
+      <EndProperty Name="DocGia">
+        <ScalarProperty Name="MaDG" ColumnName="DocGia_MaDG" />
+      </EndProperty>
+      <EndProperty Name="The">
+        <ScalarProperty Name="MaThe" ColumnName="MaThe" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
