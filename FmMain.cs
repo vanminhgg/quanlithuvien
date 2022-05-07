@@ -67,8 +67,8 @@ namespace QUANLITHUVIENWINFORM
 
         private void nXBToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FmNXB fmNXB = new FmNXB();
-            fmNXB.Show();
+         //   FmNXB fmNXB = new FmNXB();
+           // fmNXB.Show();
         }
     }
 }
