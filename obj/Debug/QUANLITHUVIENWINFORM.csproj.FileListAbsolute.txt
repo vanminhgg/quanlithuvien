@@ -42,8 +42,34 @@ D:\windows\QLTV\quanlithuvien\bin\Debug\EntityFramework.SqlServer.dll
 D:\windows\QLTV\quanlithuvien\bin\Debug\EntityFramework.xml
 D:\windows\QLTV\quanlithuvien\bin\Debug\EntityFramework.SqlServer.xml
 D:\windows\QLTV\quanlithuvien\obj\Debug\QUANLITHUVIENWINFORM.csproj.CopyComplete
+<<<<<<< HEAD
 D:\winform\QUANLITHUVIENWINFORM\bin\Debug\EntityFramework.dll
 D:\winform\QUANLITHUVIENWINFORM\bin\Debug\EntityFramework.SqlServer.dll
 D:\winform\QUANLITHUVIENWINFORM\bin\Debug\EntityFramework.xml
 D:\winform\QUANLITHUVIENWINFORM\bin\Debug\EntityFramework.SqlServer.xml
 D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.csproj.CopyComplete
+=======
+D:\ltwin\endproj\bin\Debug\QUANLITHUVIENWINFORM.exe.config
+D:\ltwin\endproj\bin\Debug\QUANLITHUVIENWINFORM.exe
+D:\ltwin\endproj\bin\Debug\QUANLITHUVIENWINFORM.pdb
+D:\ltwin\endproj\bin\Debug\EntityFramework.dll
+D:\ltwin\endproj\bin\Debug\EntityFramework.SqlServer.dll
+D:\ltwin\endproj\bin\Debug\EntityFramework.xml
+D:\ltwin\endproj\bin\Debug\EntityFramework.SqlServer.xml
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.csprojResolveAssemblyReference.cache
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.CRUD.resources
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.FmDocgia.resources
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.FmMuon.resources
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.FmNXB.resources
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.FmSach.resources
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.FmTacGia.resources
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.FmTheLoai.resources
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.FmTheTV.resources
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.FmTTTaiKhoan.resources
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.FormLogin.resources
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.FmMain.resources
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.Properties.Resources.resources
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.csproj.GenerateResource.Cache
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.exe
+D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.pdb
+>>>>>>> b7116f761570c2773c09b0e2770cb280b3b0f556
