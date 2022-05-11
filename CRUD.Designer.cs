@@ -34,9 +34,6 @@ namespace QUANLITHUVIENWINFORM
             this.ptbSearch = new System.Windows.Forms.PictureBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.txtTacgia = new System.Windows.Forms.TextBox();
-            this.txtNXB = new System.Windows.Forms.TextBox();
-            this.txtTheloai = new System.Windows.Forms.TextBox();
             this.txtNamXB = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -47,6 +44,9 @@ namespace QUANLITHUVIENWINFORM
             this.lbNXB = new System.Windows.Forms.Label();
             this.lbTheloai = new System.Windows.Forms.Label();
             this.lbNam = new System.Windows.Forms.Label();
+            this.cbTacGia = new System.Windows.Forms.ComboBox();
+            this.cbNXB = new System.Windows.Forms.ComboBox();
+            this.cbTheloai = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).BeginInit();
             this.SuspendLayout();
@@ -89,27 +89,6 @@ namespace QUANLITHUVIENWINFORM
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(210, 20);
             this.txtName.TabIndex = 4;
-            // 
-            // txtTacgia
-            // 
-            this.txtTacgia.Location = new System.Drawing.Point(390, 142);
-            this.txtTacgia.Name = "txtTacgia";
-            this.txtTacgia.Size = new System.Drawing.Size(210, 20);
-            this.txtTacgia.TabIndex = 5;
-            // 
-            // txtNXB
-            // 
-            this.txtNXB.Location = new System.Drawing.Point(390, 184);
-            this.txtNXB.Name = "txtNXB";
-            this.txtNXB.Size = new System.Drawing.Size(210, 20);
-            this.txtNXB.TabIndex = 6;
-            // 
-            // txtTheloai
-            // 
-            this.txtTheloai.Location = new System.Drawing.Point(390, 229);
-            this.txtTheloai.Name = "txtTheloai";
-            this.txtTheloai.Size = new System.Drawing.Size(210, 20);
-            this.txtTheloai.TabIndex = 7;
             // 
             // txtNamXB
             // 
@@ -220,10 +199,37 @@ namespace QUANLITHUVIENWINFORM
             this.lbNam.TabIndex = 17;
             this.lbNam.Text = "Năm XB";
             // 
+            // cbTacGia
+            // 
+            this.cbTacGia.FormattingEnabled = true;
+            this.cbTacGia.Location = new System.Drawing.Point(390, 142);
+            this.cbTacGia.Name = "cbTacGia";
+            this.cbTacGia.Size = new System.Drawing.Size(210, 21);
+            this.cbTacGia.TabIndex = 18;
+            // 
+            // cbNXB
+            // 
+            this.cbNXB.FormattingEnabled = true;
+            this.cbNXB.Location = new System.Drawing.Point(390, 184);
+            this.cbNXB.Name = "cbNXB";
+            this.cbNXB.Size = new System.Drawing.Size(210, 21);
+            this.cbNXB.TabIndex = 19;
+            // 
+            // cbTheloai
+            // 
+            this.cbTheloai.FormattingEnabled = true;
+            this.cbTheloai.Location = new System.Drawing.Point(390, 229);
+            this.cbTheloai.Name = "cbTheloai";
+            this.cbTheloai.Size = new System.Drawing.Size(210, 21);
+            this.cbTheloai.TabIndex = 20;
+            // 
             // CRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cbTheloai);
+            this.Controls.Add(this.cbNXB);
+            this.Controls.Add(this.cbTacGia);
             this.Controls.Add(this.lbNam);
             this.Controls.Add(this.lbTheloai);
             this.Controls.Add(this.lbNXB);
@@ -234,9 +240,6 @@ namespace QUANLITHUVIENWINFORM
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtNamXB);
-            this.Controls.Add(this.txtTheloai);
-            this.Controls.Add(this.txtNXB);
-            this.Controls.Add(this.txtTacgia);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.ptbSearch);
@@ -258,9 +261,6 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.PictureBox ptbSearch;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtTacgia;
-        private System.Windows.Forms.TextBox txtNXB;
-        private System.Windows.Forms.TextBox txtTheloai;
         private System.Windows.Forms.TextBox txtNamXB;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
@@ -271,5 +271,8 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.Label lbNXB;
         private System.Windows.Forms.Label lbTheloai;
         private System.Windows.Forms.Label lbNam;
+        private System.Windows.Forms.ComboBox cbTacGia;
+        private System.Windows.Forms.ComboBox cbNXB;
+        private System.Windows.Forms.ComboBox cbTheloai;
     }
 }

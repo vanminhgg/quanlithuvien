@@ -1,7 +1,6 @@
 D:\winform\QUANLITHUVIENWINFORM\bin\Debug\QUANLITHUVIENWINFORM.exe.config
 D:\winform\QUANLITHUVIENWINFORM\bin\Debug\QUANLITHUVIENWINFORM.exe
 D:\winform\QUANLITHUVIENWINFORM\bin\Debug\QUANLITHUVIENWINFORM.pdb
-D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.csproj.AssemblyReference.cache
 D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.CRUD.resources
 D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.FmDocgia.resources
 D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.FmMuon.resources
@@ -43,3 +42,8 @@ D:\windows\QLTV\quanlithuvien\bin\Debug\EntityFramework.SqlServer.dll
 D:\windows\QLTV\quanlithuvien\bin\Debug\EntityFramework.xml
 D:\windows\QLTV\quanlithuvien\bin\Debug\EntityFramework.SqlServer.xml
 D:\windows\QLTV\quanlithuvien\obj\Debug\QUANLITHUVIENWINFORM.csproj.CopyComplete
+D:\winform\QUANLITHUVIENWINFORM\bin\Debug\EntityFramework.dll
+D:\winform\QUANLITHUVIENWINFORM\bin\Debug\EntityFramework.SqlServer.dll
+D:\winform\QUANLITHUVIENWINFORM\bin\Debug\EntityFramework.xml
+D:\winform\QUANLITHUVIENWINFORM\bin\Debug\EntityFramework.SqlServer.xml
+D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.csproj.CopyComplete

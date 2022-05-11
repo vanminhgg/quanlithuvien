@@ -56,9 +56,9 @@ namespace QUANLITHUVIENWINFORM
             // 
             // crud1
             // 
-            this.crud1.Location = new System.Drawing.Point(4, 61);
+            this.crud1.Location = new System.Drawing.Point(3, 61);
             this.crud1.Name = "crud1";
-            this.crud1.Size = new System.Drawing.Size(642, 387);
+            this.crud1.Size = new System.Drawing.Size(633, 375);
             this.crud1.TabIndex = 1;
             // 
             // FmSach
