@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace QUANLITHUVIENWINFORM
 {
-    public partial class FmSach : Form
+    public partial class AppDocGia : Form
     {
-        public FmSach()
+        public AppDocGia()
         {
             InitializeComponent();
         }
 
-        private void FmSach_Load(object sender, EventArgs e)
+        private void AppDocGia_Load(object sender, EventArgs e)
         {
-           
+            label1.Text = "docgia";
         }
     }
 }

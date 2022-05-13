@@ -46,6 +46,8 @@ namespace QUANLITHUVIENWINFORM
             this.dgvDocgia = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbDocgia = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocgia)).BeginInit();
@@ -54,6 +56,8 @@ namespace QUANLITHUVIENWINFORM
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.lbDocgia);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnSua);
             this.panel2.Controls.Add(this.btnThem);
@@ -80,7 +84,7 @@ namespace QUANLITHUVIENWINFORM
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnXoa.Location = new System.Drawing.Point(558, 255);
+            this.btnXoa.Location = new System.Drawing.Point(570, 300);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(61, 29);
             this.btnXoa.TabIndex = 26;
@@ -94,7 +98,7 @@ namespace QUANLITHUVIENWINFORM
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnSua.Location = new System.Drawing.Point(464, 255);
+            this.btnSua.Location = new System.Drawing.Point(476, 300);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(61, 29);
             this.btnSua.TabIndex = 25;
@@ -108,7 +112,7 @@ namespace QUANLITHUVIENWINFORM
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnThem.Location = new System.Drawing.Point(368, 255);
+            this.btnThem.Location = new System.Drawing.Point(379, 300);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(61, 29);
             this.btnThem.TabIndex = 24;
@@ -227,6 +231,24 @@ namespace QUANLITHUVIENWINFORM
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lí thẻ thư viện";
             // 
+            // lbDocgia
+            // 
+            this.lbDocgia.AutoSize = true;
+            this.lbDocgia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDocgia.Location = new System.Drawing.Point(327, 259);
+            this.lbDocgia.Name = "lbDocgia";
+            this.lbDocgia.Size = new System.Drawing.Size(48, 15);
+            this.lbDocgia.TabIndex = 28;
+            this.lbDocgia.Text = "Ghi chú";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(414, 259);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(210, 21);
+            this.comboBox1.TabIndex = 29;
+            // 
             // FmTheTV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,5 +287,7 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.DataGridView dgvDocgia;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lbDocgia;
     }
 }
