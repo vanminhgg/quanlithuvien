@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace QUANLITHUVIENWINFORM
 {
-    public partial class CRUD : UserControl
+    public partial class FmChiTietMuon : Form
     {
-        public CRUD()
+        public FmChiTietMuon()
         {
             InitializeComponent();
         }
-
-      
     }
 }

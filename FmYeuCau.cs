@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QUANLITHUVIENWINFORM
 {
-    public partial class FmSach : Form
+    public partial class FmYeuCau : Form
     {
-        public FmSach()
+        public FmYeuCau()
         {
             InitializeComponent();
-        }
-
-        private void FmSach_Load(object sender, EventArgs e)
-        {
-           
         }
     }
 }

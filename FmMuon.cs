@@ -21,5 +21,18 @@ namespace QUANLITHUVIENWINFORM
         {
 
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            FmThemChiTietMuon fmThemChiTietMuon = new FmThemChiTietMuon();
+            fmThemChiTietMuon.Show();
+        }
+
+        private void btnCTMuon_Click(object sender, EventArgs e)
+        {
+            FmChiTietMuon fmChiTietMuon = new FmChiTietMuon();
+            fmChiTietMuon.Show();
+
+        }
     }
 }
