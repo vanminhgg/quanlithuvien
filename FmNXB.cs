@@ -25,11 +25,12 @@ namespace QUANLITHUVIENWINFORM
             txtSearch.Clear();
             txtName.Enabled = false;
             txtId.Enabled = false;
-            var listNXB = (from nxb in db.NXBs select new { Id = nxb.MaNXB, Name = nxb.TenNXB }).Distinct().ToList();
-            dgvNXB.DataSource = listNXB;
+
+        dgvNXB.DataSource = (from nxb in db.NXBs select new { Id = nxb.MaNXB, Name = nxb.TenNXB }).Distinct().ToList();
+
             dgvNXB.Columns["Id"].HeaderText = "Mã NXB";
             dgvNXB.Columns["Name"].HeaderText = "Tên NXB";
-            dgvNXB.Columns["Id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvNXB.Columns["Id"].Width = 50;
             dgvNXB.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
