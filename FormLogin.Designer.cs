@@ -39,6 +39,8 @@ namespace QUANLITHUVIENWINFORM
             this.lbPassword = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.rbtnDocgia = new System.Windows.Forms.RadioButton();
+            this.rbtnNhanvien = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -119,7 +121,7 @@ namespace QUANLITHUVIENWINFORM
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnLogin.Location = new System.Drawing.Point(111, 145);
+            this.btnLogin.Location = new System.Drawing.Point(111, 153);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(85, 29);
             this.btnLogin.TabIndex = 7;
@@ -134,18 +136,42 @@ namespace QUANLITHUVIENWINFORM
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnExit.Location = new System.Drawing.Point(222, 145);
+            this.btnExit.Location = new System.Drawing.Point(222, 153);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(85, 29);
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = false;
             // 
+            // rbtnDocgia
+            // 
+            this.rbtnDocgia.AutoSize = true;
+            this.rbtnDocgia.Location = new System.Drawing.Point(111, 128);
+            this.rbtnDocgia.Name = "rbtnDocgia";
+            this.rbtnDocgia.Size = new System.Drawing.Size(64, 17);
+            this.rbtnDocgia.TabIndex = 9;
+            this.rbtnDocgia.TabStop = true;
+            this.rbtnDocgia.Text = "Độc Giả";
+            this.rbtnDocgia.UseVisualStyleBackColor = true;
+            // 
+            // rbtnNhanvien
+            // 
+            this.rbtnNhanvien.AutoSize = true;
+            this.rbtnNhanvien.Location = new System.Drawing.Point(222, 128);
+            this.rbtnNhanvien.Name = "rbtnNhanvien";
+            this.rbtnNhanvien.Size = new System.Drawing.Size(75, 17);
+            this.rbtnNhanvien.TabIndex = 10;
+            this.rbtnNhanvien.TabStop = true;
+            this.rbtnNhanvien.Text = "Nhân Viên";
+            this.rbtnNhanvien.UseVisualStyleBackColor = true;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(339, 194);
+            this.Controls.Add(this.rbtnNhanvien);
+            this.Controls.Add(this.rbtnDocgia);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txbPassword);
@@ -175,6 +201,8 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.RadioButton rbtnDocgia;
+        private System.Windows.Forms.RadioButton rbtnNhanvien;
     }
 }
 
