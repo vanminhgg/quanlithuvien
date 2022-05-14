@@ -24,6 +24,7 @@ namespace QUANLITHUVIENWINFORM
             txtName.Clear();
             txtDiachi.Clear();
             txtSDT.Clear();
+            txtEmail.Clear();
 
             var listDG = from dg in db.DocGias
                          select new { Id = dg.MaDG, name = dg.TenDG, dc = dg.DiaChi, sdt = dg.SDT };

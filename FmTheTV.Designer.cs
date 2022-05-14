@@ -30,6 +30,8 @@ namespace QUANLITHUVIENWINFORM
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbTen = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbID = new System.Windows.Forms.ComboBox();
             this.lbDocgia = new System.Windows.Forms.Label();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -40,16 +42,14 @@ namespace QUANLITHUVIENWINFORM
             this.lbName = new System.Windows.Forms.Label();
             this.lbId = new System.Windows.Forms.Label();
             this.txtGhichu = new System.Windows.Forms.TextBox();
-            this.txtNgayketthuc = new System.Windows.Forms.TextBox();
-            this.txtNgaybatdau = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.ptbSearch = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvThe = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbTen = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dtpBD = new System.Windows.Forms.DateTimePicker();
+            this.dtpKT = new System.Windows.Forms.DateTimePicker();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThe)).BeginInit();
@@ -58,6 +58,8 @@ namespace QUANLITHUVIENWINFORM
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.dtpKT);
+            this.panel2.Controls.Add(this.dtpBD);
             this.panel2.Controls.Add(this.cbTen);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.cbID);
@@ -70,8 +72,6 @@ namespace QUANLITHUVIENWINFORM
             this.panel2.Controls.Add(this.lbName);
             this.panel2.Controls.Add(this.lbId);
             this.panel2.Controls.Add(this.txtGhichu);
-            this.panel2.Controls.Add(this.txtNgayketthuc);
-            this.panel2.Controls.Add(this.txtNgaybatdau);
             this.panel2.Controls.Add(this.txtId);
             this.panel2.Controls.Add(this.ptbSearch);
             this.panel2.Controls.Add(this.txtSearch);
@@ -81,6 +81,28 @@ namespace QUANLITHUVIENWINFORM
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(905, 459);
             this.panel2.TabIndex = 4;
+            // 
+            // cbTen
+            // 
+            this.cbTen.Enabled = false;
+            this.cbTen.FormattingEnabled = true;
+            this.cbTen.Location = new System.Drawing.Point(612, 309);
+            this.cbTen.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTen.Name = "cbTen";
+            this.cbTen.Size = new System.Drawing.Size(279, 24);
+            this.cbTen.TabIndex = 31;
+            this.cbTen.SelectedIndexChanged += new System.EventHandler(this.cbTen_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(608, 271);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 20);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Tên Độc Giả";
             // 
             // cbID
             // 
@@ -205,24 +227,6 @@ namespace QUANLITHUVIENWINFORM
             this.txtGhichu.Size = new System.Drawing.Size(279, 22);
             this.txtGhichu.TabIndex = 19;
             // 
-            // txtNgayketthuc
-            // 
-            this.txtNgayketthuc.Enabled = false;
-            this.txtNgayketthuc.Location = new System.Drawing.Point(612, 165);
-            this.txtNgayketthuc.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNgayketthuc.Name = "txtNgayketthuc";
-            this.txtNgayketthuc.Size = new System.Drawing.Size(279, 22);
-            this.txtNgayketthuc.TabIndex = 18;
-            // 
-            // txtNgaybatdau
-            // 
-            this.txtNgaybatdau.Enabled = false;
-            this.txtNgaybatdau.Location = new System.Drawing.Point(612, 111);
-            this.txtNgaybatdau.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNgaybatdau.Name = "txtNgaybatdau";
-            this.txtNgaybatdau.Size = new System.Drawing.Size(279, 22);
-            this.txtNgaybatdau.TabIndex = 17;
-            // 
             // txtId
             // 
             this.txtId.Enabled = false;
@@ -283,27 +287,23 @@ namespace QUANLITHUVIENWINFORM
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lí thẻ thư viện";
             // 
-            // cbTen
+            // dtpBD
             // 
-            this.cbTen.Enabled = false;
-            this.cbTen.FormattingEnabled = true;
-            this.cbTen.Location = new System.Drawing.Point(612, 309);
-            this.cbTen.Margin = new System.Windows.Forms.Padding(4);
-            this.cbTen.Name = "cbTen";
-            this.cbTen.Size = new System.Drawing.Size(279, 24);
-            this.cbTen.TabIndex = 31;
-            this.cbTen.SelectedIndexChanged += new System.EventHandler(this.cbTen_SelectedIndexChanged);
+            this.dtpBD.CustomFormat = "dd/MM/yyyy";
+            this.dtpBD.Location = new System.Drawing.Point(612, 111);
+            this.dtpBD.Name = "dtpBD";
+            this.dtpBD.Size = new System.Drawing.Size(279, 22);
+            this.dtpBD.TabIndex = 32;
+            this.dtpBD.Value = new System.DateTime(2022, 5, 14, 19, 12, 43, 0);
             // 
-            // label2
+            // dtpKT
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(608, 271);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 20);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Tên Độc Giả";
+            this.dtpKT.CustomFormat = "dd/MM/yyyy";
+            this.dtpKT.Location = new System.Drawing.Point(612, 165);
+            this.dtpKT.Name = "dtpKT";
+            this.dtpKT.Size = new System.Drawing.Size(279, 22);
+            this.dtpKT.TabIndex = 33;
+            this.dtpKT.Value = new System.DateTime(2022, 5, 14, 19, 13, 15, 0);
             // 
             // FmTheTV
             // 
@@ -337,8 +337,6 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbId;
         private System.Windows.Forms.TextBox txtGhichu;
-        private System.Windows.Forms.TextBox txtNgayketthuc;
-        private System.Windows.Forms.TextBox txtNgaybatdau;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.PictureBox ptbSearch;
         private System.Windows.Forms.TextBox txtSearch;
@@ -349,5 +347,7 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.Label lbDocgia;
         private System.Windows.Forms.ComboBox cbTen;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtpKT;
+        private System.Windows.Forms.DateTimePicker dtpBD;
     }
 }
