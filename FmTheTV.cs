@@ -49,11 +49,12 @@ namespace QUANLITHUVIENWINFORM
         {
             if (e.RowIndex >= 0)
             {
+                
                 DataGridViewRow row = dgvThe.Rows[e.RowIndex];
                 txtId.Text = row.Cells[0].Value.ToString();
-                /*txtNgaybatdau.Text = row.Cells[1].Value.ToString();
-                txtNgayketthuc.Text = row.Cells[2].Value.ToString();*/
-                if (row.Cells[3].Value.ToString() != null) txtGhichu.Text = row.Cells[3].Value.ToString();
+                dtpBD.Value = DateTime.Parse(row.Cells[1].Value.ToString());
+                dtpKT.Value = DateTime.Parse(row.Cells[2].Value.ToString());
+                if (row.Cells[3].Value != null) txtGhichu.Text = row.Cells[3].Value.ToString();
                 cbID.Text = row.Cells[4].Value.ToString();
                 int id = Convert.ToInt32(cbID.Text);
                 var dg = db.DocGias.SingleOrDefault(i => i.MaDG == id);
@@ -73,13 +74,15 @@ namespace QUANLITHUVIENWINFORM
                         NgayBatDau = dtpBD.Value,
                         NgayKetThuc = dtpKT.Value,
                         GhiChu = txtGhichu.Text.ToString(),
-                        MaDG = Convert.ToInt32(cbID.Text)
+                        MaDG = Convert.ToInt32(cbID.Text),  
                     };
                     db.Thes.Add(theTV);
                     db.SaveChanges();
                     FmTheTV_Load(sender, e);
                     MessageBox.Show("Thêm thẻ thư viện mới thành công !", "Thông báo", MessageBoxButtons.OK);
 
+                    dtpBD.Value = DateTime.Now;
+                    dtpKT.Value = DateTime.Now;
                     txtGhichu.Enabled = false;
                     cbID.Enabled = false;
                     cbTen.Enabled = false;
@@ -114,6 +117,8 @@ namespace QUANLITHUVIENWINFORM
                     FmTheTV_Load(sender, e);
                     MessageBox.Show("Cập nhập Thẻ Thư Viện thành công !", "Thông báo", MessageBoxButtons.OK);
 
+                    dtpBD.Value = DateTime.Now;
+                    dtpKT.Value = DateTime.Now;
                     txtGhichu.Enabled = false;
                     cbID.Enabled = false;
                     cbTen.Enabled = false;

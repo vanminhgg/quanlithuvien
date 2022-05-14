@@ -83,8 +83,8 @@
     <Property Name="MaTheLoai" Type="int" Nullable="false" />
     <Property Name="MaTacGia" Type="int" Nullable="false" />
     <Property Name="TenSach" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="NamXB" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="SoLuong" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NamXB" Type="int" Nullable="false" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Thes">
     <Key>
@@ -113,6 +113,7 @@
     <Property Name="TenDG" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DiaChi" Type="nvarchar(max)" Nullable="true" />
     <Property Name="SDT" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="ChiTietMuons">
     <Key>
