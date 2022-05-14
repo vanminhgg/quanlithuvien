@@ -24,10 +24,6 @@
       <End Role="Muon" EntitySet="Muons" />
     </AssociationSet>
     <EntitySet Name="DocGias" EntityType="ModelQLTV.DocGia" />
-    <AssociationSet Name="TheDocGia" Association="ModelQLTV.TheDocGia">
-      <End Role="The" EntitySet="Thes" />
-      <End Role="DocGia" EntitySet="DocGias" />
-    </AssociationSet>
     <EntitySet Name="ChiTietMuons" EntityType="ModelQLTV.ChiTietMuon" />
     <AssociationSet Name="MuonChiTietMuon" Association="ModelQLTV.MuonChiTietMuon">
       <End Role="Muon" EntitySet="Muons" />
@@ -37,6 +33,25 @@
       <End Role="Sach" EntitySet="Saches" />
       <End Role="ChiTietMuon" EntitySet="ChiTietMuons" />
     </AssociationSet>
+    <EntitySet Name="YeuCauMuons" EntityType="ModelQLTV.YeuCauMuon" />
+    <AssociationSet Name="YeuCauMuonThe" Association="ModelQLTV.YeuCauMuonThe">
+      <End Role="YeuCauMuon" EntitySet="YeuCauMuons" />
+      <End Role="The" EntitySet="Thes" />
+    </AssociationSet>
+    <EntitySet Name="ChiTietYeuCaus" EntityType="ModelQLTV.ChiTietYeuCau" />
+    <AssociationSet Name="YeuCauMuonChiTietYeuCau" Association="ModelQLTV.YeuCauMuonChiTietYeuCau">
+      <End Role="YeuCauMuon" EntitySet="YeuCauMuons" />
+      <End Role="ChiTietYeuCau" EntitySet="ChiTietYeuCaus" />
+    </AssociationSet>
+    <AssociationSet Name="SachChiTietYeuCau" Association="ModelQLTV.SachChiTietYeuCau">
+      <End Role="Sach" EntitySet="Saches" />
+      <End Role="ChiTietYeuCau" EntitySet="ChiTietYeuCaus" />
+    </AssociationSet>
+    <AssociationSet Name="TheDocGia" Association="ModelQLTV.TheDocGia">
+      <End Role="The" EntitySet="Thes" />
+      <End Role="DocGia" EntitySet="DocGias" />
+    </AssociationSet>
+    <EntitySet Name="TaiKhoans" EntityType="ModelQLTV.TaiKhoan" />
   </EntityContainer>
   <EntityType Name="NXB">
     <Key>
@@ -76,6 +91,8 @@
     <Property Name="TenSach" Type="String" Nullable="false" />
     <Property Name="NamXB" Type="String" Nullable="false" />
     <NavigationProperty Name="ChiTietMuons" Relationship="ModelQLTV.SachChiTietMuon" FromRole="Sach" ToRole="ChiTietMuon" />
+    <NavigationProperty Name="ChiTietYeuCaus" Relationship="ModelQLTV.SachChiTietYeuCau" FromRole="Sach" ToRole="ChiTietYeuCau" />
+    <Property Name="SoLuong" Type="String" Nullable="false" />
   </EntityType>
   <Association Name="NXBSach">
     <End Type="ModelQLTV.NXB" Role="NXB" Multiplicity="1" />
@@ -122,7 +139,9 @@
     <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" />
     <Property Name="GhiChu" Type="String" Nullable="true" />
     <NavigationProperty Name="Muons" Relationship="ModelQLTV.TheMuon" FromRole="The" ToRole="Muon" />
+    <NavigationProperty Name="YeuCauMuons" Relationship="ModelQLTV.YeuCauMuonThe" FromRole="The" ToRole="YeuCauMuon" />
     <NavigationProperty Name="DocGia" Relationship="ModelQLTV.TheDocGia" FromRole="The" ToRole="DocGia" />
+    <Property Name="MaDG" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Muon">
     <Key>
@@ -155,25 +174,21 @@
     <Property Name="TenDG" Type="String" Nullable="false" />
     <Property Name="DiaChi" Type="String" Nullable="true" />
     <Property Name="SDT" Type="String" Nullable="true" />
-    <Property Name="MaThe" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="The" Relationship="ModelQLTV.TheDocGia" FromRole="DocGia" ToRole="The" />
+    <NavigationProperty Name="Thes" Relationship="ModelQLTV.TheDocGia" FromRole="DocGia" ToRole="The" />
   </EntityType>
-  <Association Name="TheDocGia">
-    <End Type="ModelQLTV.The" Role="The" Multiplicity="1" />
-    <End Type="ModelQLTV.DocGia" Role="DocGia" Multiplicity="1" />
-  </Association>
   <EntityType Name="ChiTietMuon">
     <Key>
-      <PropertyRef Name="SachMaSach" />
+      <PropertyRef Name="MaSach" />
       <PropertyRef Name="MaMuon" />
     </Key>
     <NavigationProperty Name="Muon" Relationship="ModelQLTV.MuonChiTietMuon" FromRole="ChiTietMuon" ToRole="Muon" />
     <Property Name="MaMuon" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Sach" Relationship="ModelQLTV.SachChiTietMuon" FromRole="ChiTietMuon" ToRole="Sach" />
-    <Property Name="SachMaSach" Type="Int32" Nullable="false" />
+    <Property Name="MaSach" Type="Int32" Nullable="false" />
     <Property Name="DaTra" Type="Int32" Nullable="false" />
     <Property Name="NgayTra" Type="DateTime" Nullable="true" />
     <Property Name="NgayHetHan" Type="DateTime" Nullable="false" />
+    <Property Name="TinhTrangSach" Type="String" Nullable="true" />
   </EntityType>
   <Association Name="MuonChiTietMuon">
     <End Type="ModelQLTV.Muon" Role="Muon" Multiplicity="1" />
@@ -195,8 +210,85 @@
         <PropertyRef Name="MaSach" />
       </Principal>
       <Dependent Role="ChiTietMuon">
-        <PropertyRef Name="SachMaSach" />
+        <PropertyRef Name="MaSach" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="YeuCauMuon">
+    <Key>
+      <PropertyRef Name="MaYC" />
+    </Key>
+    <Property Name="MaYC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="The" Relationship="ModelQLTV.YeuCauMuonThe" FromRole="YeuCauMuon" ToRole="The" />
+    <Property Name="MaThe" Type="Int32" Nullable="false" />
+    <Property Name="NgayYeuCau" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="ChiTietYeuCaus" Relationship="ModelQLTV.YeuCauMuonChiTietYeuCau" FromRole="YeuCauMuon" ToRole="ChiTietYeuCau" />
+  </EntityType>
+  <Association Name="YeuCauMuonThe">
+    <End Type="ModelQLTV.YeuCauMuon" Role="YeuCauMuon" Multiplicity="*" />
+    <End Type="ModelQLTV.The" Role="The" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="The">
+        <PropertyRef Name="MaThe" />
+      </Principal>
+      <Dependent Role="YeuCauMuon">
+        <PropertyRef Name="MaThe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ChiTietYeuCau">
+    <Key>
+      <PropertyRef Name="MaYC" />
+      <PropertyRef Name="MaSach" />
+    </Key>
+    <NavigationProperty Name="YeuCauMuon" Relationship="ModelQLTV.YeuCauMuonChiTietYeuCau" FromRole="ChiTietYeuCau" ToRole="YeuCauMuon" />
+    <Property Name="MaYC" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Sach" Relationship="ModelQLTV.SachChiTietYeuCau" FromRole="ChiTietYeuCau" ToRole="Sach" />
+    <Property Name="MaSach" Type="Int32" Nullable="false" />
+    <Property Name="SoLuong" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="YeuCauMuonChiTietYeuCau">
+    <End Type="ModelQLTV.YeuCauMuon" Role="YeuCauMuon" Multiplicity="1" />
+    <End Type="ModelQLTV.ChiTietYeuCau" Role="ChiTietYeuCau" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YeuCauMuon">
+        <PropertyRef Name="MaYC" />
+      </Principal>
+      <Dependent Role="ChiTietYeuCau">
+        <PropertyRef Name="MaYC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SachChiTietYeuCau">
+    <End Type="ModelQLTV.Sach" Role="Sach" Multiplicity="1" />
+    <End Type="ModelQLTV.ChiTietYeuCau" Role="ChiTietYeuCau" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sach">
+        <PropertyRef Name="MaSach" />
+      </Principal>
+      <Dependent Role="ChiTietYeuCau">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TheDocGia">
+    <End Type="ModelQLTV.The" Role="The" Multiplicity="*" />
+    <End Type="ModelQLTV.DocGia" Role="DocGia" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="DocGia">
+        <PropertyRef Name="MaDG" />
+      </Principal>
+      <Dependent Role="The">
+        <PropertyRef Name="MaDG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="MaTaiKhoan" />
+    </Key>
+    <Property Name="MaTaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenDangNhap" Type="String" Nullable="false" />
+    <Property Name="MatKhau" Type="String" Nullable="false" />
+  </EntityType>
 </Schema>
