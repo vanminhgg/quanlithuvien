@@ -88,8 +88,8 @@
     <Property Name="MaTheLoai" Type="int" Nullable="false" />
     <Property Name="MaTacGia" Type="int" Nullable="false" />
     <Property Name="TenSach" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="NamXB" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="SoLuong" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NamXB" Type="int" Nullable="false" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Thes">
     <Key>
@@ -118,6 +118,7 @@
     <Property Name="TenDG" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DiaChi" Type="nvarchar(max)" Nullable="true" />
     <Property Name="SDT" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="ChiTietMuons">
     <Key>
@@ -399,10 +400,10 @@
           <NavigationProperty Name="TacGia" Relationship="ModelQLTV.SachTacGia" FromRole="Sach" ToRole="TacGia" />
           <Property Name="MaTacGia" Type="Int32" Nullable="false" />
           <Property Name="TenSach" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="NamXB" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="NamXB" Type="Int32" Nullable="false" />
           <NavigationProperty Name="ChiTietMuons" Relationship="ModelQLTV.SachChiTietMuon" FromRole="Sach" ToRole="ChiTietMuon" />
           <NavigationProperty Name="ChiTietYeuCaus" Relationship="ModelQLTV.SachChiTietYeuCau" FromRole="Sach" ToRole="ChiTietYeuCau" />
-          <Property Name="SoLuong" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="NXBSach">
           <End Type="ModelQLTV.NXB" Role="NXB" Multiplicity="1" />
@@ -485,6 +486,7 @@
           <Property Name="DiaChi" Type="String" Nullable="true" />
           <Property Name="SDT" Type="String" Nullable="true" />
           <NavigationProperty Name="Thes" Relationship="ModelQLTV.TheDocGia" FromRole="DocGia" ToRole="The" />
+          <Property Name="Email" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="ChiTietMuon">
           <Key>
@@ -683,6 +685,7 @@
           <ScalarProperty Name="TenDG" ColumnName="TenDG" />
           <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
           <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

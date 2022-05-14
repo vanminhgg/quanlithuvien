@@ -30,6 +30,8 @@ namespace QUANLITHUVIENWINFORM
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.cbMathe = new System.Windows.Forms.ComboBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnXacnhan = new System.Windows.Forms.Button();
@@ -38,17 +40,16 @@ namespace QUANLITHUVIENWINFORM
             this.lbId = new System.Windows.Forms.Label();
             this.txtNgayPhaiTra = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.ptbSearch = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvSach = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.ptbSearch = new System.Windows.Forms.PictureBox();
+            this.select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -70,6 +71,23 @@ namespace QUANLITHUVIENWINFORM
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(679, 373);
             this.panel2.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(346, 152);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 15);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Số lượng";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(429, 150);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(29, 20);
+            this.textBox1.TabIndex = 29;
             // 
             // cbMathe
             // 
@@ -151,6 +169,16 @@ namespace QUANLITHUVIENWINFORM
             this.txtId.Size = new System.Drawing.Size(66, 20);
             this.txtId.TabIndex = 16;
             // 
+            // ptbSearch
+            // 
+            this.ptbSearch.Image = global::QUANLITHUVIENWINFORM.Properties.Resources._49116;
+            this.ptbSearch.Location = new System.Drawing.Point(185, 15);
+            this.ptbSearch.Name = "ptbSearch";
+            this.ptbSearch.Size = new System.Drawing.Size(26, 20);
+            this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbSearch.TabIndex = 5;
+            this.ptbSearch.TabStop = false;
+            // 
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(0, 15);
@@ -160,7 +188,11 @@ namespace QUANLITHUVIENWINFORM
             // 
             // dgvSach
             // 
+            this.dgvSach.AllowUserToResizeColumns = false;
+            this.dgvSach.AllowUserToResizeRows = false;
             this.dgvSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.select});
             this.dgvSach.Location = new System.Drawing.Point(0, 41);
             this.dgvSach.Name = "dgvSach";
             this.dgvSach.Size = new System.Drawing.Size(321, 320);
@@ -185,32 +217,10 @@ namespace QUANLITHUVIENWINFORM
             this.label1.TabIndex = 0;
             this.label1.Text = "Thêm chi tiết mượn";
             // 
-            // label2
+            // select
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(346, 152);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 15);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Số lượng";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(429, 150);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(29, 20);
-            this.textBox1.TabIndex = 29;
-            // 
-            // ptbSearch
-            // 
-            this.ptbSearch.Image = global::QUANLITHUVIENWINFORM.Properties.Resources._49116;
-            this.ptbSearch.Location = new System.Drawing.Point(185, 15);
-            this.ptbSearch.Name = "ptbSearch";
-            this.ptbSearch.Size = new System.Drawing.Size(26, 20);
-            this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbSearch.TabIndex = 5;
-            this.ptbSearch.TabStop = false;
+            this.select.HeaderText = "";
+            this.select.Name = "select";
             // 
             // FmThemChiTietMuon
             // 
@@ -223,10 +233,10 @@ namespace QUANLITHUVIENWINFORM
             this.Text = "FmThemChiTietMuon";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,5 +259,6 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn select;
     }
 }

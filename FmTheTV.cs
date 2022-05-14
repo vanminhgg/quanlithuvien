@@ -71,7 +71,7 @@ namespace QUANLITHUVIENWINFORM
                         NgayBatDau = DateTime.Parse(txtNgaybatdau.Text),
                         NgayKetThuc = DateTime.Parse(txtNgayketthuc.Text),
                         GhiChu = txtGhichu.Text.ToString(),
-                        // MaDG = cbBoxDG.
+                        MaDG = Convert.ToInt32(cbID.SelectedItem)
                     };
                     db.Thes.Add(theTV);
                     db.SaveChanges();

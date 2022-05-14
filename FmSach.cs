@@ -51,8 +51,8 @@ namespace QUANLITHUVIENWINFORM
                         MaTacGia = matg.MaTacGia,
                         MaNXB = manxb.MaNXB,
                         MaTheLoai = matl.MaTheLoai,
-                        NamXB = txtNamXB.Text.ToString(),
-                        SoLuong = txtSoluong.Text.ToString(),
+                        NamXB = Convert.ToInt32(txtNamXB.Text),
+                        SoLuong = Convert.ToInt32(txtSoluong.Text),
 
                     };
                     db.Saches.Add(sach);
