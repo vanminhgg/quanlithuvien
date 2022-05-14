@@ -116,6 +116,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             // txtSoluong
             // 
+            this.txtSoluong.Enabled = false;
             this.txtSoluong.Location = new System.Drawing.Point(393, 285);
             this.txtSoluong.Name = "txtSoluong";
             this.txtSoluong.Size = new System.Drawing.Size(210, 20);
@@ -123,6 +124,9 @@ namespace QUANLITHUVIENWINFORM
             // 
             // cbTheloai
             // 
+            this.cbTheloai.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbTheloai.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbTheloai.Enabled = false;
             this.cbTheloai.FormattingEnabled = true;
             this.cbTheloai.Location = new System.Drawing.Point(393, 205);
             this.cbTheloai.Name = "cbTheloai";
@@ -131,6 +135,9 @@ namespace QUANLITHUVIENWINFORM
             // 
             // cbNXB
             // 
+            this.cbNXB.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbNXB.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbNXB.Enabled = false;
             this.cbNXB.FormattingEnabled = true;
             this.cbNXB.Location = new System.Drawing.Point(393, 165);
             this.cbNXB.Name = "cbNXB";
@@ -139,6 +146,9 @@ namespace QUANLITHUVIENWINFORM
             // 
             // cbTacGia
             // 
+            this.cbTacGia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbTacGia.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbTacGia.Enabled = false;
             this.cbTacGia.FormattingEnabled = true;
             this.cbTacGia.Location = new System.Drawing.Point(393, 122);
             this.cbTacGia.Name = "cbTacGia";
@@ -218,6 +228,7 @@ namespace QUANLITHUVIENWINFORM
             this.btnXoa.TabIndex = 31;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -232,6 +243,7 @@ namespace QUANLITHUVIENWINFORM
             this.btnSua.TabIndex = 30;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -246,9 +258,11 @@ namespace QUANLITHUVIENWINFORM
             this.btnThem.TabIndex = 29;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtNamXB
             // 
+            this.txtNamXB.Enabled = false;
             this.txtNamXB.Location = new System.Drawing.Point(393, 248);
             this.txtNamXB.Name = "txtNamXB";
             this.txtNamXB.Size = new System.Drawing.Size(210, 20);
@@ -256,6 +270,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             // txtName
             // 
+            this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(393, 81);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(210, 20);
@@ -263,6 +278,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(393, 42);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(210, 20);
@@ -292,6 +308,7 @@ namespace QUANLITHUVIENWINFORM
             this.dgvSach.Name = "dgvSach";
             this.dgvSach.Size = new System.Drawing.Size(321, 320);
             this.dgvSach.TabIndex = 23;
+            this.dgvSach.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSach_CellMouseClick);
             // 
             // FmSach
             // 

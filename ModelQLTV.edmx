@@ -14,6 +14,9 @@
     <EntitySet Name="Muons" EntityType="ModelQLTV.Store.Muons" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="DocGias" EntityType="ModelQLTV.Store.DocGias" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ChiTietMuons" EntityType="ModelQLTV.Store.ChiTietMuons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="YeuCauMuons" EntityType="ModelQLTV.Store.YeuCauMuons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChiTietYeuCaus" EntityType="ModelQLTV.Store.ChiTietYeuCaus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TaiKhoans" EntityType="ModelQLTV.Store.TaiKhoans" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="NXBSach" Association="ModelQLTV.Store.NXBSach">
       <End Role="NXB" EntitySet="NXBs" />
       <End Role="Sach" EntitySet="Saches" />
@@ -30,10 +33,6 @@
       <End Role="The" EntitySet="Thes" />
       <End Role="Muon" EntitySet="Muons" />
     </AssociationSet>
-    <AssociationSet Name="TheDocGia" Association="ModelQLTV.Store.TheDocGia">
-      <End Role="The" EntitySet="Thes" />
-      <End Role="DocGia" EntitySet="DocGias" />
-    </AssociationSet>
     <AssociationSet Name="MuonChiTietMuon" Association="ModelQLTV.Store.MuonChiTietMuon">
       <End Role="Muon" EntitySet="Muons" />
       <End Role="ChiTietMuon" EntitySet="ChiTietMuons" />
@@ -41,6 +40,22 @@
     <AssociationSet Name="SachChiTietMuon" Association="ModelQLTV.Store.SachChiTietMuon">
       <End Role="Sach" EntitySet="Saches" />
       <End Role="ChiTietMuon" EntitySet="ChiTietMuons" />
+    </AssociationSet>
+    <AssociationSet Name="YeuCauMuonThe" Association="ModelQLTV.Store.YeuCauMuonThe">
+      <End Role="YeuCauMuon" EntitySet="YeuCauMuons" />
+      <End Role="The" EntitySet="Thes" />
+    </AssociationSet>
+    <AssociationSet Name="YeuCauMuonChiTietYeuCau" Association="ModelQLTV.Store.YeuCauMuonChiTietYeuCau">
+      <End Role="YeuCauMuon" EntitySet="YeuCauMuons" />
+      <End Role="ChiTietYeuCau" EntitySet="ChiTietYeuCaus" />
+    </AssociationSet>
+    <AssociationSet Name="SachChiTietYeuCau" Association="ModelQLTV.Store.SachChiTietYeuCau">
+      <End Role="Sach" EntitySet="Saches" />
+      <End Role="ChiTietYeuCau" EntitySet="ChiTietYeuCaus" />
+    </AssociationSet>
+    <AssociationSet Name="TheDocGia" Association="ModelQLTV.Store.TheDocGia">
+      <End Role="The" EntitySet="Thes" />
+      <End Role="DocGia" EntitySet="DocGias" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="NXBs">
@@ -74,6 +89,7 @@
     <Property Name="MaTacGia" Type="int" Nullable="false" />
     <Property Name="TenSach" Type="nvarchar(max)" Nullable="false" />
     <Property Name="NamXB" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SoLuong" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="Thes">
     <Key>
@@ -83,7 +99,7 @@
     <Property Name="NgayBatDau" Type="datetime" Nullable="false" />
     <Property Name="NgayKetThuc" Type="datetime" Nullable="false" />
     <Property Name="GhiChu" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="DocGia_MaDG" Type="int" Nullable="false" />
+    <Property Name="MaDG" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Muons">
     <Key>
@@ -102,18 +118,43 @@
     <Property Name="TenDG" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DiaChi" Type="nvarchar(max)" Nullable="true" />
     <Property Name="SDT" Type="nvarchar(max)" Nullable="true" />
-    <Property Name="MaThe" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ChiTietMuons">
     <Key>
-      <PropertyRef Name="SachMaSach" />
+      <PropertyRef Name="MaSach" />
       <PropertyRef Name="MaMuon" />
     </Key>
     <Property Name="MaMuon" Type="int" Nullable="false" />
-    <Property Name="SachMaSach" Type="int" Nullable="false" />
+    <Property Name="MaSach" Type="int" Nullable="false" />
     <Property Name="DaTra" Type="int" Nullable="false" />
     <Property Name="NgayTra" Type="datetime" Nullable="true" />
     <Property Name="NgayHetHan" Type="datetime" Nullable="false" />
+    <Property Name="TinhTrangSach" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="YeuCauMuons">
+    <Key>
+      <PropertyRef Name="MaYC" />
+    </Key>
+    <Property Name="MaYC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaThe" Type="int" Nullable="false" />
+    <Property Name="NgayYeuCau" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChiTietYeuCaus">
+    <Key>
+      <PropertyRef Name="MaYC" />
+      <PropertyRef Name="MaSach" />
+    </Key>
+    <Property Name="MaYC" Type="int" Nullable="false" />
+    <Property Name="MaSach" Type="int" Nullable="false" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TaiKhoans">
+    <Key>
+      <PropertyRef Name="MaTaiKhoan" />
+    </Key>
+    <Property Name="MaTaiKhoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenDangNhap" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MatKhau" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <Association Name="NXBSach">
     <End Role="NXB" Type="ModelQLTV.Store.NXBs" Multiplicity="1" />
@@ -163,18 +204,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="TheDocGia">
-    <End Role="The" Type="ModelQLTV.Store.Thes" Multiplicity="*" />
-    <End Role="DocGia" Type="ModelQLTV.Store.DocGias" Multiplicity="1" />
-    <ReferentialConstraint>
-      <Principal Role="DocGia">
-        <PropertyRef Name="MaDG" />
-      </Principal>
-      <Dependent Role="The">
-        <PropertyRef Name="DocGia_MaDG" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="MuonChiTietMuon">
     <End Role="Muon" Type="ModelQLTV.Store.Muons" Multiplicity="1" />
     <End Role="ChiTietMuon" Type="ModelQLTV.Store.ChiTietMuons" Multiplicity="*" />
@@ -195,7 +224,55 @@
         <PropertyRef Name="MaSach" />
       </Principal>
       <Dependent Role="ChiTietMuon">
-        <PropertyRef Name="SachMaSach" />
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="YeuCauMuonThe">
+    <End Role="YeuCauMuon" Type="ModelQLTV.Store.YeuCauMuons" Multiplicity="*" />
+    <End Role="The" Type="ModelQLTV.Store.Thes" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="The">
+        <PropertyRef Name="MaThe" />
+      </Principal>
+      <Dependent Role="YeuCauMuon">
+        <PropertyRef Name="MaThe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="YeuCauMuonChiTietYeuCau">
+    <End Role="YeuCauMuon" Type="ModelQLTV.Store.YeuCauMuons" Multiplicity="1" />
+    <End Role="ChiTietYeuCau" Type="ModelQLTV.Store.ChiTietYeuCaus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YeuCauMuon">
+        <PropertyRef Name="MaYC" />
+      </Principal>
+      <Dependent Role="ChiTietYeuCau">
+        <PropertyRef Name="MaYC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SachChiTietYeuCau">
+    <End Role="Sach" Type="ModelQLTV.Store.Saches" Multiplicity="1" />
+    <End Role="ChiTietYeuCau" Type="ModelQLTV.Store.ChiTietYeuCaus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sach">
+        <PropertyRef Name="MaSach" />
+      </Principal>
+      <Dependent Role="ChiTietYeuCau">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TheDocGia">
+    <End Role="The" Type="ModelQLTV.Store.Thes" Multiplicity="*" />
+    <End Role="DocGia" Type="ModelQLTV.Store.DocGias" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="DocGia">
+        <PropertyRef Name="MaDG" />
+      </Principal>
+      <Dependent Role="The">
+        <PropertyRef Name="MaDG" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -533,6 +610,7 @@
           <ScalarProperty Name="MaTacGia" ColumnName="MaTacGia" />
           <ScalarProperty Name="TenSach" ColumnName="TenSach" />
           <ScalarProperty Name="NamXB" ColumnName="NamXB" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -543,6 +621,7 @@
           <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
           <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
           <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="MaDG" ColumnName="MaDG" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -569,11 +648,39 @@
     <EntitySetMapping Name="ChiTietMuons">
       <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.ChiTietMuon)">
         <MappingFragment StoreEntitySet="ChiTietMuons">
-          <ScalarProperty Name="MaSach" ColumnName="SachMaSach" />
+          <ScalarProperty Name="MaSach" ColumnName="MaSach" />
           <ScalarProperty Name="MaMuon" ColumnName="MaMuon" />
           <ScalarProperty Name="DaTra" ColumnName="DaTra" />
           <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
           <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
+          <ScalarProperty Name="TinhTrangSach" ColumnName="TinhTrangSach" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YeuCauMuons">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.YeuCauMuon)">
+        <MappingFragment StoreEntitySet="YeuCauMuons">
+          <ScalarProperty Name="MaYC" ColumnName="MaYC" />
+          <ScalarProperty Name="MaThe" ColumnName="MaThe" />
+          <ScalarProperty Name="NgayYeuCau" ColumnName="NgayYeuCau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietYeuCaus">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.ChiTietYeuCau)">
+        <MappingFragment StoreEntitySet="ChiTietYeuCaus">
+          <ScalarProperty Name="MaYC" ColumnName="MaYC" />
+          <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaiKhoans">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.TaiKhoan)">
+        <MappingFragment StoreEntitySet="TaiKhoans">
+          <ScalarProperty Name="MaTaiKhoan" ColumnName="MaTaiKhoan" />
+          <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
