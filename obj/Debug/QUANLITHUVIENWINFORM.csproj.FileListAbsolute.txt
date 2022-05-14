@@ -79,3 +79,8 @@ D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.FmChiTietMuon.res
 D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.FmThemChiTietMuon.resources
 D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.FmTra.resources
 D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.FmYeuCau.resources
+D:\windows\QLTV\quanlithuvien\obj\Debug\QUANLITHUVIENWINFORM.AppDocGia.resources
+D:\windows\QLTV\quanlithuvien\obj\Debug\QUANLITHUVIENWINFORM.FmChiTietMuon.resources
+D:\windows\QLTV\quanlithuvien\obj\Debug\QUANLITHUVIENWINFORM.FmThemChiTietMuon.resources
+D:\windows\QLTV\quanlithuvien\obj\Debug\QUANLITHUVIENWINFORM.FmTra.resources
+D:\windows\QLTV\quanlithuvien\obj\Debug\QUANLITHUVIENWINFORM.FmYeuCau.resources

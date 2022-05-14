@@ -76,6 +76,7 @@ namespace QUANLITHUVIENWINFORM
                     db.SaveChanges();
                     FmTacGia_Load(sender, e);
                     MessageBox.Show("Sửa Tác Giả Thành Công", "Thông Báo", MessageBoxButtons.OK);
+                    txtName.Enabled = false;
                 }
                 else
                 {

@@ -48,9 +48,10 @@ namespace QUANLITHUVIENWINFORM
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(100, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(133, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 24);
+            this.pictureBox1.Size = new System.Drawing.Size(33, 30);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -61,9 +62,10 @@ namespace QUANLITHUVIENWINFORM
             this.lbLogin.BackColor = System.Drawing.Color.Lime;
             this.lbLogin.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
             this.lbLogin.ForeColor = System.Drawing.Color.Red;
-            this.lbLogin.Location = new System.Drawing.Point(130, 19);
+            this.lbLogin.Location = new System.Drawing.Point(173, 23);
+            this.lbLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(121, 30);
+            this.lbLogin.Size = new System.Drawing.Size(156, 37);
             this.lbLogin.TabIndex = 1;
             this.lbLogin.Text = "Đăng nhập";
             // 
@@ -72,17 +74,19 @@ namespace QUANLITHUVIENWINFORM
             this.label1.AccessibleName = "lbUsername";
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(34, 66);
+            this.label1.Location = new System.Drawing.Point(45, 81);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 17);
+            this.label1.Size = new System.Drawing.Size(87, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tài khoản";
             // 
             // txbUsername
             // 
-            this.txbUsername.Location = new System.Drawing.Point(111, 65);
+            this.txbUsername.Location = new System.Drawing.Point(148, 80);
+            this.txbUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txbUsername.Name = "txbUsername";
-            this.txbUsername.Size = new System.Drawing.Size(196, 20);
+            this.txbUsername.Size = new System.Drawing.Size(260, 22);
             this.txbUsername.TabIndex = 3;
             // 
             // panel1
@@ -91,15 +95,18 @@ namespace QUANLITHUVIENWINFORM
             this.panel1.Controls.Add(this.lbLogin);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(1, -2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(357, 54);
+            this.panel1.Size = new System.Drawing.Size(476, 66);
             this.panel1.TabIndex = 4;
             // 
             // txbPassword
             // 
-            this.txbPassword.Location = new System.Drawing.Point(111, 102);
+            this.txbPassword.Location = new System.Drawing.Point(148, 126);
+            this.txbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txbPassword.Name = "txbPassword";
-            this.txbPassword.Size = new System.Drawing.Size(196, 20);
+            this.txbPassword.PasswordChar = '*';
+            this.txbPassword.Size = new System.Drawing.Size(260, 22);
             this.txbPassword.TabIndex = 6;
             this.txbPassword.UseSystemPasswordChar = true;
             // 
@@ -108,9 +115,10 @@ namespace QUANLITHUVIENWINFORM
             this.lbPassword.AccessibleName = "lbUsername";
             this.lbPassword.AutoSize = true;
             this.lbPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lbPassword.Location = new System.Drawing.Point(34, 103);
+            this.lbPassword.Location = new System.Drawing.Point(45, 127);
+            this.lbPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(66, 17);
+            this.lbPassword.Size = new System.Drawing.Size(86, 23);
             this.lbPassword.TabIndex = 5;
             this.lbPassword.Text = "Mật khẩu";
             // 
@@ -121,9 +129,10 @@ namespace QUANLITHUVIENWINFORM
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnLogin.Location = new System.Drawing.Point(111, 153);
+            this.btnLogin.Location = new System.Drawing.Point(148, 188);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(85, 29);
+            this.btnLogin.Size = new System.Drawing.Size(113, 36);
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -136,40 +145,46 @@ namespace QUANLITHUVIENWINFORM
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnExit.Location = new System.Drawing.Point(222, 153);
+            this.btnExit.Location = new System.Drawing.Point(296, 188);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(85, 29);
+            this.btnExit.Size = new System.Drawing.Size(113, 36);
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // rbtnDocgia
             // 
             this.rbtnDocgia.AutoSize = true;
-            this.rbtnDocgia.Location = new System.Drawing.Point(111, 128);
+            this.rbtnDocgia.Checked = true;
+            this.rbtnDocgia.Location = new System.Drawing.Point(148, 158);
+            this.rbtnDocgia.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnDocgia.Name = "rbtnDocgia";
-            this.rbtnDocgia.Size = new System.Drawing.Size(64, 17);
+            this.rbtnDocgia.Size = new System.Drawing.Size(80, 21);
             this.rbtnDocgia.TabIndex = 9;
             this.rbtnDocgia.TabStop = true;
             this.rbtnDocgia.Text = "Độc Giả";
             this.rbtnDocgia.UseVisualStyleBackColor = true;
+            this.rbtnDocgia.CheckedChanged += new System.EventHandler(this.rbtnDocgia_CheckedChanged);
             // 
             // rbtnNhanvien
             // 
             this.rbtnNhanvien.AutoSize = true;
-            this.rbtnNhanvien.Location = new System.Drawing.Point(222, 128);
+            this.rbtnNhanvien.Location = new System.Drawing.Point(296, 158);
+            this.rbtnNhanvien.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnNhanvien.Name = "rbtnNhanvien";
-            this.rbtnNhanvien.Size = new System.Drawing.Size(75, 17);
+            this.rbtnNhanvien.Size = new System.Drawing.Size(95, 21);
             this.rbtnNhanvien.TabIndex = 10;
-            this.rbtnNhanvien.TabStop = true;
             this.rbtnNhanvien.Text = "Nhân Viên";
             this.rbtnNhanvien.UseVisualStyleBackColor = true;
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.btnLogin;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 194);
+            this.ClientSize = new System.Drawing.Size(452, 239);
             this.Controls.Add(this.rbtnNhanvien);
             this.Controls.Add(this.rbtnDocgia);
             this.Controls.Add(this.btnExit);
@@ -180,9 +195,11 @@ namespace QUANLITHUVIENWINFORM
             this.Controls.Add(this.txbUsername);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
