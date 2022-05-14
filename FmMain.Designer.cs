@@ -40,6 +40,7 @@ namespace QUANLITHUVIENWINFORM
             this.theeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nXBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yêuCầuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,10 +56,11 @@ namespace QUANLITHUVIENWINFORM
             this.thôngTinTàiKhoảnToolStripMenuItem1,
             this.theeToolStripMenuItem,
             this.tácGiảToolStripMenuItem,
-            this.nXBToolStripMenuItem});
+            this.nXBToolStripMenuItem,
+            this.yêuCầuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(684, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(742, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -88,6 +90,7 @@ namespace QUANLITHUVIENWINFORM
             this.trảToolStripMenuItem.Name = "trảToolStripMenuItem";
             this.trảToolStripMenuItem.Size = new System.Drawing.Size(34, 20);
             this.trảToolStripMenuItem.Text = "Trả";
+            this.trảToolStripMenuItem.Click += new System.EventHandler(this.trảToolStripMenuItem_Click);
             // 
             // thốngKêToolStripMenuItem
             // 
@@ -130,11 +133,18 @@ namespace QUANLITHUVIENWINFORM
             this.nXBToolStripMenuItem.Text = "NXB";
             this.nXBToolStripMenuItem.Click += new System.EventHandler(this.nXBToolStripMenuItem_Click);
             // 
+            // yêuCầuToolStripMenuItem
+            // 
+            this.yêuCầuToolStripMenuItem.Name = "yêuCầuToolStripMenuItem";
+            this.yêuCầuToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.yêuCầuToolStripMenuItem.Text = "Yêu cầu";
+            this.yêuCầuToolStripMenuItem.Click += new System.EventHandler(this.yêuCầuToolStripMenuItem_Click);
+            // 
             // FmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 329);
+            this.ClientSize = new System.Drawing.Size(742, 329);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FmMain";
@@ -160,5 +170,6 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.ToolStripMenuItem theeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tácGiảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nXBToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yêuCầuToolStripMenuItem;
     }
 }

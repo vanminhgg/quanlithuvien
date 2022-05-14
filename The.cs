@@ -18,15 +18,19 @@ namespace QUANLITHUVIENWINFORM
         public The()
         {
             this.Muons = new HashSet<Muon>();
+            this.YeuCauMuons = new HashSet<YeuCauMuon>();
         }
     
         public int MaThe { get; set; }
         public System.DateTime NgayBatDau { get; set; }
         public System.DateTime NgayKetThuc { get; set; }
         public string GhiChu { get; set; }
+        public int MaDG { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Muon> Muons { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<YeuCauMuon> YeuCauMuons { get; set; }
         public virtual DocGia DocGia { get; set; }
     }
 }

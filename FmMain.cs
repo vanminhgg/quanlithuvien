@@ -70,5 +70,17 @@ namespace QUANLITHUVIENWINFORM
             FmNXB fmNXB = new FmNXB();
             fmNXB.Show();
         }
+
+        private void yêuCầuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FmYeuCau fmYeuCau = new FmYeuCau();
+            fmYeuCau.Show();
+        }
+
+        private void trảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FmTra fmTra = new FmTra();
+            fmTra.Show();
+        }
     }
 }

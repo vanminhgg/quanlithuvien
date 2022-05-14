@@ -14,12 +14,18 @@ namespace QUANLITHUVIENWINFORM
     
     public partial class DocGia
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public DocGia()
+        {
+            this.Thes = new HashSet<The>();
+        }
+    
         public int MaDG { get; set; }
         public string TenDG { get; set; }
         public string DiaChi { get; set; }
         public string SDT { get; set; }
-        public int MaThe { get; set; }
     
-        public virtual The The { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<The> Thes { get; set; }
     }
 }

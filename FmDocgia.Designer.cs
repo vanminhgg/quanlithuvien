@@ -32,9 +32,11 @@ namespace QUANLITHUVIENWINFORM
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ptbSearch = new System.Windows.Forms.PictureBox();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.dgvDocgia = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtMathe = new System.Windows.Forms.TextBox();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
             this.lbNXB = new System.Windows.Forms.Label();
             this.lbTacgia = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
@@ -43,11 +45,9 @@ namespace QUANLITHUVIENWINFORM
             this.txtDiachi = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtMathe = new System.Windows.Forms.TextBox();
+            this.ptbSearch = new System.Windows.Forms.PictureBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.dgvDocgia = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).BeginInit();
@@ -96,98 +96,22 @@ namespace QUANLITHUVIENWINFORM
             this.panel2.Size = new System.Drawing.Size(679, 373);
             this.panel2.TabIndex = 2;
             // 
-            // ptbSearch
+            // label2
             // 
-            this.ptbSearch.Image = global::QUANLITHUVIENWINFORM.Properties.Resources._49116;
-            this.ptbSearch.Location = new System.Drawing.Point(185, 15);
-            this.ptbSearch.Name = "ptbSearch";
-            this.ptbSearch.Size = new System.Drawing.Size(26, 20);
-            this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbSearch.TabIndex = 5;
-            this.ptbSearch.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(335, 261);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 15);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Mã thẻ";
             // 
-            // txtSearch
+            // txtMathe
             // 
-            this.txtSearch.Location = new System.Drawing.Point(0, 15);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(179, 20);
-            this.txtSearch.TabIndex = 4;
-            // 
-            // dgvDocgia
-            // 
-            this.dgvDocgia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDocgia.Location = new System.Drawing.Point(0, 41);
-            this.dgvDocgia.Name = "dgvDocgia";
-            this.dgvDocgia.Size = new System.Drawing.Size(321, 320);
-            this.dgvDocgia.TabIndex = 3;
-            // 
-            // lbNXB
-            // 
-            this.lbNXB.AutoSize = true;
-            this.lbNXB.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNXB.Location = new System.Drawing.Point(335, 217);
-            this.lbNXB.Name = "lbNXB";
-            this.lbNXB.Size = new System.Drawing.Size(26, 15);
-            this.lbNXB.TabIndex = 23;
-            this.lbNXB.Text = "SDT";
-            // 
-            // lbTacgia
-            // 
-            this.lbTacgia.AutoSize = true;
-            this.lbTacgia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTacgia.Location = new System.Drawing.Point(335, 175);
-            this.lbTacgia.Name = "lbTacgia";
-            this.lbTacgia.Size = new System.Drawing.Size(43, 15);
-            this.lbTacgia.TabIndex = 22;
-            this.lbTacgia.Text = "Địa chỉ";
-            // 
-            // lbName
-            // 
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(335, 131);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(67, 15);
-            this.lbName.TabIndex = 21;
-            this.lbName.Text = "Tên đọc giả";
-            // 
-            // lbId
-            // 
-            this.lbId.AutoSize = true;
-            this.lbId.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbId.Location = new System.Drawing.Point(335, 88);
-            this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(66, 15);
-            this.lbId.TabIndex = 20;
-            this.lbId.Text = "Mã đọc giả";
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(407, 215);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(210, 20);
-            this.txtSDT.TabIndex = 19;
-            // 
-            // txtDiachi
-            // 
-            this.txtDiachi.Location = new System.Drawing.Point(407, 173);
-            this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(210, 20);
-            this.txtDiachi.TabIndex = 18;
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(407, 129);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(210, 20);
-            this.txtName.TabIndex = 17;
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(407, 86);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(210, 20);
-            this.txtId.TabIndex = 16;
+            this.txtMathe.Location = new System.Drawing.Point(407, 259);
+            this.txtMathe.Name = "txtMathe";
+            this.txtMathe.Size = new System.Drawing.Size(210, 20);
+            this.txtMathe.TabIndex = 27;
             // 
             // btnXoa
             // 
@@ -231,22 +155,98 @@ namespace QUANLITHUVIENWINFORM
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // lbNXB
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(335, 261);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 15);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Mã thẻ";
+            this.lbNXB.AutoSize = true;
+            this.lbNXB.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNXB.Location = new System.Drawing.Point(335, 217);
+            this.lbNXB.Name = "lbNXB";
+            this.lbNXB.Size = new System.Drawing.Size(26, 15);
+            this.lbNXB.TabIndex = 23;
+            this.lbNXB.Text = "SDT";
             // 
-            // txtMathe
+            // lbTacgia
             // 
-            this.txtMathe.Location = new System.Drawing.Point(407, 259);
-            this.txtMathe.Name = "txtMathe";
-            this.txtMathe.Size = new System.Drawing.Size(210, 20);
-            this.txtMathe.TabIndex = 27;
+            this.lbTacgia.AutoSize = true;
+            this.lbTacgia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTacgia.Location = new System.Drawing.Point(335, 175);
+            this.lbTacgia.Name = "lbTacgia";
+            this.lbTacgia.Size = new System.Drawing.Size(43, 15);
+            this.lbTacgia.TabIndex = 22;
+            this.lbTacgia.Text = "Địa chỉ";
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Location = new System.Drawing.Point(335, 131);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(67, 15);
+            this.lbName.TabIndex = 21;
+            this.lbName.Text = "Tên độc giả";
+            // 
+            // lbId
+            // 
+            this.lbId.AutoSize = true;
+            this.lbId.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbId.Location = new System.Drawing.Point(335, 88);
+            this.lbId.Name = "lbId";
+            this.lbId.Size = new System.Drawing.Size(66, 15);
+            this.lbId.TabIndex = 20;
+            this.lbId.Text = "Mã độc giả";
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(407, 215);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(210, 20);
+            this.txtSDT.TabIndex = 19;
+            // 
+            // txtDiachi
+            // 
+            this.txtDiachi.Location = new System.Drawing.Point(407, 173);
+            this.txtDiachi.Name = "txtDiachi";
+            this.txtDiachi.Size = new System.Drawing.Size(210, 20);
+            this.txtDiachi.TabIndex = 18;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(407, 129);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(210, 20);
+            this.txtName.TabIndex = 17;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(407, 86);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(210, 20);
+            this.txtId.TabIndex = 16;
+            // 
+            // ptbSearch
+            // 
+            this.ptbSearch.Image = global::QUANLITHUVIENWINFORM.Properties.Resources._49116;
+            this.ptbSearch.Location = new System.Drawing.Point(185, 15);
+            this.ptbSearch.Name = "ptbSearch";
+            this.ptbSearch.Size = new System.Drawing.Size(26, 20);
+            this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbSearch.TabIndex = 5;
+            this.ptbSearch.TabStop = false;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(0, 15);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(179, 20);
+            this.txtSearch.TabIndex = 4;
+            // 
+            // dgvDocgia
+            // 
+            this.dgvDocgia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDocgia.Location = new System.Drawing.Point(0, 41);
+            this.dgvDocgia.Name = "dgvDocgia";
+            this.dgvDocgia.Size = new System.Drawing.Size(321, 320);
+            this.dgvDocgia.TabIndex = 3;
             // 
             // FmDocgia
             // 
