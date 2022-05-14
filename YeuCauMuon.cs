@@ -12,28 +12,19 @@ namespace QUANLITHUVIENWINFORM
     using System;
     using System.Collections.Generic;
     
-    public partial class Sach
+    public partial class YeuCauMuon
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Sach()
+        public YeuCauMuon()
         {
-            this.ChiTietMuons = new HashSet<ChiTietMuon>();
             this.ChiTietYeuCaus = new HashSet<ChiTietYeuCau>();
         }
     
-        public int MaSach { get; set; }
-        public int MaNXB { get; set; }
-        public int MaTheLoai { get; set; }
-        public int MaTacGia { get; set; }
-        public string TenSach { get; set; }
-        public string NamXB { get; set; }
-        public string SoLuong { get; set; }
+        public int MaYC { get; set; }
+        public int MaThe { get; set; }
+        public System.DateTime NgayYeuCau { get; set; }
     
-        public virtual NXB NXB { get; set; }
-        public virtual TheLoai TheLoai { get; set; }
-        public virtual TacGia TacGia { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietMuon> ChiTietMuons { get; set; }
+        public virtual The The { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietYeuCau> ChiTietYeuCaus { get; set; }
     }

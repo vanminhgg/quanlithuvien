@@ -33,5 +33,8 @@ namespace QUANLITHUVIENWINFORM
         public virtual DbSet<Muon> Muons { get; set; }
         public virtual DbSet<DocGia> DocGias { get; set; }
         public virtual DbSet<ChiTietMuon> ChiTietMuons { get; set; }
+        public virtual DbSet<YeuCauMuon> YeuCauMuons { get; set; }
+        public virtual DbSet<ChiTietYeuCau> ChiTietYeuCaus { get; set; }
+        public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
     }
 }
