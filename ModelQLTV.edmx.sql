@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/07/2022 13:05:45
--- Generated from EDMX file: D:\windows\QLTV\quanlithuvien\ModelQLTV.edmx
+-- Date Created: 05/14/2022 13:44:44
+-- Generated from EDMX file: D:\winform\QUANLITHUVIENWINFORM\ModelQLTV.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -17,11 +17,56 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_NXBSach]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Saches] DROP CONSTRAINT [FK_NXBSach];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TheLoaiSach]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Saches] DROP CONSTRAINT [FK_TheLoaiSach];
+GO
+IF OBJECT_ID(N'[dbo].[FK_SachTacGia]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Saches] DROP CONSTRAINT [FK_SachTacGia];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TheMuon]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Muons] DROP CONSTRAINT [FK_TheMuon];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TheDocGia]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Thes] DROP CONSTRAINT [FK_TheDocGia];
+GO
+IF OBJECT_ID(N'[dbo].[FK_MuonChiTietMuon]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ChiTietMuons] DROP CONSTRAINT [FK_MuonChiTietMuon];
+GO
+IF OBJECT_ID(N'[dbo].[FK_SachChiTietMuon]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ChiTietMuons] DROP CONSTRAINT [FK_SachChiTietMuon];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[NXBs]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[NXBs];
+GO
+IF OBJECT_ID(N'[dbo].[TheLoais]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TheLoais];
+GO
+IF OBJECT_ID(N'[dbo].[TacGias]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TacGias];
+GO
+IF OBJECT_ID(N'[dbo].[Saches]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Saches];
+GO
+IF OBJECT_ID(N'[dbo].[Thes]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Thes];
+GO
+IF OBJECT_ID(N'[dbo].[Muons]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Muons];
+GO
+IF OBJECT_ID(N'[dbo].[DocGias]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[DocGias];
+GO
+IF OBJECT_ID(N'[dbo].[ChiTietMuons]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ChiTietMuons];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -55,7 +100,8 @@ CREATE TABLE [dbo].[Saches] (
     [MaTheLoai] int  NOT NULL,
     [MaTacGia] int  NOT NULL,
     [TenSach] nvarchar(max)  NOT NULL,
-    [NamXB] nvarchar(max)  NOT NULL
+    [NamXB] nvarchar(max)  NOT NULL,
+    [SoLuong] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -65,7 +111,7 @@ CREATE TABLE [dbo].[Thes] (
     [NgayBatDau] datetime  NOT NULL,
     [NgayKetThuc] datetime  NOT NULL,
     [GhiChu] nvarchar(max)  NULL,
-    [DocGia_MaDG] int  NOT NULL
+    [MaDG] int  NOT NULL
 );
 GO
 
@@ -83,18 +129,42 @@ CREATE TABLE [dbo].[DocGias] (
     [MaDG] int IDENTITY(1,1) NOT NULL,
     [TenDG] nvarchar(max)  NOT NULL,
     [DiaChi] nvarchar(max)  NULL,
-    [SDT] nvarchar(max)  NULL,
-    [MaThe] int  NOT NULL
+    [SDT] nvarchar(max)  NULL
 );
 GO
 
 -- Creating table 'ChiTietMuons'
 CREATE TABLE [dbo].[ChiTietMuons] (
     [MaMuon] int  NOT NULL,
-    [SachMaSach] int  NOT NULL,
+    [MaSach] int  NOT NULL,
     [DaTra] int  NOT NULL,
     [NgayTra] datetime  NULL,
-    [NgayHetHan] datetime  NOT NULL
+    [NgayHetHan] datetime  NOT NULL,
+    [TinhTrangSach] nvarchar(max)  NULL
+);
+GO
+
+-- Creating table 'YeuCauMuons'
+CREATE TABLE [dbo].[YeuCauMuons] (
+    [MaYC] int IDENTITY(1,1) NOT NULL,
+    [MaThe] int  NOT NULL,
+    [NgayYeuCau] datetime  NOT NULL
+);
+GO
+
+-- Creating table 'ChiTietYeuCaus'
+CREATE TABLE [dbo].[ChiTietYeuCaus] (
+    [MaYC] int  NOT NULL,
+    [MaSach] int  NOT NULL,
+    [SoLuong] int  NOT NULL
+);
+GO
+
+-- Creating table 'TaiKhoans'
+CREATE TABLE [dbo].[TaiKhoans] (
+    [MaTaiKhoan] int IDENTITY(1,1) NOT NULL,
+    [TenDangNhap] nvarchar(max)  NOT NULL,
+    [MatKhau] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -144,10 +214,28 @@ ADD CONSTRAINT [PK_DocGias]
     PRIMARY KEY CLUSTERED ([MaDG] ASC);
 GO
 
--- Creating primary key on [SachMaSach], [MaMuon] in table 'ChiTietMuons'
+-- Creating primary key on [MaSach], [MaMuon] in table 'ChiTietMuons'
 ALTER TABLE [dbo].[ChiTietMuons]
 ADD CONSTRAINT [PK_ChiTietMuons]
-    PRIMARY KEY CLUSTERED ([SachMaSach], [MaMuon] ASC);
+    PRIMARY KEY CLUSTERED ([MaSach], [MaMuon] ASC);
+GO
+
+-- Creating primary key on [MaYC] in table 'YeuCauMuons'
+ALTER TABLE [dbo].[YeuCauMuons]
+ADD CONSTRAINT [PK_YeuCauMuons]
+    PRIMARY KEY CLUSTERED ([MaYC] ASC);
+GO
+
+-- Creating primary key on [MaYC], [MaSach] in table 'ChiTietYeuCaus'
+ALTER TABLE [dbo].[ChiTietYeuCaus]
+ADD CONSTRAINT [PK_ChiTietYeuCaus]
+    PRIMARY KEY CLUSTERED ([MaYC], [MaSach] ASC);
+GO
+
+-- Creating primary key on [MaTaiKhoan] in table 'TaiKhoans'
+ALTER TABLE [dbo].[TaiKhoans]
+ADD CONSTRAINT [PK_TaiKhoans]
+    PRIMARY KEY CLUSTERED ([MaTaiKhoan] ASC);
 GO
 
 -- --------------------------------------------------
@@ -214,21 +302,6 @@ ON [dbo].[Muons]
     ([MaThe]);
 GO
 
--- Creating foreign key on [DocGia_MaDG] in table 'Thes'
-ALTER TABLE [dbo].[Thes]
-ADD CONSTRAINT [FK_TheDocGia]
-    FOREIGN KEY ([DocGia_MaDG])
-    REFERENCES [dbo].[DocGias]
-        ([MaDG])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_TheDocGia'
-CREATE INDEX [IX_FK_TheDocGia]
-ON [dbo].[Thes]
-    ([DocGia_MaDG]);
-GO
-
 -- Creating foreign key on [MaMuon] in table 'ChiTietMuons'
 ALTER TABLE [dbo].[ChiTietMuons]
 ADD CONSTRAINT [FK_MuonChiTietMuon]
@@ -244,13 +317,67 @@ ON [dbo].[ChiTietMuons]
     ([MaMuon]);
 GO
 
--- Creating foreign key on [SachMaSach] in table 'ChiTietMuons'
+-- Creating foreign key on [MaSach] in table 'ChiTietMuons'
 ALTER TABLE [dbo].[ChiTietMuons]
 ADD CONSTRAINT [FK_SachChiTietMuon]
-    FOREIGN KEY ([SachMaSach])
+    FOREIGN KEY ([MaSach])
     REFERENCES [dbo].[Saches]
         ([MaSach])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating foreign key on [MaThe] in table 'YeuCauMuons'
+ALTER TABLE [dbo].[YeuCauMuons]
+ADD CONSTRAINT [FK_YeuCauMuonThe]
+    FOREIGN KEY ([MaThe])
+    REFERENCES [dbo].[Thes]
+        ([MaThe])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_YeuCauMuonThe'
+CREATE INDEX [IX_FK_YeuCauMuonThe]
+ON [dbo].[YeuCauMuons]
+    ([MaThe]);
+GO
+
+-- Creating foreign key on [MaYC] in table 'ChiTietYeuCaus'
+ALTER TABLE [dbo].[ChiTietYeuCaus]
+ADD CONSTRAINT [FK_YeuCauMuonChiTietYeuCau]
+    FOREIGN KEY ([MaYC])
+    REFERENCES [dbo].[YeuCauMuons]
+        ([MaYC])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating foreign key on [MaSach] in table 'ChiTietYeuCaus'
+ALTER TABLE [dbo].[ChiTietYeuCaus]
+ADD CONSTRAINT [FK_SachChiTietYeuCau]
+    FOREIGN KEY ([MaSach])
+    REFERENCES [dbo].[Saches]
+        ([MaSach])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_SachChiTietYeuCau'
+CREATE INDEX [IX_FK_SachChiTietYeuCau]
+ON [dbo].[ChiTietYeuCaus]
+    ([MaSach]);
+GO
+
+-- Creating foreign key on [MaDG] in table 'Thes'
+ALTER TABLE [dbo].[Thes]
+ADD CONSTRAINT [FK_TheDocGia]
+    FOREIGN KEY ([MaDG])
+    REFERENCES [dbo].[DocGias]
+        ([MaDG])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_TheDocGia'
+CREATE INDEX [IX_FK_TheDocGia]
+ON [dbo].[Thes]
+    ([MaDG]);
 GO
 
 -- --------------------------------------------------

@@ -1,7 +1,6 @@
 D:\winform\QUANLITHUVIENWINFORM\bin\Debug\QUANLITHUVIENWINFORM.exe.config
 D:\winform\QUANLITHUVIENWINFORM\bin\Debug\QUANLITHUVIENWINFORM.exe
 D:\winform\QUANLITHUVIENWINFORM\bin\Debug\QUANLITHUVIENWINFORM.pdb
-D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.csproj.AssemblyReference.cache
 D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.CRUD.resources
 D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.FmDocgia.resources
 D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.FmMuon.resources
@@ -43,6 +42,13 @@ D:\windows\QLTV\quanlithuvien\bin\Debug\EntityFramework.SqlServer.dll
 D:\windows\QLTV\quanlithuvien\bin\Debug\EntityFramework.xml
 D:\windows\QLTV\quanlithuvien\bin\Debug\EntityFramework.SqlServer.xml
 D:\windows\QLTV\quanlithuvien\obj\Debug\QUANLITHUVIENWINFORM.csproj.CopyComplete
+<<<<<<< HEAD
+D:\winform\QUANLITHUVIENWINFORM\bin\Debug\EntityFramework.dll
+D:\winform\QUANLITHUVIENWINFORM\bin\Debug\EntityFramework.SqlServer.dll
+D:\winform\QUANLITHUVIENWINFORM\bin\Debug\EntityFramework.xml
+D:\winform\QUANLITHUVIENWINFORM\bin\Debug\EntityFramework.SqlServer.xml
+D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.csproj.CopyComplete
+=======
 D:\ltwin\endproj\bin\Debug\QUANLITHUVIENWINFORM.exe.config
 D:\ltwin\endproj\bin\Debug\QUANLITHUVIENWINFORM.exe
 D:\ltwin\endproj\bin\Debug\QUANLITHUVIENWINFORM.pdb
@@ -66,3 +72,10 @@ D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.Properties.Resources.resources
 D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.csproj.GenerateResource.Cache
 D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.exe
 D:\ltwin\endproj\obj\Debug\QUANLITHUVIENWINFORM.pdb
+>>>>>>> b7116f761570c2773c09b0e2770cb280b3b0f556
+D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.csproj.AssemblyReference.cache
+D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.AppDocGia.resources
+D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.FmChiTietMuon.resources
+D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.FmThemChiTietMuon.resources
+D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.FmTra.resources
+D:\winform\QUANLITHUVIENWINFORM\obj\Debug\QUANLITHUVIENWINFORM.FmYeuCau.resources

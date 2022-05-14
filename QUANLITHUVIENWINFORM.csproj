@@ -42,6 +42,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -56,17 +57,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppDocGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppDocGia.Designer.cs">
+      <DependentUpon>AppDocGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChiTietMuon.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
-    <Compile Include="CRUD.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CRUD.Designer.cs">
-      <DependentUpon>CRUD.cs</DependentUpon>
+    <Compile Include="ChiTietYeuCau.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
     <Compile Include="DocGia.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FmChiTietMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmChiTietMuon.Designer.cs">
+      <DependentUpon>FmChiTietMuon.cs</DependentUpon>
     </Compile>
     <Compile Include="FmDocgia.cs">
       <SubType>Form</SubType>
@@ -104,17 +114,35 @@
     <Compile Include="FmTheLoai.Designer.cs">
       <DependentUpon>FmTheLoai.cs</DependentUpon>
     </Compile>
+    <Compile Include="FmThemChiTietMuon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmThemChiTietMuon.Designer.cs">
+      <DependentUpon>FmThemChiTietMuon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmTheTV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FmTheTV.Designer.cs">
       <DependentUpon>FmTheTV.cs</DependentUpon>
     </Compile>
+    <Compile Include="FmTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmTra.Designer.cs">
+      <DependentUpon>FmTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmTTTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FmTTTaiKhoan.Designer.cs">
       <DependentUpon>FmTTTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FmYeuCau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmYeuCau.Designer.cs">
+      <DependentUpon>FmYeuCau.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -157,14 +185,23 @@
     <Compile Include="TacGia.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
+    <Compile Include="TaiKhoan.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
     <Compile Include="The.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
     <Compile Include="TheLoai.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CRUD.resx">
-      <DependentUpon>CRUD.cs</DependentUpon>
+    <Compile Include="YeuCauMuon.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AppDocGia.resx">
+      <DependentUpon>AppDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmChiTietMuon.resx">
+      <DependentUpon>FmChiTietMuon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FmDocgia.resx">
       <DependentUpon>FmDocgia.cs</DependentUpon>
@@ -184,11 +221,20 @@
     <EmbeddedResource Include="FmTheLoai.resx">
       <DependentUpon>FmTheLoai.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FmThemChiTietMuon.resx">
+      <DependentUpon>FmThemChiTietMuon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FmTheTV.resx">
       <DependentUpon>FmTheTV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FmTra.resx">
+      <DependentUpon>FmTra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FmTTTaiKhoan.resx">
       <DependentUpon>FmTTTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmYeuCau.resx">
+      <DependentUpon>FmYeuCau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
