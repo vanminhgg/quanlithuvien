@@ -66,6 +66,9 @@
     <Compile Include="ChiTietMuon.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
+    <Compile Include="ChiTietYeuCau.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
     <Compile Include="DocGia.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
@@ -179,13 +182,25 @@
     <Compile Include="Sach.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
     <Compile Include="TacGia.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaiKhoan.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
     <Compile Include="The.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
     <Compile Include="TheLoai.cs">
+      <DependentUpon>ModelQLTV.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YeuCauMuon.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AppDocGia.resx">

@@ -34,6 +34,7 @@
           <ScalarProperty Name="MaTacGia" ColumnName="MaTacGia" />
           <ScalarProperty Name="TenSach" ColumnName="TenSach" />
           <ScalarProperty Name="NamXB" ColumnName="NamXB" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -44,6 +45,7 @@
           <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
           <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
           <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="MaDG" ColumnName="MaDG" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -64,28 +66,47 @@
           <ScalarProperty Name="TenDG" ColumnName="TenDG" />
           <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
           <ScalarProperty Name="SDT" ColumnName="SDT" />
-          <ScalarProperty Name="MaThe" ColumnName="MaThe" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ChiTietMuons">
       <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.ChiTietMuon)">
         <MappingFragment StoreEntitySet="ChiTietMuons">
-          <ScalarProperty Name="SachMaSach" ColumnName="SachMaSach" />
+          <ScalarProperty Name="MaSach" ColumnName="MaSach" />
           <ScalarProperty Name="MaMuon" ColumnName="MaMuon" />
           <ScalarProperty Name="DaTra" ColumnName="DaTra" />
           <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
           <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
+          <ScalarProperty Name="TinhTrangSach" ColumnName="TinhTrangSach" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="TheDocGia" TypeName="ModelQLTV.TheDocGia" StoreEntitySet="Thes">
-      <EndProperty Name="DocGia">
-        <ScalarProperty Name="MaDG" ColumnName="DocGia_MaDG" />
-      </EndProperty>
-      <EndProperty Name="The">
-        <ScalarProperty Name="MaThe" ColumnName="MaThe" />
-      </EndProperty>
-    </AssociationSetMapping>
+    <EntitySetMapping Name="YeuCauMuons">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.YeuCauMuon)">
+        <MappingFragment StoreEntitySet="YeuCauMuons">
+          <ScalarProperty Name="MaYC" ColumnName="MaYC" />
+          <ScalarProperty Name="MaThe" ColumnName="MaThe" />
+          <ScalarProperty Name="NgayYeuCau" ColumnName="NgayYeuCau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietYeuCaus">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.ChiTietYeuCau)">
+        <MappingFragment StoreEntitySet="ChiTietYeuCaus">
+          <ScalarProperty Name="MaYC" ColumnName="MaYC" />
+          <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaiKhoans">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.TaiKhoan)">
+        <MappingFragment StoreEntitySet="TaiKhoans">
+          <ScalarProperty Name="MaTaiKhoan" ColumnName="MaTaiKhoan" />
+          <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

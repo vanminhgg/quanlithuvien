@@ -10,18 +10,13 @@
 namespace QUANLITHUVIENWINFORM
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class ChiTietMuon
+    public partial class sp_helpdiagrams_Result
     {
-        public int MaMuon { get; set; }
-        public int MaSach { get; set; }
-        public int DaTra { get; set; }
-        public Nullable<System.DateTime> NgayTra { get; set; }
-        public System.DateTime NgayHetHan { get; set; }
-        public string TinhTrangSach { get; set; }
-    
-        public virtual Muon Muon { get; set; }
-        public virtual Sach Sach { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }
