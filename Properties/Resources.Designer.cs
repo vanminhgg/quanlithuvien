@@ -69,5 +69,15 @@ namespace QUANLITHUVIENWINFORM.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _598a8e02f92ae717e65e670aaa8790ea {
+            get {
+                object obj = ResourceManager.GetObject("598a8e02f92ae717e65e670aaa8790ea", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
