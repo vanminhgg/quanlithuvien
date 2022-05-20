@@ -15,28 +15,65 @@ namespace QUANLITHUVIENWINFORM
         public FmMain()
         {
             InitializeComponent();
+
         }
+
 
         private void quảnLýSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FmSach fmSach = new FmSach();
-            fmSach.Show();
+            if (ActiveMdiChild != null)
+            {
+                ActiveMdiChild.Close();
+                FmSach fmSach = new FmSach();
+
+
+                fmSach.MdiParent = this;
+
+                fmSach.Show();
+            }
+            else
+            {
+                FmSach fmSach = new FmSach();
+
+
+                fmSach.MdiParent = this;
+
+                fmSach.Show();
+            }
+            
+
         }
 
         private void FmMain_Load(object sender, EventArgs e)
         {
-          
+            this.IsMdiContainer = true;
         }
 
         private void đọcGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FmDocgia fmDocgia = new FmDocgia();
-            fmDocgia.Show();
+            if (ActiveMdiChild != null)
+            {
+                ActiveMdiChild.Close();
+                FmDocgia fmDocgia = new FmDocgia();
+                fmDocgia.MdiParent = this;
+
+                fmDocgia.Show();
+            } else
+            {
+                FmDocgia fmDocgia = new FmDocgia();
+                fmDocgia.MdiParent = this;
+
+                fmDocgia.Show();
+
+            }    
+           
         }
 
         private void mượnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FmMuon fmMuon = new FmMuon();
+            fmMuon.MdiParent = this;
+            
             fmMuon.Show();
         }
 
