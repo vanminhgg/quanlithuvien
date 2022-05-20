@@ -29,7 +29,6 @@ namespace QUANLITHUVIENWINFORM
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quảnLýSáchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đọcGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mượnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,28 +40,9 @@ namespace QUANLITHUVIENWINFORM
             this.tácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nXBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yêuCầuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.quảnLýSáchToolStripMenuItem,
-            this.đọcGiảToolStripMenuItem,
-            this.mượnToolStripMenuItem,
-            this.trảToolStripMenuItem,
-            this.thốngKêToolStripMenuItem,
-            this.thôngTinTàiKhoảnToolStripMenuItem,
-            this.thôngTinTàiKhoảnToolStripMenuItem1,
-            this.theeToolStripMenuItem,
-            this.tácGiảToolStripMenuItem,
-            this.nXBToolStripMenuItem,
-            this.yêuCầuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(742, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // quảnLýSáchToolStripMenuItem
             // 
@@ -75,7 +55,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.đọcGiảToolStripMenuItem.Name = "đọcGiảToolStripMenuItem";
             this.đọcGiảToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.đọcGiảToolStripMenuItem.Text = "Đọc Giả";
+            this.đọcGiảToolStripMenuItem.Text = "Độc Giả";
             this.đọcGiảToolStripMenuItem.Click += new System.EventHandler(this.đọcGiảToolStripMenuItem_Click);
             // 
             // mượnToolStripMenuItem
@@ -140,11 +120,32 @@ namespace QUANLITHUVIENWINFORM
             this.yêuCầuToolStripMenuItem.Text = "Yêu cầu";
             this.yêuCầuToolStripMenuItem.Click += new System.EventHandler(this.yêuCầuToolStripMenuItem_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quảnLýSáchToolStripMenuItem,
+            this.đọcGiảToolStripMenuItem,
+            this.mượnToolStripMenuItem,
+            this.trảToolStripMenuItem,
+            this.thốngKêToolStripMenuItem,
+            this.thôngTinTàiKhoảnToolStripMenuItem,
+            this.thôngTinTàiKhoảnToolStripMenuItem1,
+            this.theeToolStripMenuItem,
+            this.tácGiảToolStripMenuItem,
+            this.nXBToolStripMenuItem,
+            this.yêuCầuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(742, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // FmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 329);
+            this.ClientSize = new System.Drawing.Size(742, 421);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FmMain";
@@ -159,7 +160,6 @@ namespace QUANLITHUVIENWINFORM
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem quảnLýSáchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đọcGiảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mượnToolStripMenuItem;
@@ -171,5 +171,6 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.ToolStripMenuItem tácGiảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nXBToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yêuCầuToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

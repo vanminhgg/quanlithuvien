@@ -26,8 +26,8 @@ namespace QUANLITHUVIENWINFORM
         public int MaTheLoai { get; set; }
         public int MaTacGia { get; set; }
         public string TenSach { get; set; }
-        public string NamXB { get; set; }
-        public string SoLuong { get; set; }
+        public int NamXB { get; set; }
+        public int SoLuong { get; set; }
     
         public virtual NXB NXB { get; set; }
         public virtual TheLoai TheLoai { get; set; }
