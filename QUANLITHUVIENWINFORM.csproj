@@ -295,6 +295,7 @@
       <LastGenOutput>ModelQLTV.cs</LastGenOutput>
       <DependentUpon>ModelQLTV.edmx</DependentUpon>
     </Content>
+    <None Include="Resources\598a8e02f92ae717e65e670aaa8790ea.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

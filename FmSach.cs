@@ -33,7 +33,7 @@ namespace QUANLITHUVIENWINFORM
             txtNamXB.Clear();
             txtSoluong.Clear();
             var listSach = (from sach in db.Saches select new { Id = sach.MaSach, Name = sach.TenSach, Tacgia = sach.TacGia.TenTacGia,Nxb = sach.NXB.TenNXB, Theloai = sach.TheLoai.TenTheLoai, Namxb = sach.NamXB, Soluong = sach.SoLuong }).ToList();
-            dgvSach.DataSource = listSach;
+            dgvSach.DataSource = listSach.Distinct().ToList();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -51,8 +51,8 @@ namespace QUANLITHUVIENWINFORM
                         MaTacGia = matg.MaTacGia,
                         MaNXB = manxb.MaNXB,
                         MaTheLoai = matl.MaTheLoai,
-                        NamXB = txtNamXB.Text.ToString(),
-                        SoLuong = txtSoluong.Text.ToString(),
+                        NamXB = Convert.ToInt32(txtNamXB.Text),
+                        SoLuong = Convert.ToInt32(txtSoluong.Text),
 
                     };
                     db.Saches.Add(sach);
@@ -156,5 +156,7 @@ namespace QUANLITHUVIENWINFORM
                 MessageBox.Show(err.Message);
             }
         }
+
+     
     }
 }

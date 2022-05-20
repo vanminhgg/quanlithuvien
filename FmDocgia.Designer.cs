@@ -32,6 +32,8 @@ namespace QUANLITHUVIENWINFORM
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -75,6 +77,8 @@ namespace QUANLITHUVIENWINFORM
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.txtEmail);
             this.panel2.Controls.Add(this.btnXoa);
             this.panel2.Controls.Add(this.btnSua);
             this.panel2.Controls.Add(this.btnThem);
@@ -95,6 +99,26 @@ namespace QUANLITHUVIENWINFORM
             this.panel2.Size = new System.Drawing.Size(905, 459);
             this.panel2.TabIndex = 2;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(509, 306);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Enabled = false;
+            this.txtEmail.Location = new System.Drawing.Point(605, 304);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(279, 22);
+            this.txtEmail.TabIndex = 27;
+            // 
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.Red;
@@ -102,7 +126,7 @@ namespace QUANLITHUVIENWINFORM
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnXoa.Location = new System.Drawing.Point(741, 367);
+            this.btnXoa.Location = new System.Drawing.Point(790, 357);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(81, 36);
@@ -118,7 +142,7 @@ namespace QUANLITHUVIENWINFORM
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnSua.Location = new System.Drawing.Point(616, 367);
+            this.btnSua.Location = new System.Drawing.Point(665, 357);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(81, 36);
@@ -134,7 +158,7 @@ namespace QUANLITHUVIENWINFORM
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnThem.Location = new System.Drawing.Point(488, 367);
+            this.btnThem.Location = new System.Drawing.Point(537, 357);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(81, 36);
@@ -147,7 +171,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.lbNXB.AutoSize = true;
             this.lbNXB.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNXB.Location = new System.Drawing.Point(460, 273);
+            this.lbNXB.Location = new System.Drawing.Point(509, 254);
             this.lbNXB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNXB.Name = "lbNXB";
             this.lbNXB.Size = new System.Drawing.Size(35, 20);
@@ -158,7 +182,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.lbTacgia.AutoSize = true;
             this.lbTacgia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTacgia.Location = new System.Drawing.Point(460, 221);
+            this.lbTacgia.Location = new System.Drawing.Point(509, 202);
             this.lbTacgia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTacgia.Name = "lbTacgia";
             this.lbTacgia.Size = new System.Drawing.Size(55, 20);
@@ -169,7 +193,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(460, 167);
+            this.lbName.Location = new System.Drawing.Point(509, 148);
             this.lbName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(86, 20);
@@ -180,7 +204,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.lbId.AutoSize = true;
             this.lbId.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbId.Location = new System.Drawing.Point(460, 114);
+            this.lbId.Location = new System.Drawing.Point(509, 95);
             this.lbId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbId.Name = "lbId";
             this.lbId.Size = new System.Drawing.Size(84, 20);
@@ -190,7 +214,7 @@ namespace QUANLITHUVIENWINFORM
             // txtSDT
             // 
             this.txtSDT.Enabled = false;
-            this.txtSDT.Location = new System.Drawing.Point(556, 271);
+            this.txtSDT.Location = new System.Drawing.Point(605, 252);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(279, 22);
@@ -199,7 +223,7 @@ namespace QUANLITHUVIENWINFORM
             // txtDiachi
             // 
             this.txtDiachi.Enabled = false;
-            this.txtDiachi.Location = new System.Drawing.Point(556, 219);
+            this.txtDiachi.Location = new System.Drawing.Point(605, 200);
             this.txtDiachi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.Size = new System.Drawing.Size(279, 22);
@@ -208,7 +232,7 @@ namespace QUANLITHUVIENWINFORM
             // txtName
             // 
             this.txtName.Enabled = false;
-            this.txtName.Location = new System.Drawing.Point(556, 165);
+            this.txtName.Location = new System.Drawing.Point(605, 146);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(279, 22);
@@ -217,7 +241,7 @@ namespace QUANLITHUVIENWINFORM
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(556, 112);
+            this.txtId.Location = new System.Drawing.Point(605, 93);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(279, 22);
@@ -249,7 +273,7 @@ namespace QUANLITHUVIENWINFORM
             this.dgvDocgia.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDocgia.Name = "dgvDocgia";
             this.dgvDocgia.RowHeadersWidth = 51;
-            this.dgvDocgia.Size = new System.Drawing.Size(428, 394);
+            this.dgvDocgia.Size = new System.Drawing.Size(489, 394);
             this.dgvDocgia.TabIndex = 3;
             this.dgvDocgia.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDocgia_CellMouseClick);
             // 
@@ -257,7 +281,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(905, 523);
+            this.ClientSize = new System.Drawing.Size(970, 576);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -293,5 +317,7 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dgvDocgia;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }

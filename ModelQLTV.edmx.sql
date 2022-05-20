@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/14/2022 18:59:40
--- Generated from EDMX file: D:\ltwin\endproj\ModelQLTV.edmx
+-- Date Created: 05/14/2022 19:45:07
+-- Generated from EDMX file: D:\windows\QLTV\quanlithuvien\ModelQLTV.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -17,73 +17,73 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[FK_MuonChiTietMuon]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[ChiTietMuons] DROP CONSTRAINT [FK_MuonChiTietMuon];
-GO
 IF OBJECT_ID(N'[dbo].[FK_NXBSach]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Saches] DROP CONSTRAINT [FK_NXBSach];
-GO
-IF OBJECT_ID(N'[dbo].[FK_SachChiTietMuon]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[ChiTietMuons] DROP CONSTRAINT [FK_SachChiTietMuon];
-GO
-IF OBJECT_ID(N'[dbo].[FK_SachChiTietYeuCau]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[ChiTietYeuCaus] DROP CONSTRAINT [FK_SachChiTietYeuCau];
-GO
-IF OBJECT_ID(N'[dbo].[FK_SachTacGia]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Saches] DROP CONSTRAINT [FK_SachTacGia];
-GO
-IF OBJECT_ID(N'[dbo].[FK_TheDocGia]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Thes] DROP CONSTRAINT [FK_TheDocGia];
 GO
 IF OBJECT_ID(N'[dbo].[FK_TheLoaiSach]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Saches] DROP CONSTRAINT [FK_TheLoaiSach];
 GO
+IF OBJECT_ID(N'[dbo].[FK_SachTacGia]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Saches] DROP CONSTRAINT [FK_SachTacGia];
+GO
 IF OBJECT_ID(N'[dbo].[FK_TheMuon]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Muons] DROP CONSTRAINT [FK_TheMuon];
+GO
+IF OBJECT_ID(N'[dbo].[FK_MuonChiTietMuon]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ChiTietMuons] DROP CONSTRAINT [FK_MuonChiTietMuon];
+GO
+IF OBJECT_ID(N'[dbo].[FK_SachChiTietMuon]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ChiTietMuons] DROP CONSTRAINT [FK_SachChiTietMuon];
+GO
+IF OBJECT_ID(N'[dbo].[FK_YeuCauMuonThe]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[YeuCauMuons] DROP CONSTRAINT [FK_YeuCauMuonThe];
 GO
 IF OBJECT_ID(N'[dbo].[FK_YeuCauMuonChiTietYeuCau]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ChiTietYeuCaus] DROP CONSTRAINT [FK_YeuCauMuonChiTietYeuCau];
 GO
-IF OBJECT_ID(N'[dbo].[FK_YeuCauMuonThe]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[YeuCauMuons] DROP CONSTRAINT [FK_YeuCauMuonThe];
+IF OBJECT_ID(N'[dbo].[FK_SachChiTietYeuCau]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ChiTietYeuCaus] DROP CONSTRAINT [FK_SachChiTietYeuCau];
+GO
+IF OBJECT_ID(N'[dbo].[FK_TheDocGia]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Thes] DROP CONSTRAINT [FK_TheDocGia];
 GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[ChiTietMuons]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[ChiTietMuons];
-GO
-IF OBJECT_ID(N'[dbo].[ChiTietYeuCaus]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[ChiTietYeuCaus];
-GO
-IF OBJECT_ID(N'[dbo].[DocGias]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[DocGias];
-GO
-IF OBJECT_ID(N'[dbo].[Muons]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Muons];
-GO
 IF OBJECT_ID(N'[dbo].[NXBs]', 'U') IS NOT NULL
     DROP TABLE [dbo].[NXBs];
-GO
-IF OBJECT_ID(N'[dbo].[Saches]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Saches];
-GO
-IF OBJECT_ID(N'[dbo].[TacGias]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[TacGias];
-GO
-IF OBJECT_ID(N'[dbo].[TaiKhoans]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[TaiKhoans];
 GO
 IF OBJECT_ID(N'[dbo].[TheLoais]', 'U') IS NOT NULL
     DROP TABLE [dbo].[TheLoais];
 GO
+IF OBJECT_ID(N'[dbo].[TacGias]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TacGias];
+GO
+IF OBJECT_ID(N'[dbo].[Saches]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Saches];
+GO
 IF OBJECT_ID(N'[dbo].[Thes]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Thes];
 GO
+IF OBJECT_ID(N'[dbo].[Muons]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Muons];
+GO
+IF OBJECT_ID(N'[dbo].[DocGias]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[DocGias];
+GO
+IF OBJECT_ID(N'[dbo].[ChiTietMuons]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ChiTietMuons];
+GO
 IF OBJECT_ID(N'[dbo].[YeuCauMuons]', 'U') IS NOT NULL
     DROP TABLE [dbo].[YeuCauMuons];
+GO
+IF OBJECT_ID(N'[dbo].[ChiTietYeuCaus]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ChiTietYeuCaus];
+GO
+IF OBJECT_ID(N'[dbo].[TaiKhoans]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[TaiKhoans];
 GO
 
 -- --------------------------------------------------
@@ -118,8 +118,8 @@ CREATE TABLE [dbo].[Saches] (
     [MaTheLoai] int  NOT NULL,
     [MaTacGia] int  NOT NULL,
     [TenSach] nvarchar(max)  NOT NULL,
-    [NamXB] nvarchar(max)  NOT NULL,
-    [SoLuong] nvarchar(max)  NOT NULL
+    [NamXB] int  NOT NULL,
+    [SoLuong] int  NOT NULL
 );
 GO
 
@@ -147,7 +147,8 @@ CREATE TABLE [dbo].[DocGias] (
     [MaDG] int IDENTITY(1,1) NOT NULL,
     [TenDG] nvarchar(max)  NOT NULL,
     [DiaChi] nvarchar(max)  NULL,
-    [SDT] nvarchar(max)  NULL
+    [SDT] nvarchar(max)  NULL,
+    [Email] nvarchar(max)  NOT NULL
 );
 GO
 

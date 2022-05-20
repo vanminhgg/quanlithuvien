@@ -30,7 +30,7 @@ namespace QUANLITHUVIENWINFORM
 
             dgvNXB.Columns["Id"].HeaderText = "Mã NXB";
             dgvNXB.Columns["Name"].HeaderText = "Tên NXB";
-            dgvNXB.Columns["Id"].Width = 50;
+            dgvNXB.Columns["Id"].Width = 70;
             dgvNXB.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
 
