@@ -24,22 +24,25 @@ namespace QUANLITHUVIENWINFORM
             txtName.Clear();
             txtDiachi.Clear();
             txtSDT.Clear();
+            txtEmail.Clear();
 
             var listDG = from dg in db.DocGias
-                         select new { Id = dg.MaDG, name = dg.TenDG, dc = dg.DiaChi, sdt = dg.SDT };
+                         select new { Id = dg.MaDG, name = dg.TenDG, dc = dg.DiaChi, sdt = dg.SDT, email = dg.Email };
             dgvDocgia.DataSource = listDG.ToList();
 
             dgvDocgia.Columns["Id"].HeaderText = "Mã Độc Giả";
             dgvDocgia.Columns["name"].HeaderText = "Tên Độc Giả";
             dgvDocgia.Columns["dc"].HeaderText = "Địa Chỉ";
             dgvDocgia.Columns["sdt"].HeaderText = "Số Điện Thoại";
+            dgvDocgia.Columns["email"].HeaderText = "Email";
 
             dgvDocgia.Columns["Id"].Width = 50;
             dgvDocgia.Columns["name"].Width = 100;
             dgvDocgia.Columns["dc"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvDocgia.Columns["sdt"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvDocgia.Columns["email"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
-            
+
 
         }
 
@@ -52,6 +55,7 @@ namespace QUANLITHUVIENWINFORM
                 txtName.Text = row.Cells[1].Value.ToString();
                 txtDiachi.Text = row.Cells[2].Value.ToString();
                 txtSDT.Text = row.Cells[3].Value.ToString();
+                txtEmail.Text = row.Cells[4].Value.ToString();
             }
         }
 
@@ -65,7 +69,8 @@ namespace QUANLITHUVIENWINFORM
                     {
                         TenDG = txtName.Text.ToString(),
                         DiaChi = txtDiachi.Text.ToString(),
-                        SDT = txtSDT.Text.ToString()
+                        SDT = txtSDT.Text.ToString(),
+                        Email = txtEmail.Text.ToString()
                     };
                     db.DocGias.Add(dg);
                     db.SaveChanges();
@@ -74,6 +79,7 @@ namespace QUANLITHUVIENWINFORM
                     txtName.Enabled = false;
                     txtDiachi.Enabled = false;
                     txtSDT.Enabled = false;
+                    txtEmail.Enabled = false;
                 }
                 else
                 {
@@ -81,6 +87,7 @@ namespace QUANLITHUVIENWINFORM
                     txtName.Enabled = true;
                     txtDiachi.Enabled = true;
                     txtSDT.Enabled = true;
+                    txtEmail.Enabled = true;
                 }
             }
             catch (Exception err)
@@ -100,6 +107,8 @@ namespace QUANLITHUVIENWINFORM
                     dg.TenDG = txtName.Text.ToString();
                     dg.DiaChi = txtDiachi.Text.ToString();
                     dg.SDT = txtSDT.Text.ToString();
+                    dg.Email = txtEmail.Text.ToString();
+
 
                     db.SaveChanges();
                     FmDocgia_Load(sender, e);
@@ -107,12 +116,14 @@ namespace QUANLITHUVIENWINFORM
                     txtName.Enabled = false;
                     txtDiachi.Enabled = false;
                     txtSDT.Enabled = false;
+                    txtEmail.Enabled = false;
                 }
                 else
                 {
                     txtName.Enabled = true;
                     txtDiachi.Enabled = true;
                     txtSDT.Enabled = true;
+                    txtEmail.Enabled = true;
                 }
             }
             catch (Exception err)

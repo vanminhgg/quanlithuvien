@@ -33,7 +33,7 @@ namespace QUANLITHUVIENWINFORM
             txtNamXB.Clear();
             txtSoluong.Clear();
             var listSach = (from sach in db.Saches select new { Id = sach.MaSach, Name = sach.TenSach, Tacgia = sach.TacGia.TenTacGia,Nxb = sach.NXB.TenNXB, Theloai = sach.TheLoai.TenTheLoai, Namxb = sach.NamXB, Soluong = sach.SoLuong }).ToList();
-            dgvSach.DataSource = listSach;
+            dgvSach.DataSource = listSach.Distinct().ToList();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
