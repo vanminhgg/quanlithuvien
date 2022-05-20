@@ -88,7 +88,7 @@
       <PropertyRef Name="MaNXB" />
     </Key>
     <Property Name="MaNXB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TenNXB" Type="String" Nullable="false" />
+    <Property Name="TenNXB" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Saches" Relationship="ModelQLTV.NXBSach" FromRole="NXB" ToRole="Sach" />
   </EntityType>
   <EntityType Name="TheLoai">
@@ -201,9 +201,9 @@
       <PropertyRef Name="MaDG" />
     </Key>
     <Property Name="MaDG" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="TenDG" Type="String" Nullable="false" />
-    <Property Name="DiaChi" Type="String" Nullable="true" />
-    <Property Name="SDT" Type="String" Nullable="true" />
+    <Property Name="TenDG" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DiaChi" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="SDT" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
     <NavigationProperty Name="Thes" Relationship="ModelQLTV.TheDocGia" FromRole="DocGia" ToRole="The" />
     <Property Name="Email" Type="String" Nullable="false" />
   </EntityType>
@@ -252,7 +252,7 @@
     <Property Name="MaYC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <NavigationProperty Name="The" Relationship="ModelQLTV.YeuCauMuonThe" FromRole="YeuCauMuon" ToRole="The" />
     <Property Name="MaThe" Type="Int32" Nullable="false" />
-    <Property Name="NgayYeuCau" Type="DateTime" Nullable="false" />
+    <Property Name="NgayYeuCau" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="ChiTietYeuCaus" Relationship="ModelQLTV.YeuCauMuonChiTietYeuCau" FromRole="YeuCauMuon" ToRole="ChiTietYeuCau" />
   </EntityType>
   <Association Name="YeuCauMuonThe">

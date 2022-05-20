@@ -69,6 +69,7 @@
     <Compile Include="ChiTietYeuCau.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data.cs" />
     <Compile Include="DocGia.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
