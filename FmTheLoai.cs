@@ -117,5 +117,24 @@ namespace QUANLITHUVIENWINFORM
                 txtName.Text = row.Cells[1].Value.ToString();
             }
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text != "")
+            {
+                var listTimKiem = (from tl in db.TheLoais
+                                   where tl.TenTheLoai.Contains(txtSearch.Text.ToString())
+                                   select new { id = tl.MaTheLoai, ten = tl.TenTheLoai });
+
+                dgvTheLoai.DataSource = listTimKiem.ToList();
+
+
+            }
+            else
+            {
+                this.FmTheLoai_Load(sender, e);
+
+            }
+        }
     }
 }

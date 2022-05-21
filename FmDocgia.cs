@@ -151,5 +151,23 @@ namespace QUANLITHUVIENWINFORM
                 }
             }
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text != "")
+            {
+                var listTimKiem = (from dg in db.DocGias
+                                   where dg.TenDG.Contains(txtSearch.Text.ToString())
+                                   select new { Id = dg.MaDG, name = dg.TenDG, dc = dg.DiaChi, sdt = dg.SDT, email = dg.Email });
+
+                dgvDocgia.DataSource = listTimKiem.Distinct().ToList();
+
+            }
+            else
+            {
+                this.FmDocgia_Load(sender, e);
+
+            }
+        }
     }
 }

@@ -157,6 +157,23 @@ namespace QUANLITHUVIENWINFORM
             }
         }
 
-     
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSearch.Text != "")
+            {
+                var listTimKiem = (from sach in db.Saches
+                                   where sach.TenSach.Contains(txtSearch.Text.ToString())
+                                   select new { Id = sach.MaSach, Name = sach.TenSach, Tacgia = sach.TacGia.TenTacGia, Nxb = sach.NXB.TenNXB, Theloai = sach.TheLoai.TenTheLoai, Namxb = sach.NamXB, Soluong = sach.SoLuong }).ToList();
+
+                dgvSach.DataSource = listTimKiem.Distinct().ToList();
+
+            }
+            else
+            {
+                this.FmSach_Load(sender, e);
+
+            }
+            
+        }
     }
 }
