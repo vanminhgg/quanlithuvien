@@ -12,6 +12,7 @@ namespace QUANLITHUVIENWINFORM
 {
     public partial class FmMain : Form
     {
+        QLTVContext db = new QLTVContext();
         public FmMain()
         {
             InitializeComponent();
@@ -21,59 +22,24 @@ namespace QUANLITHUVIENWINFORM
 
         private void quảnLýSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)
-            {
-                ActiveMdiChild.Close();
-                FmSach fmSach = new FmSach();
-
-
-                fmSach.MdiParent = this;
-
-                fmSach.Show();
-            }
-            else
-            {
-                FmSach fmSach = new FmSach();
-
-
-                fmSach.MdiParent = this;
-
-                fmSach.Show();
-            }
-            
-
+            FmSach fmSach = new FmSach();
+            fmSach.Show();
         }
 
         private void FmMain_Load(object sender, EventArgs e)
         {
-            this.IsMdiContainer = true;
+            var totalBook = (from sach in db.Saches select sach.SoLuong);
         }
 
         private void đọcGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)
-            {
-                ActiveMdiChild.Close();
-                FmDocgia fmDocgia = new FmDocgia();
-                fmDocgia.MdiParent = this;
-
-                fmDocgia.Show();
-            } else
-            {
-                FmDocgia fmDocgia = new FmDocgia();
-                fmDocgia.MdiParent = this;
-
-                fmDocgia.Show();
-
-            }    
-           
+            FmDocgia fmDocgia = new FmDocgia();
+            fmDocgia.Show();
         }
 
         private void mượnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FmMuon fmMuon = new FmMuon();
-            fmMuon.MdiParent = this;
-            
             fmMuon.Show();
         }
 
