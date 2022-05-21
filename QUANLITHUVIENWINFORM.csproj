@@ -69,6 +69,7 @@
     <Compile Include="ChiTietYeuCau.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
+    <Compile Include="Data.cs" />
     <Compile Include="DocGia.cs">
       <DependentUpon>ModelQLTV.tt</DependentUpon>
     </Compile>
@@ -294,6 +295,10 @@
       <LastGenOutput>ModelQLTV.cs</LastGenOutput>
       <DependentUpon>ModelQLTV.edmx</DependentUpon>
     </Content>
+    <None Include="Resources\password.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\libary.png" />
+    <None Include="Resources\person-fill.png" />
     <None Include="Resources\598a8e02f92ae717e65e670aaa8790ea.jpg" />
   </ItemGroup>
   <ItemGroup>

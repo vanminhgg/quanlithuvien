@@ -16,7 +16,11 @@ namespace QUANLITHUVIENWINFORM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new FormLogin());//vanminh
+=======
+            Application.Run(new FmMain());
+>>>>>>> dfbf3cfa78741e52c3d552ee975de03d39f3ad7d
         }
     }
 }

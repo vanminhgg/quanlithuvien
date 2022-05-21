@@ -74,34 +74,55 @@ namespace QUANLITHUVIENWINFORM
         {
             if (rbtnDocgia.Checked)
             {
-                label1.Visible = true;
-                lbPassword.Visible = false;
+                txbUsername.Text = "Nhập mã thẻ";
                 txbUsername.Visible = true;
                 txbPassword.Visible = false;
-                label1.Text = "Mã thẻ";
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = false;
+                rbtnDocgia.Checked = true;
+                panel2.Visible = true;
+                panel3.Visible = false;
             }
             if (rbtnNhanvien.Checked)
             {
-                label1.Visible = true;
-                lbPassword.Visible = true;
+                txbUsername.Text = "Nhập tên đăng nhập";
+                txbPassword.Text = " Nhập mật khẩu";
                 txbUsername.Visible = true;
                 txbPassword.Visible = true;
-                label1.Text = "Tài khoản";
+                pictureBox2.Visible = true;
+                pictureBox3.Visible = true;
+                rbtnNhanvien.Checked = true;
+                panel2.Visible = true;
+                panel3.Visible = true;
             }
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            label1.Visible = true;
-            lbPassword.Visible = false;
+            txbUsername.Text = "Nhập mã thẻ";
             txbUsername.Visible = true;
             txbPassword.Visible = false;
-            label1.Text = "Mã thẻ";
+            pictureBox2.Visible = true;
+            pictureBox3.Visible = false;
+            rbtnDocgia.Checked = true;
+            panel2.Visible = true;
+            panel3.Visible = false;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txbPassword_Click(object sender, EventArgs e)
+        {
+            txbPassword.PasswordChar = '*';
+            txbPassword.Clear();
+        }
+
+        private void txbUsername_Click(object sender, EventArgs e)
+        {
+            txbUsername.Clear();
         }
     }
 }
