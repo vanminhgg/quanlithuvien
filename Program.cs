@@ -16,7 +16,7 @@ namespace QUANLITHUVIENWINFORM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AppDocGia());
+            Application.Run(new FmMain());
         }
     }
 }
