@@ -71,7 +71,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(244, 12);
+            this.label1.Location = new System.Drawing.Point(311, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 33);
             this.label1.TabIndex = 0;
@@ -91,10 +91,9 @@ namespace QUANLITHUVIENWINFORM
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(7, 18);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(302, 29);
+            this.txtSearch.Location = new System.Drawing.Point(309, 28);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(179, 24);
             this.txtSearch.TabIndex = 4;
@@ -104,11 +103,10 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.ptbSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbSearch.Image = global::QUANLITHUVIENWINFORM.Properties.Resources._49116;
-            this.ptbSearch.Location = new System.Drawing.Point(252, 18);
+            this.ptbSearch.Location = new System.Drawing.Point(487, 28);
             this.ptbSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.ptbSearch.Location = new System.Drawing.Point(487, 29);
             this.ptbSearch.Name = "ptbSearch";
-            this.ptbSearch.Size = new System.Drawing.Size(26, 23);
+            this.ptbSearch.Size = new System.Drawing.Size(26, 24);
             this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbSearch.TabIndex = 5;
             this.ptbSearch.TabStop = false;
@@ -265,7 +263,7 @@ namespace QUANLITHUVIENWINFORM
             this.dtpBD.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpBD.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpBD.Location = new System.Drawing.Point(632, 119);
-            this.dtpBD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpBD.Margin = new System.Windows.Forms.Padding(2);
             this.dtpBD.Name = "dtpBD";
             this.dtpBD.Size = new System.Drawing.Size(210, 24);
             this.dtpBD.TabIndex = 32;
@@ -277,7 +275,7 @@ namespace QUANLITHUVIENWINFORM
             this.dtpKT.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpKT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpKT.Location = new System.Drawing.Point(632, 165);
-            this.dtpKT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpKT.Margin = new System.Windows.Forms.Padding(2);
             this.dtpKT.Name = "dtpKT";
             this.dtpKT.Size = new System.Drawing.Size(210, 24);
             this.dtpKT.TabIndex = 33;
