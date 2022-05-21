@@ -61,7 +61,7 @@ namespace QUANLITHUVIENWINFORM
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Controls.Add(this.dgvTheLoai);
             this.panel2.Location = new System.Drawing.Point(1, 96);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(905, 459);
             this.panel2.TabIndex = 3;
@@ -74,7 +74,7 @@ namespace QUANLITHUVIENWINFORM
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnXoa.Location = new System.Drawing.Point(724, 282);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(81, 36);
             this.btnXoa.TabIndex = 26;
@@ -90,7 +90,7 @@ namespace QUANLITHUVIENWINFORM
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSua.Location = new System.Drawing.Point(599, 282);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(81, 36);
             this.btnSua.TabIndex = 25;
@@ -106,7 +106,7 @@ namespace QUANLITHUVIENWINFORM
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnThem.Location = new System.Drawing.Point(471, 282);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(81, 36);
             this.btnThem.TabIndex = 24;
@@ -140,7 +140,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(543, 204);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(279, 22);
             this.txtName.TabIndex = 17;
@@ -149,7 +149,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(543, 154);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(279, 22);
             this.txtId.TabIndex = 16;
@@ -158,26 +158,28 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.ptbSearch.Image = global::QUANLITHUVIENWINFORM.Properties.Resources._49116;
             this.ptbSearch.Location = new System.Drawing.Point(247, 18);
-            this.ptbSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ptbSearch.Margin = new System.Windows.Forms.Padding(4);
             this.ptbSearch.Name = "ptbSearch";
             this.ptbSearch.Size = new System.Drawing.Size(35, 25);
             this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbSearch.TabIndex = 5;
             this.ptbSearch.TabStop = false;
+            this.ptbSearch.Click += new System.EventHandler(this.ptbSearch_Click);
             // 
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(0, 18);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(237, 22);
             this.txtSearch.TabIndex = 4;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgvTheLoai
             // 
             this.dgvTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTheLoai.Location = new System.Drawing.Point(0, 50);
-            this.dgvTheLoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvTheLoai.Margin = new System.Windows.Forms.Padding(4);
             this.dgvTheLoai.Name = "dgvTheLoai";
             this.dgvTheLoai.RowHeadersWidth = 51;
             this.dgvTheLoai.Size = new System.Drawing.Size(428, 394);
@@ -189,7 +191,7 @@ namespace QUANLITHUVIENWINFORM
             this.panel1.BackColor = System.Drawing.Color.Lime;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(905, 68);
             this.panel1.TabIndex = 4;
@@ -212,7 +214,7 @@ namespace QUANLITHUVIENWINFORM
             this.ClientSize = new System.Drawing.Size(901, 540);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FmTheLoai";
             this.Text = "FmTheLoai";
             this.Load += new System.EventHandler(this.FmTheLoai_Load);
