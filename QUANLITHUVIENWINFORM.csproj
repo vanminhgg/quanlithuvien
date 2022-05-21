@@ -295,6 +295,9 @@
       <LastGenOutput>ModelQLTV.cs</LastGenOutput>
       <DependentUpon>ModelQLTV.edmx</DependentUpon>
     </Content>
+    <None Include="Resources\hinh-anh-cuon-sach-dep-4.jpg" />
+    <None Include="Resources\booksnewe1611252343470-1640339-6533-8077-1640339279.jpg" />
+    <None Include="Resources\Screenshot 2022-05-21 112618.png" />
     <None Include="Resources\password.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\libary.png" />
