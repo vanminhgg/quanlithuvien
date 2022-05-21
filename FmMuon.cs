@@ -20,7 +20,10 @@ namespace QUANLITHUVIENWINFORM
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-
+            
+            /*var listTimKiem = (from muon in db.Muons where muon.MaMuon.ToString().Contains(txtSearch)
+                           select new { id = muon.MaMuon, mathe = muon.MaThe, ngay = muon.NgayMuon, ghichu = muon.GhiChu });
+            dgvMuon.DataSource = listTimKiem.Distinct().ToList();*/
         }
 
         private void btnThem_Click(object sender, EventArgs e)

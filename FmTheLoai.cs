@@ -22,8 +22,8 @@ namespace QUANLITHUVIENWINFORM
         {
             txtId.Clear();
             txtName.Clear();
-            var query = from tg in db.TheLoais
-                        select new { id = tg.MaTheLoai, ten = tg.TenTheLoai };
+            var query = from tl in db.TheLoais
+                        select new { id = tl.MaTheLoai, ten = tl.TenTheLoai };
             dgvTheLoai.DataSource = query.Distinct().ToList();
             dgvTheLoai.Columns["id"].HeaderText = "Mã Thể Loại";
             dgvTheLoai.Columns["ten"].HeaderText = "Tên Thể Loại";
@@ -68,7 +68,7 @@ namespace QUANLITHUVIENWINFORM
                 if (txtName.Enabled)
                 {
                     int ma = int.Parse(txtId.Text); // lấy mã ID trong txtId
-                    var theloai = db.TheLoais.SingleOrDefault(tg => tg.MaTheLoai == ma); // tìm tác giả có ID tương ứng
+                    var theloai = db.TheLoais.SingleOrDefault(tl => tl.MaTheLoai == ma); // tìm tác giả có ID tương ứng
                     theloai.TenTheLoai = Convert.ToString(txtName.Text);
                     db.SaveChanges();
                     FmTheLoai_Load(sender, e);
@@ -116,6 +116,20 @@ namespace QUANLITHUVIENWINFORM
                 txtId.Text = row.Cells[0].Value.ToString();
                 txtName.Text = row.Cells[1].Value.ToString();
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            var listTimKiem = (from tl in db.TheLoais
+                               where tl.TenTheLoai.Contains(txtSearch.Text.ToString())
+                               select new { id = tl.MaTheLoai, ten = tl.TenTheLoai });
+
+            dgvTheLoai.DataSource = listTimKiem.ToList();
+        }
+
+        private void ptbSearch_Click(object sender, EventArgs e)
+        {
+            FmTheLoai_Load(sender, e);
         }
     }
 }

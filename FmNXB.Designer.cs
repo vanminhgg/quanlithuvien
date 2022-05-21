@@ -181,6 +181,7 @@ namespace QUANLITHUVIENWINFORM
             this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbSearch.TabIndex = 5;
             this.ptbSearch.TabStop = false;
+            this.ptbSearch.Click += new System.EventHandler(this.ptbSearch_Click);
             // 
             // txtSearch
             // 
@@ -189,6 +190,7 @@ namespace QUANLITHUVIENWINFORM
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(179, 24);
             this.txtSearch.TabIndex = 4;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgvNXB
             // 
@@ -199,8 +201,13 @@ namespace QUANLITHUVIENWINFORM
             this.dgvNXB.Location = new System.Drawing.Point(10, 43);
             this.dgvNXB.Name = "dgvNXB";
             this.dgvNXB.ReadOnly = true;
+<<<<<<< HEAD
+            this.dgvNXB.RowHeadersWidth = 51;
+            this.dgvNXB.Size = new System.Drawing.Size(428, 394);
+=======
             this.dgvNXB.RowHeadersVisible = false;
             this.dgvNXB.Size = new System.Drawing.Size(321, 338);
+>>>>>>> a1b96450fa15568c28935e378b10bec2bc5ec73b
             this.dgvNXB.TabIndex = 3;
             this.dgvNXB.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvNXB_CellMouseClick);
             // 

@@ -120,5 +120,19 @@ namespace QUANLITHUVIENWINFORM
                 txtName.Text = row.Cells[1].Value.ToString();
             }
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            var listTimKiem = (from tg in db.TacGias
+                               where tg.TenTacGia.Contains(txtSearch.Text.ToString())
+                               select new { id = tg.MaTacGia, ten = tg.TenTacGia });
+
+            dgvTacgia.DataSource = listTimKiem.ToList();
+        }
+
+        private void ptbSearch_Click(object sender, EventArgs e)
+        {
+            FmTacGia_Load(sender, e);
+        }
     }
 }
