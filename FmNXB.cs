@@ -117,5 +117,30 @@ namespace QUANLITHUVIENWINFORM
                 }
             }
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+            if (txtSearch.Text != "")
+            {
+
+                var listTimKiem = (from nxb in db.NXBs
+                                   where nxb.TenNXB.Contains(txtSearch.Text.ToString())
+                                   select new { Id = nxb.MaNXB, Name = nxb.TenNXB });
+
+                dgvNXB.DataSource = listTimKiem.ToList();
+
+            }
+            else
+            {
+                this.FmNXB_Load(sender, e);
+
+            }
+        }
+
+        private void ptbSearch_Click(object sender, EventArgs e)
+        {
+            FmNXB_Load(sender, e);
+        }
     }
 }
