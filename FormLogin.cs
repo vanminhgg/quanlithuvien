@@ -124,5 +124,7 @@ namespace QUANLITHUVIENWINFORM
         {
             txbUsername.Clear();
         }
+
+ 
     }
 }
