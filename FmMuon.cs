@@ -71,9 +71,9 @@ namespace QUANLITHUVIENWINFORM
             dgvMuon.Columns["ngay"].HeaderText = "Ngày Mượn";
             dgvMuon.Columns["ghichu"].HeaderText = "Ghi Chú";
 
-            dgvMuon.Columns["id"].Width = 50;
-            dgvMuon.Columns["mathe"].Width = 50;
-            dgvMuon.Columns["ngay"].Width = 70;
+            dgvMuon.Columns["id"].Width = 60;
+            dgvMuon.Columns["mathe"].Width = 60;
+            dgvMuon.Columns["ngay"].Width = 135;
             dgvMuon.Columns["ghichu"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             cbMathe.DataSource = (from the in db.Thes select the.MaThe).Distinct().ToList();
