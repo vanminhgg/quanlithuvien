@@ -42,7 +42,7 @@ namespace QUANLITHUVIENWINFORM
             {
                 if (txtName.Enabled)
                 {
-                    var matg = db.TacGias.SingleOrDefault(tg=>tg.TenTacGia== cbTacGia.SelectedItem);
+                    var matg = db.TacGias.SingleOrDefault(tg => tg.TenTacGia == cbTacGia.SelectedItem);
                     var manxb = db.NXBs.SingleOrDefault(tg => tg.TenNXB == cbNXB.SelectedItem);
                     var matl = db.TheLoais.SingleOrDefault(tg => tg.TenTheLoai == cbTheloai.SelectedItem);
                     var sach = new Sach()

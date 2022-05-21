@@ -21,16 +21,16 @@ namespace QUANLITHUVIENWINFORM
 
         private void quảnLýSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)
+          /*  if (ActiveMdiChild != null)
             {
-                ActiveMdiChild.Close();
+                ActiveMdiChild.Close();*/
                 FmSach fmSach = new FmSach();
 
 
-                fmSach.MdiParent = this;
+               // fmSach.MdiParent = this;
 
                 fmSach.Show();
-            }
+           /* }
             else
             {
                 FmSach fmSach = new FmSach();
@@ -39,14 +39,14 @@ namespace QUANLITHUVIENWINFORM
                 fmSach.MdiParent = this;
 
                 fmSach.Show();
-            }
+            }*/
             
 
         }
 
         private void FmMain_Load(object sender, EventArgs e)
         {
-            this.IsMdiContainer = true;
+            this.IsMdiContainer = false;
         }
 
         private void đọcGiảToolStripMenuItem_Click(object sender, EventArgs e)
@@ -118,6 +118,21 @@ namespace QUANLITHUVIENWINFORM
         {
             FmTra fmTra = new FmTra();
             fmTra.Show();
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

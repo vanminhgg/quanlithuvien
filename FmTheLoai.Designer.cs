@@ -29,6 +29,7 @@ namespace QUANLITHUVIENWINFORM
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmTheLoai));
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -60,10 +61,16 @@ namespace QUANLITHUVIENWINFORM
             this.panel2.Controls.Add(this.ptbSearch);
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Controls.Add(this.dgvTheLoai);
+<<<<<<< HEAD
             this.panel2.Location = new System.Drawing.Point(1, 96);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(0, 55);
+>>>>>>> a1b96450fa15568c28935e378b10bec2bc5ec73b
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(905, 459);
+            this.panel2.Size = new System.Drawing.Size(676, 384);
             this.panel2.TabIndex = 3;
             // 
             // btnXoa
@@ -72,11 +79,16 @@ namespace QUANLITHUVIENWINFORM
             this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnXoa.Location = new System.Drawing.Point(724, 282);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.btnXoa.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.Location = new System.Drawing.Point(562, 227);
+>>>>>>> a1b96450fa15568c28935e378b10bec2bc5ec73b
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(81, 36);
+            this.btnXoa.Size = new System.Drawing.Size(74, 29);
             this.btnXoa.TabIndex = 26;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -88,11 +100,16 @@ namespace QUANLITHUVIENWINFORM
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSua.Location = new System.Drawing.Point(599, 282);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.btnSua.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Location = new System.Drawing.Point(468, 227);
+>>>>>>> a1b96450fa15568c28935e378b10bec2bc5ec73b
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(81, 36);
+            this.btnSua.Size = new System.Drawing.Size(74, 29);
             this.btnSua.TabIndex = 25;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -104,11 +121,16 @@ namespace QUANLITHUVIENWINFORM
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnThem.Location = new System.Drawing.Point(471, 282);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.btnThem.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.Location = new System.Drawing.Point(372, 227);
+>>>>>>> a1b96450fa15568c28935e378b10bec2bc5ec73b
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(81, 36);
+            this.btnThem.Size = new System.Drawing.Size(74, 29);
             this.btnThem.TabIndex = 24;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -117,50 +139,62 @@ namespace QUANLITHUVIENWINFORM
             // lbName
             // 
             this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(447, 210);
-            this.lbName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbName.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Location = new System.Drawing.Point(356, 137);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(86, 20);
+            this.lbName.Size = new System.Drawing.Size(82, 17);
             this.lbName.TabIndex = 21;
             this.lbName.Text = "Tên thể loại";
             // 
             // lbId
             // 
             this.lbId.AutoSize = true;
-            this.lbId.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbId.Location = new System.Drawing.Point(447, 154);
-            this.lbId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbId.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbId.Location = new System.Drawing.Point(358, 91);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(84, 20);
+            this.lbId.Size = new System.Drawing.Size(78, 17);
             this.lbId.TabIndex = 20;
             this.lbId.Text = "Mã thể loại";
             // 
             // txtName
             // 
             this.txtName.Enabled = false;
+<<<<<<< HEAD
             this.txtName.Location = new System.Drawing.Point(543, 204);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.txtName.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(434, 135);
+>>>>>>> a1b96450fa15568c28935e378b10bec2bc5ec73b
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(279, 22);
+            this.txtName.Size = new System.Drawing.Size(210, 24);
             this.txtName.TabIndex = 17;
             // 
             // txtId
             // 
             this.txtId.Enabled = false;
+<<<<<<< HEAD
             this.txtId.Location = new System.Drawing.Point(543, 154);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.txtId.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(434, 89);
+>>>>>>> a1b96450fa15568c28935e378b10bec2bc5ec73b
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(279, 22);
+            this.txtId.Size = new System.Drawing.Size(210, 24);
             this.txtId.TabIndex = 16;
             // 
             // ptbSearch
             // 
             this.ptbSearch.Image = global::QUANLITHUVIENWINFORM.Properties.Resources._49116;
+<<<<<<< HEAD
             this.ptbSearch.Location = new System.Drawing.Point(247, 18);
             this.ptbSearch.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.ptbSearch.Location = new System.Drawing.Point(305, 11);
+>>>>>>> a1b96450fa15568c28935e378b10bec2bc5ec73b
             this.ptbSearch.Name = "ptbSearch";
-            this.ptbSearch.Size = new System.Drawing.Size(35, 25);
+            this.ptbSearch.Size = new System.Drawing.Size(26, 23);
             this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbSearch.TabIndex = 5;
             this.ptbSearch.TabStop = false;
@@ -168,55 +202,77 @@ namespace QUANLITHUVIENWINFORM
             // 
             // txtSearch
             // 
+<<<<<<< HEAD
             this.txtSearch.Location = new System.Drawing.Point(0, 18);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.txtSearch.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(122, 11);
+>>>>>>> a1b96450fa15568c28935e378b10bec2bc5ec73b
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(237, 22);
+            this.txtSearch.Size = new System.Drawing.Size(179, 24);
             this.txtSearch.TabIndex = 4;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgvTheLoai
             // 
+            this.dgvTheLoai.BackgroundColor = System.Drawing.Color.White;
             this.dgvTheLoai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+<<<<<<< HEAD
             this.dgvTheLoai.Location = new System.Drawing.Point(0, 50);
             this.dgvTheLoai.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.dgvTheLoai.Location = new System.Drawing.Point(10, 41);
+>>>>>>> a1b96450fa15568c28935e378b10bec2bc5ec73b
             this.dgvTheLoai.Name = "dgvTheLoai";
+            this.dgvTheLoai.RowHeadersVisible = false;
             this.dgvTheLoai.RowHeadersWidth = 51;
-            this.dgvTheLoai.Size = new System.Drawing.Size(428, 394);
+            this.dgvTheLoai.Size = new System.Drawing.Size(321, 333);
             this.dgvTheLoai.TabIndex = 3;
             this.dgvTheLoai.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTheLoai_CellMouseClick);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Lime;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(141)))), ((int)(((byte)(240)))));
             this.panel1.Controls.Add(this.label1);
+<<<<<<< HEAD
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+>>>>>>> a1b96450fa15568c28935e378b10bec2bc5ec73b
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(905, 68);
+            this.panel1.Size = new System.Drawing.Size(676, 55);
             this.panel1.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(284, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 32);
+            this.label1.Size = new System.Drawing.Size(115, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thể Loại";
             // 
             // FmTheLoai
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 540);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(676, 439);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(4);
+=======
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+>>>>>>> a1b96450fa15568c28935e378b10bec2bc5ec73b
             this.Name = "FmTheLoai";
-            this.Text = "FmTheLoai";
+            this.Text = "Thể Loại";
             this.Load += new System.EventHandler(this.FmTheLoai_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -33,7 +33,7 @@ namespace QUANLITHUVIENWINFORM
                 var muon = new Muon()
                 {                        
                     MaThe = Convert.ToInt32(cbMathe.Text),
-                    NgayMuon = dateTimePicker1.Value,                        
+                    NgayMuon = dTp_ngayMuon.Value,                        
                     GhiChu = txtGhiChu.Text.ToString(),                       
                 };                  
                 db.Muons.Add(muon);                   
@@ -59,7 +59,7 @@ namespace QUANLITHUVIENWINFORM
         private void FmMuon_Load(object sender, EventArgs e)
         {
             txtId.Clear();
-            dateTimePicker1.Value = DateTime.Now;
+            dTp_ngayMuon.Value = DateTime.Now;
 
             var listMuon = from muon in db.Muons
                            select new { id = muon.MaMuon, mathe = muon.MaThe, ngay = muon.NgayMuon, ghichu = muon.GhiChu };
@@ -89,7 +89,7 @@ namespace QUANLITHUVIENWINFORM
                 DataGridViewRow row = dgvMuon.Rows[e.RowIndex];
                 txtId.Text = row.Cells[0].Value.ToString();
                 cbMathe.Text = row.Cells[1].Value.ToString();
-                dateTimePicker1.Value = DateTime.Parse(row.Cells[2].Value.ToString());
+                dTp_ngayMuon.Value = DateTime.Parse(row.Cells[2].Value.ToString());
                 if (row.Cells[3].Value != null) txtGhiChu.Text = row.Cells[3].Value.ToString(); 
             }
         }
