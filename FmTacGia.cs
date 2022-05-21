@@ -123,6 +123,22 @@ namespace QUANLITHUVIENWINFORM
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+            if (txtSearch.Text != "")
+            {
+                var listTimKiem = (from tg in db.TacGias
+                                   where tg.TenTacGia.Contains(txtSearch.Text.ToString())
+                                   select new { id = tg.MaTacGia, ten = tg.TenTacGia });
+
+                dgvTacgia.DataSource = listTimKiem.ToList();
+
+            }
+            else
+            {
+                this.FmTacGia_Load(sender, e);
+
+            }
+=======
             var listTimKiem = (from tg in db.TacGias
                                where tg.TenTacGia.Contains(txtSearch.Text.ToString())
                                select new { id = tg.MaTacGia, ten = tg.TenTacGia });
@@ -133,6 +149,7 @@ namespace QUANLITHUVIENWINFORM
         private void ptbSearch_Click(object sender, EventArgs e)
         {
             FmTacGia_Load(sender, e);
+>>>>>>> 9eaa98dac2a8aa39ae5da0087e818bc0f69eca42
         }
     }
 }

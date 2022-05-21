@@ -34,7 +34,6 @@ namespace QUANLITHUVIENWINFORM
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDocgia = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.ptbSearch = new System.Windows.Forms.PictureBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtDiachi = new System.Windows.Forms.TextBox();
@@ -49,10 +48,11 @@ namespace QUANLITHUVIENWINFORM
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ptbSearch = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocgia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,17 +95,7 @@ namespace QUANLITHUVIENWINFORM
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(179, 24);
             this.txtSearch.TabIndex = 4;
-            // 
-            // ptbSearch
-            // 
-            this.ptbSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ptbSearch.Image = global::QUANLITHUVIENWINFORM.Properties.Resources._49116;
-            this.ptbSearch.Location = new System.Drawing.Point(626, 12);
-            this.ptbSearch.Name = "ptbSearch";
-            this.ptbSearch.Size = new System.Drawing.Size(26, 23);
-            this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbSearch.TabIndex = 5;
-            this.ptbSearch.TabStop = false;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // txtId
             // 
@@ -273,6 +263,19 @@ namespace QUANLITHUVIENWINFORM
             this.panel2.Size = new System.Drawing.Size(994, 413);
             this.panel2.TabIndex = 2;
             // 
+<<<<<<< HEAD
+            // ptbSearch
+            // 
+            this.ptbSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbSearch.Image = global::QUANLITHUVIENWINFORM.Properties.Resources._49116;
+            this.ptbSearch.Location = new System.Drawing.Point(626, 12);
+            this.ptbSearch.Name = "ptbSearch";
+            this.ptbSearch.Size = new System.Drawing.Size(26, 23);
+            this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbSearch.TabIndex = 5;
+            this.ptbSearch.TabStop = false;
+            // 
+=======
 <<<<<<< HEAD
             // label2
             // 
@@ -456,6 +459,7 @@ namespace QUANLITHUVIENWINFORM
             // 
 =======
 >>>>>>> a1b96450fa15568c28935e378b10bec2bc5ec73b
+>>>>>>> 9eaa98dac2a8aa39ae5da0087e818bc0f69eca42
             // FmDocgia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,9 +476,9 @@ namespace QUANLITHUVIENWINFORM
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocgia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).EndInit();
             this.ResumeLayout(false);
 
         }

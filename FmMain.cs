@@ -51,28 +51,18 @@ namespace QUANLITHUVIENWINFORM
 
         private void đọcGiảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (ActiveMdiChild != null)
-            {
-                ActiveMdiChild.Close();
+            
                 FmDocgia fmDocgia = new FmDocgia();
-                fmDocgia.MdiParent = this;
+                
 
                 fmDocgia.Show();
-            } else
-            {
-                FmDocgia fmDocgia = new FmDocgia();
-                fmDocgia.MdiParent = this;
-
-                fmDocgia.Show();
-
-            }    
+            
            
         }
 
         private void mượnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FmMuon fmMuon = new FmMuon();
-            fmMuon.MdiParent = this;
             
             fmMuon.Show();
         }
