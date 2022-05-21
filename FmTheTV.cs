@@ -172,11 +172,15 @@ namespace QUANLITHUVIENWINFORM
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            var listTimKiem = (from The in db.Thes
-                               where The.MaDG.ToString().Contains(txtSearch.Text.ToString())
-                               select new { Id = The.MaThe, timeStart = The.NgayBatDau, timeStop = The.NgayKetThuc, note = The.GhiChu, idDG = The.MaDG });
+            if (txtSearch.Text != "")
+            {
+                var listTimKiem = (from The in db.Thes
+                                   where The.MaDG.ToString().Contains(txtSearch.Text.ToString())
+                                   select new { Id = The.MaThe, timeStart = The.NgayBatDau, timeStop = The.NgayKetThuc, note = The.GhiChu, idDG = The.MaDG });
 
-            dgvThe.DataSource = listTimKiem.ToList();
+                dgvThe.DataSource = listTimKiem.ToList();
+            }
+            else this.FmTheTV_Load(sender, e);
         }
 
         private void ptbSearch_Click(object sender, EventArgs e)

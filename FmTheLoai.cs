@@ -120,7 +120,6 @@ namespace QUANLITHUVIENWINFORM
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             if (txtSearch.Text != "")
             {
                 var listTimKiem = (from tl in db.TheLoais
@@ -136,18 +135,11 @@ namespace QUANLITHUVIENWINFORM
                 this.FmTheLoai_Load(sender, e);
 
             }
-=======
-            var listTimKiem = (from tl in db.TheLoais
-                               where tl.TenTheLoai.Contains(txtSearch.Text.ToString())
-                               select new { id = tl.MaTheLoai, ten = tl.TenTheLoai });
-
-            dgvTheLoai.DataSource = listTimKiem.ToList();
         }
 
         private void ptbSearch_Click(object sender, EventArgs e)
         {
             FmTheLoai_Load(sender, e);
->>>>>>> 9eaa98dac2a8aa39ae5da0087e818bc0f69eca42
         }
     }
 }
