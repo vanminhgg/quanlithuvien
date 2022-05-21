@@ -104,10 +104,10 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.txtSoluong.Enabled = false;
             this.txtSoluong.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoluong.Location = new System.Drawing.Point(840, 296);
+            this.txtSoluong.Location = new System.Drawing.Point(846, 296);
             this.txtSoluong.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoluong.Name = "txtSoluong";
-            this.txtSoluong.Size = new System.Drawing.Size(210, 28);
+            this.txtSoluong.Size = new System.Drawing.Size(235, 28);
             this.txtSoluong.TabIndex = 41;
             // 
             // cbTheloai
@@ -117,10 +117,10 @@ namespace QUANLITHUVIENWINFORM
             this.cbTheloai.Enabled = false;
             this.cbTheloai.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTheloai.FormattingEnabled = true;
-            this.cbTheloai.Location = new System.Drawing.Point(840, 218);
+            this.cbTheloai.Location = new System.Drawing.Point(846, 218);
             this.cbTheloai.Margin = new System.Windows.Forms.Padding(4);
             this.cbTheloai.Name = "cbTheloai";
-            this.cbTheloai.Size = new System.Drawing.Size(210, 29);
+            this.cbTheloai.Size = new System.Drawing.Size(235, 29);
             this.cbTheloai.TabIndex = 40;
             // 
             // cbNXB
@@ -130,10 +130,10 @@ namespace QUANLITHUVIENWINFORM
             this.cbNXB.Enabled = false;
             this.cbNXB.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNXB.FormattingEnabled = true;
-            this.cbNXB.Location = new System.Drawing.Point(840, 178);
+            this.cbNXB.Location = new System.Drawing.Point(846, 178);
             this.cbNXB.Margin = new System.Windows.Forms.Padding(4);
             this.cbNXB.Name = "cbNXB";
-            this.cbNXB.Size = new System.Drawing.Size(210, 29);
+            this.cbNXB.Size = new System.Drawing.Size(235, 29);
             this.cbNXB.TabIndex = 39;
             // 
             // cbTacGia
@@ -143,10 +143,10 @@ namespace QUANLITHUVIENWINFORM
             this.cbTacGia.Enabled = false;
             this.cbTacGia.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTacGia.FormattingEnabled = true;
-            this.cbTacGia.Location = new System.Drawing.Point(840, 135);
+            this.cbTacGia.Location = new System.Drawing.Point(846, 135);
             this.cbTacGia.Margin = new System.Windows.Forms.Padding(4);
             this.cbTacGia.Name = "cbTacGia";
-            this.cbTacGia.Size = new System.Drawing.Size(210, 29);
+            this.cbTacGia.Size = new System.Drawing.Size(235, 29);
             this.cbTacGia.TabIndex = 38;
             // 
             // lbNam
@@ -270,40 +270,40 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.txtNamXB.Enabled = false;
             this.txtNamXB.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamXB.Location = new System.Drawing.Point(840, 261);
+            this.txtNamXB.Location = new System.Drawing.Point(846, 261);
             this.txtNamXB.Margin = new System.Windows.Forms.Padding(4);
             this.txtNamXB.Name = "txtNamXB";
-            this.txtNamXB.Size = new System.Drawing.Size(210, 28);
+            this.txtNamXB.Size = new System.Drawing.Size(235, 28);
             this.txtNamXB.TabIndex = 28;
             // 
             // txtName
             // 
             this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(840, 94);
+            this.txtName.Location = new System.Drawing.Point(846, 94);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(210, 28);
+            this.txtName.Size = new System.Drawing.Size(235, 28);
             this.txtName.TabIndex = 27;
             // 
             // txtId
             // 
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(840, 55);
+            this.txtId.Location = new System.Drawing.Point(846, 55);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(210, 28);
+            this.txtId.Size = new System.Drawing.Size(235, 28);
             this.txtId.TabIndex = 26;
             // 
             // ptbSearch
             // 
             this.ptbSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbSearch.Image = global::QUANLITHUVIENWINFORM.Properties.Resources._49116;
-            this.ptbSearch.Location = new System.Drawing.Point(716, 15);
+            this.ptbSearch.Location = new System.Drawing.Point(368, 11);
             this.ptbSearch.Margin = new System.Windows.Forms.Padding(4);
             this.ptbSearch.Name = "ptbSearch";
-            this.ptbSearch.Size = new System.Drawing.Size(26, 23);
+            this.ptbSearch.Size = new System.Drawing.Size(31, 27);
             this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbSearch.TabIndex = 25;
             this.ptbSearch.TabStop = false;
@@ -312,7 +312,7 @@ namespace QUANLITHUVIENWINFORM
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(406, 10);
+            this.txtSearch.Location = new System.Drawing.Point(399, 10);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(304, 28);

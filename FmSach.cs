@@ -32,8 +32,25 @@ namespace QUANLITHUVIENWINFORM
             txtName.Clear();
             txtNamXB.Clear();
             txtSoluong.Clear();
-            var listSach = (from sach in db.Saches select new { Id = sach.MaSach, Name = sach.TenSach, Tacgia = sach.TacGia.TenTacGia,Nxb = sach.NXB.TenNXB, Theloai = sach.TheLoai.TenTheLoai, Namxb = sach.NamXB, Soluong = sach.SoLuong }).ToList();
+            var listSach = (from sach in db.Saches select new { Id = sach.MaSach, Name = sach.TenSach, Tacgia = sach.TacGia.TenTacGia,Nxb = sach.NXB.TenNXB,
+                Theloai = sach.TheLoai.TenTheLoai, Namxb = sach.NamXB, Soluong = sach.SoLuong }).ToList();
             dgvSach.DataSource = listSach.Distinct().ToList();
+
+            dgvSach.Columns["Id"].HeaderText = "Mã sách";
+            dgvSach.Columns["Name"].HeaderText = "Tên sách";
+            dgvSach.Columns["Tacgia"].HeaderText = "Tên tác giả";
+            dgvSach.Columns["Nxb"].HeaderText = "Tên NXB";
+            dgvSach.Columns["Theloai"].HeaderText = "Tên thể loại";
+            dgvSach.Columns["Namxb"].HeaderText = "Năm xuất bản";
+            dgvSach.Columns["Soluong"].HeaderText = "Số lượng";
+
+            dgvSach.Columns["Id"].Width = 50;
+            dgvSach.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvSach.Columns["Tacgia"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvSach.Columns["Nxb"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvSach.Columns["Theloai"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvSach.Columns["Namxb"].Width = 60;
+            dgvSach.Columns["Soluong"].Width = 60;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -42,9 +59,9 @@ namespace QUANLITHUVIENWINFORM
             {
                 if (txtName.Enabled)
                 {
-                    var matg = db.TacGias.SingleOrDefault(tg => tg.TenTacGia == cbTacGia.SelectedItem);
-                    var manxb = db.NXBs.SingleOrDefault(tg => tg.TenNXB == cbNXB.SelectedItem);
-                    var matl = db.TheLoais.SingleOrDefault(tg => tg.TenTheLoai == cbTheloai.SelectedItem);
+                    var matg = db.TacGias.SingleOrDefault(tg => tg.TenTacGia == cbTacGia.Text);
+                    var manxb = db.NXBs.SingleOrDefault(tg => tg.TenNXB == cbNXB.Text);
+                    var matl = db.TheLoais.SingleOrDefault(tg => tg.TenTheLoai == cbTheloai.Text);
                     var sach = new Sach()
                     {
                         TenSach = txtName.Text.ToString(),
