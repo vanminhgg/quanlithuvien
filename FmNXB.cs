@@ -120,18 +120,15 @@ namespace QUANLITHUVIENWINFORM
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
             if (txtSearch.Text != "")
             {
-=======
->>>>>>> 9eaa98dac2a8aa39ae5da0087e818bc0f69eca42
+
                 var listTimKiem = (from nxb in db.NXBs
                                    where nxb.TenNXB.Contains(txtSearch.Text.ToString())
                                    select new { Id = nxb.MaNXB, Name = nxb.TenNXB });
 
                 dgvNXB.DataSource = listTimKiem.ToList();
-
-<<<<<<< HEAD
 
             }
             else
@@ -139,13 +136,11 @@ namespace QUANLITHUVIENWINFORM
                 this.FmNXB_Load(sender, e);
 
             }
-=======
         }
 
         private void ptbSearch_Click(object sender, EventArgs e)
         {
             FmNXB_Load(sender, e);
->>>>>>> 9eaa98dac2a8aa39ae5da0087e818bc0f69eca42
         }
     }
 }

@@ -263,7 +263,7 @@ namespace QUANLITHUVIENWINFORM
             this.panel2.Size = new System.Drawing.Size(994, 413);
             this.panel2.TabIndex = 2;
             // 
-<<<<<<< HEAD
+
             // ptbSearch
             // 
             this.ptbSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -275,8 +275,7 @@ namespace QUANLITHUVIENWINFORM
             this.ptbSearch.TabIndex = 5;
             this.ptbSearch.TabStop = false;
             // 
-=======
-<<<<<<< HEAD
+
             // label2
             // 
             this.label2.AutoSize = true;
@@ -457,9 +456,7 @@ namespace QUANLITHUVIENWINFORM
             this.dgvDocgia.TabIndex = 3;
             this.dgvDocgia.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDocgia_CellMouseClick);
             // 
-=======
->>>>>>> a1b96450fa15568c28935e378b10bec2bc5ec73b
->>>>>>> 9eaa98dac2a8aa39ae5da0087e818bc0f69eca42
+
             // FmDocgia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
