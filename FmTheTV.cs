@@ -26,20 +26,20 @@ namespace QUANLITHUVIENWINFORM
             txtGhichu.Clear();
 
             var listThe = from The in db.Thes
-                         select new { Id = The.MaThe, timeStart = The.NgayBatDau , timeStop = The.NgayKetThuc, note = The.GhiChu, idDG = The.MaDG };
+                         select new { Id = The.MaThe, timeStart = The.NgayBatDau , timeStop = The.NgayKetThuc, note = The.GhiChu, idDG = The.DocGia.TenDG};
             dgvThe.DataSource = listThe.ToList();
 
             dgvThe.Columns["Id"].HeaderText = "Mã Thẻ";
             dgvThe.Columns["timeStart"].HeaderText = "Ngày bắt đầu";
             dgvThe.Columns["timeStop"].HeaderText = "Ngày kết thúc";
             dgvThe.Columns["note"].HeaderText = "Ghi Chú";
-            dgvThe.Columns["idDG"].HeaderText = "Mã Độc Giả";
+            dgvThe.Columns["idDG"].HeaderText = "Tên Độc Giả";
 
             dgvThe.Columns["Id"].Width = 50;
-            dgvThe.Columns["timeStart"].Width = 70;
-            dgvThe.Columns["timeStop"].Width = 70;
+            dgvThe.Columns["timeStart"].Width = 135;
+            dgvThe.Columns["timeStop"].Width = 135;
             dgvThe.Columns["note"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dgvThe.Columns["idDG"].Width = 50;
+            dgvThe.Columns["idDG"].Width = 120;
 
             cbID.DataSource = (from dg in db.DocGias select dg.MaDG).Distinct().ToList();
             cbTen.DataSource = (from dg in db.DocGias select dg.TenDG).Distinct().ToList();
@@ -175,8 +175,8 @@ namespace QUANLITHUVIENWINFORM
             if (txtSearch.Text != "")
             {
                 var listTimKiem = (from The in db.Thes
-                                   where The.MaDG.ToString().Contains(txtSearch.Text.ToString())
-                                   select new { Id = The.MaThe, timeStart = The.NgayBatDau, timeStop = The.NgayKetThuc, note = The.GhiChu, idDG = The.MaDG });
+                                   where The.DocGia.TenDG.Contains(txtSearch.Text.ToString())
+                                   select new { Id = The.MaThe, timeStart = The.NgayBatDau, timeStop = The.NgayKetThuc, note = The.GhiChu, idDG = The.DocGia.TenDG });
 
                 dgvThe.DataSource = listTimKiem.ToList();
             }

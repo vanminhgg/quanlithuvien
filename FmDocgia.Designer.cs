@@ -61,17 +61,19 @@ namespace QUANLITHUVIENWINFORM
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(937, 55);
+            this.panel1.Size = new System.Drawing.Size(1249, 68);
             this.panel1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(407, 9);
+            this.label1.Location = new System.Drawing.Point(507, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 33);
+            this.label1.Size = new System.Drawing.Size(234, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lí độc giả";
             // 
@@ -80,22 +82,22 @@ namespace QUANLITHUVIENWINFORM
             this.dgvDocgia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDocgia.BackgroundColor = System.Drawing.Color.White;
             this.dgvDocgia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDocgia.Location = new System.Drawing.Point(13, 54);
-            this.dgvDocgia.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDocgia.Location = new System.Drawing.Point(17, 66);
+            this.dgvDocgia.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dgvDocgia.Name = "dgvDocgia";
             this.dgvDocgia.RowHeadersVisible = false;
             this.dgvDocgia.RowHeadersWidth = 51;
-            this.dgvDocgia.Size = new System.Drawing.Size(516, 346);
+            this.dgvDocgia.Size = new System.Drawing.Size(688, 426);
             this.dgvDocgia.TabIndex = 3;
             this.dgvDocgia.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDocgia_CellMouseClick);
             // 
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(257, 22);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Location = new System.Drawing.Point(343, 27);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(237, 24);
+            this.txtSearch.Size = new System.Drawing.Size(315, 28);
             this.txtSearch.TabIndex = 4;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -103,50 +105,50 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(641, 54);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtId.Location = new System.Drawing.Point(855, 66);
+            this.txtId.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(219, 24);
+            this.txtId.Size = new System.Drawing.Size(291, 28);
             this.txtId.TabIndex = 16;
             // 
             // txtName
             // 
             this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(641, 107);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Location = new System.Drawing.Point(855, 132);
+            this.txtName.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(219, 24);
+            this.txtName.Size = new System.Drawing.Size(291, 28);
             this.txtName.TabIndex = 17;
             // 
             // txtDiachi
             // 
             this.txtDiachi.Enabled = false;
             this.txtDiachi.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiachi.Location = new System.Drawing.Point(641, 161);
-            this.txtDiachi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDiachi.Location = new System.Drawing.Point(855, 198);
+            this.txtDiachi.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(219, 24);
+            this.txtDiachi.Size = new System.Drawing.Size(291, 28);
             this.txtDiachi.TabIndex = 18;
             // 
             // txtSDT
             // 
             this.txtSDT.Enabled = false;
             this.txtSDT.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.Location = new System.Drawing.Point(641, 213);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSDT.Location = new System.Drawing.Point(855, 262);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(219, 24);
+            this.txtSDT.Size = new System.Drawing.Size(291, 28);
             this.txtSDT.TabIndex = 19;
             // 
             // lbId
             // 
             this.lbId.AutoSize = true;
             this.lbId.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbId.Location = new System.Drawing.Point(554, 56);
-            this.lbId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbId.Location = new System.Drawing.Point(739, 69);
+            this.lbId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(79, 18);
+            this.lbId.Size = new System.Drawing.Size(99, 23);
             this.lbId.TabIndex = 20;
             this.lbId.Text = "Mã độc giả";
             // 
@@ -154,10 +156,10 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lbName.Location = new System.Drawing.Point(552, 107);
-            this.lbName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbName.Location = new System.Drawing.Point(736, 132);
+            this.lbName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(81, 18);
+            this.lbName.Size = new System.Drawing.Size(103, 23);
             this.lbName.TabIndex = 21;
             this.lbName.Text = "Tên độc giả";
             // 
@@ -165,10 +167,10 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.lbTacgia.AutoSize = true;
             this.lbTacgia.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lbTacgia.Location = new System.Drawing.Point(580, 163);
-            this.lbTacgia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTacgia.Location = new System.Drawing.Point(773, 201);
+            this.lbTacgia.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbTacgia.Name = "lbTacgia";
-            this.lbTacgia.Size = new System.Drawing.Size(53, 18);
+            this.lbTacgia.Size = new System.Drawing.Size(68, 23);
             this.lbTacgia.TabIndex = 22;
             this.lbTacgia.Text = "Địa chỉ";
             // 
@@ -176,10 +178,10 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.lbNXB.AutoSize = true;
             this.lbNXB.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lbNXB.Location = new System.Drawing.Point(599, 215);
-            this.lbNXB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNXB.Location = new System.Drawing.Point(799, 265);
+            this.lbNXB.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbNXB.Name = "lbNXB";
-            this.lbNXB.Size = new System.Drawing.Size(34, 18);
+            this.lbNXB.Size = new System.Drawing.Size(43, 23);
             this.lbNXB.TabIndex = 23;
             this.lbNXB.Text = "SDT";
             // 
@@ -190,10 +192,10 @@ namespace QUANLITHUVIENWINFORM
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.5F, System.Drawing.FontStyle.Bold);
-            this.btnThem.Location = new System.Drawing.Point(577, 324);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Location = new System.Drawing.Point(769, 399);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(81, 36);
+            this.btnThem.Size = new System.Drawing.Size(108, 44);
             this.btnThem.TabIndex = 24;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -206,10 +208,10 @@ namespace QUANLITHUVIENWINFORM
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.5F, System.Drawing.FontStyle.Bold);
-            this.btnSua.Location = new System.Drawing.Point(705, 324);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Location = new System.Drawing.Point(940, 399);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(81, 36);
+            this.btnSua.Size = new System.Drawing.Size(108, 44);
             this.btnSua.TabIndex = 25;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -222,10 +224,10 @@ namespace QUANLITHUVIENWINFORM
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.5F, System.Drawing.FontStyle.Bold);
-            this.btnXoa.Location = new System.Drawing.Point(830, 324);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Location = new System.Drawing.Point(1107, 399);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(81, 36);
+            this.btnXoa.Size = new System.Drawing.Size(108, 44);
             this.btnXoa.TabIndex = 26;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -235,20 +237,20 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.txtEmail.Enabled = false;
             this.txtEmail.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(641, 265);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Location = new System.Drawing.Point(855, 326);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(219, 24);
+            this.txtEmail.Size = new System.Drawing.Size(291, 28);
             this.txtEmail.TabIndex = 27;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(587, 267);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(783, 329);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 18);
+            this.label2.Size = new System.Drawing.Size(58, 23);
             this.label2.TabIndex = 28;
             this.label2.Text = "Email";
             // 
@@ -273,19 +275,20 @@ namespace QUANLITHUVIENWINFORM
             this.panel2.Controls.Add(this.dgvDocgia);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(0, 55);
+            this.panel2.Location = new System.Drawing.Point(0, 68);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(937, 413);
+            this.panel2.Size = new System.Drawing.Size(1249, 508);
             this.panel2.TabIndex = 2;
             // 
             // ptbSearch
             // 
             this.ptbSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbSearch.Image = global::QUANLITHUVIENWINFORM.Properties.Resources._49116;
-            this.ptbSearch.Location = new System.Drawing.Point(492, 22);
-            this.ptbSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.ptbSearch.Location = new System.Drawing.Point(656, 27);
+            this.ptbSearch.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ptbSearch.Name = "ptbSearch";
-            this.ptbSearch.Size = new System.Drawing.Size(36, 24);
+            this.ptbSearch.Size = new System.Drawing.Size(47, 29);
             this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbSearch.TabIndex = 5;
             this.ptbSearch.TabStop = false;
@@ -293,13 +296,14 @@ namespace QUANLITHUVIENWINFORM
             // 
             // FmDocgia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(937, 468);
+            this.ClientSize = new System.Drawing.Size(1249, 576);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "FmDocgia";
             this.Text = "Độc giả ";
