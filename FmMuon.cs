@@ -18,6 +18,9 @@ namespace QUANLITHUVIENWINFORM
             InitializeComponent();
         }
 
+        public string textBoxID { get { return txtId.Text; } }
+        public string cbBoxmaThe { get { return cbMathe.Text; } }
+
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             
@@ -38,9 +41,11 @@ namespace QUANLITHUVIENWINFORM
                 };                  
                 db.Muons.Add(muon);                   
                 db.SaveChanges();                   
-                FmMuon_Load(sender, e);
                 FmThemChiTietMuon fmThemChiTietMuon = new FmThemChiTietMuon();
+                fmThemChiTietMuon.textBoxID = textBoxID;
+                fmThemChiTietMuon.cbBoxmaThe = cbBoxmaThe;
                 fmThemChiTietMuon.Show();
+                FmMuon_Load(sender, e);
             }
             catch (Exception err)
             {
@@ -51,9 +56,14 @@ namespace QUANLITHUVIENWINFORM
 
         private void btnCTMuon_Click(object sender, EventArgs e)
         {
-            FmChiTietMuon fmChiTietMuon = new FmChiTietMuon();
-            fmChiTietMuon.Show();
-
+            if (txtId.Text != null && cbMathe.Text != null && txtId.Text != "")
+            {
+                FmChiTietMuon fmChiTietMuon = new FmChiTietMuon();
+                (fmChiTietMuon).textBoxID = textBoxID;
+                fmChiTietMuon.cbBoxmaThe = cbBoxmaThe;
+                fmChiTietMuon.Show();
+            }
+            else MessageBox.Show("Vui lòng chọn dữ iệu cần xem !!!");
         }
 
         private void FmMuon_Load(object sender, EventArgs e)
