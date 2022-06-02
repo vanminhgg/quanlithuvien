@@ -75,6 +75,7 @@ namespace QUANLITHUVIENWINFORM
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnXoa.Location = new System.Drawing.Point(562, 252);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 29);
@@ -85,11 +86,12 @@ namespace QUANLITHUVIENWINFORM
             // 
             // btnSua
             // 
-            this.btnSua.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSua.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSua.Location = new System.Drawing.Point(468, 252);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 29);
@@ -100,11 +102,12 @@ namespace QUANLITHUVIENWINFORM
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.Lime;
+            this.btnThem.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnThem.Location = new System.Drawing.Point(372, 252);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 29);
@@ -155,11 +158,8 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.ptbSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ptbSearch.Image = global::QUANLITHUVIENWINFORM.Properties.Resources._49116;
-
-            this.ptbSearch.Location = new System.Drawing.Point(255, 18);
-            this.ptbSearch.Margin = new System.Windows.Forms.Padding(4);
             this.ptbSearch.Location = new System.Drawing.Point(304, 12);
-
+            this.ptbSearch.Margin = new System.Windows.Forms.Padding(4);
             this.ptbSearch.Name = "ptbSearch";
             this.ptbSearch.Size = new System.Drawing.Size(26, 23);
             this.ptbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -168,13 +168,9 @@ namespace QUANLITHUVIENWINFORM
             // 
             // txtSearch
             // 
-
-            this.txtSearch.Location = new System.Drawing.Point(9, 18);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
-
             this.txtSearch.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(119, 12);
-
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(179, 24);
             this.txtSearch.TabIndex = 4;
@@ -194,9 +190,10 @@ namespace QUANLITHUVIENWINFORM
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(141)))), ((int)(((byte)(240)))));
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(681, 55);

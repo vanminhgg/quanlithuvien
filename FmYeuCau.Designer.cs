@@ -33,7 +33,6 @@ namespace QUANLITHUVIENWINFORM
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtGhiChu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dTp_ngayMuon = new System.Windows.Forms.DateTimePicker();
@@ -42,6 +41,7 @@ namespace QUANLITHUVIENWINFORM
             this.lbName = new System.Windows.Forms.Label();
             this.lbId = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -49,7 +49,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(141)))), ((int)(((byte)(240)))));
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -60,7 +60,9 @@ namespace QUANLITHUVIENWINFORM
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
             this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(224, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(246, 33);
@@ -84,15 +86,6 @@ namespace QUANLITHUVIENWINFORM
             this.panel2.Size = new System.Drawing.Size(732, 395);
             this.panel2.TabIndex = 5;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 54);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(376, 331);
-            this.dataGridView1.TabIndex = 0;
-            // 
             // txtGhiChu
             // 
             this.txtGhiChu.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,7 +99,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(431, 196);
+            this.label2.Location = new System.Drawing.Point(426, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 38;
@@ -138,7 +131,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.lbNgaymuon.AutoSize = true;
             this.lbNgaymuon.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgaymuon.Location = new System.Drawing.Point(411, 153);
+            this.lbNgaymuon.Location = new System.Drawing.Point(404, 154);
             this.lbNgaymuon.Name = "lbNgaymuon";
             this.lbNgaymuon.Size = new System.Drawing.Size(80, 17);
             this.lbNgaymuon.TabIndex = 35;
@@ -158,7 +151,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.lbId.AutoSize = true;
             this.lbId.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbId.Location = new System.Drawing.Point(422, 100);
+            this.lbId.Location = new System.Drawing.Point(417, 100);
             this.lbId.Name = "lbId";
             this.lbId.Size = new System.Drawing.Size(67, 17);
             this.lbId.TabIndex = 33;
@@ -172,6 +165,15 @@ namespace QUANLITHUVIENWINFORM
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(66, 24);
             this.txtId.TabIndex = 32;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(10, 54);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(376, 331);
+            this.dataGridView1.TabIndex = 0;
             // 
             // FmYeuCau
             // 

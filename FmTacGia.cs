@@ -143,5 +143,7 @@ namespace QUANLITHUVIENWINFORM
         {
             FmTacGia_Load(sender, e);
         }
+
+
     }
 }

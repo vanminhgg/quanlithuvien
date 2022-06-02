@@ -27,5 +27,7 @@ namespace QUANLITHUVIENWINFORM
             dgvSach.DataSource = listSach.Distinct().ToList();
 
         }
+
+      
     }
 }
