@@ -33,7 +33,7 @@ namespace QUANLITHUVIENWINFORM
                     var the = db.Thes.Where(i => i.MaThe == id).Count();
                     if(the == 1)
                     {
-                        AppDocGia app = new AppDocGia();
+                        AppDocGia app = new AppDocGia(txbUsername.Text);
                         app.Show();
                         this.Hide();
                     }

@@ -187,5 +187,7 @@ namespace QUANLITHUVIENWINFORM
         {
             FmTheTV_Load(sender, e);
         }
+
+ 
     }
 }
