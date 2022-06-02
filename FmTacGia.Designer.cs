@@ -120,7 +120,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(362, 174);
+            this.lbName.Location = new System.Drawing.Point(354, 174);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(76, 17);
             this.lbName.TabIndex = 21;
