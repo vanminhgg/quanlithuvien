@@ -23,5 +23,7 @@ namespace QUANLITHUVIENWINFORM
             var listSach = (from sach in db.Saches select new { Id = sach.MaSach, Name = sach.TenSach, Tacgia = sach.TacGia.TenTacGia, Nxb = sach.NXB.TenNXB, Theloai = sach.TheLoai.TenTheLoai, Namxb = sach.NamXB, Soluong = sach.SoLuong }).ToList();
             dgvSach.DataSource = listSach.Distinct().ToList();
         }
+
+      
     }
 }

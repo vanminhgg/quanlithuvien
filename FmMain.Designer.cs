@@ -41,12 +41,12 @@ namespace QUANLITHUVIENWINFORM
             this.mượnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thôngTinTàiKhoảnToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.theeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tácGiảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nXBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yêuCầuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -86,6 +86,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             // quảnLýSáchToolStripMenuItem
             // 
+            this.quảnLýSáchToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.quảnLýSáchToolStripMenuItem.Name = "quảnLýSáchToolStripMenuItem";
             this.quảnLýSáchToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
             this.quảnLýSáchToolStripMenuItem.Text = "Quản lý sách";
@@ -93,6 +94,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             // đọcGiảToolStripMenuItem
             // 
+            this.đọcGiảToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.đọcGiảToolStripMenuItem.Name = "đọcGiảToolStripMenuItem";
             this.đọcGiảToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.đọcGiảToolStripMenuItem.Text = "Độc Giả";
@@ -100,6 +102,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             // mượnToolStripMenuItem
             // 
+            this.mượnToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.mượnToolStripMenuItem.Name = "mượnToolStripMenuItem";
             this.mượnToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.mượnToolStripMenuItem.Text = "Mượn";
@@ -107,6 +110,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             // trảToolStripMenuItem
             // 
+            this.trảToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.trảToolStripMenuItem.Name = "trảToolStripMenuItem";
             this.trảToolStripMenuItem.Size = new System.Drawing.Size(36, 20);
             this.trảToolStripMenuItem.Text = "Trả";
@@ -114,20 +118,15 @@ namespace QUANLITHUVIENWINFORM
             // 
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
+            this.thôngTinTàiKhoảnToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
             this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thẻ thư viện";
             this.thôngTinTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.thôngTinTàiKhoảnToolStripMenuItem_Click);
             // 
-            // thôngTinTàiKhoảnToolStripMenuItem1
-            // 
-            this.thôngTinTàiKhoảnToolStripMenuItem1.Name = "thôngTinTàiKhoảnToolStripMenuItem1";
-            this.thôngTinTàiKhoảnToolStripMenuItem1.Size = new System.Drawing.Size(126, 20);
-            this.thôngTinTàiKhoảnToolStripMenuItem1.Text = "Thông tin tài khoản";
-            this.thôngTinTàiKhoảnToolStripMenuItem1.Click += new System.EventHandler(this.thôngTinTàiKhoảnToolStripMenuItem1_Click);
-            // 
             // theeToolStripMenuItem
             // 
+            this.theeToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.theeToolStripMenuItem.Name = "theeToolStripMenuItem";
             this.theeToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.theeToolStripMenuItem.Text = "Thể Loại";
@@ -135,6 +134,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             // tácGiảToolStripMenuItem
             // 
+            this.tácGiảToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tácGiảToolStripMenuItem.Name = "tácGiảToolStripMenuItem";
             this.tácGiảToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.tácGiảToolStripMenuItem.Text = "Tác Giả";
@@ -142,6 +142,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             // nXBToolStripMenuItem
             // 
+            this.nXBToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.nXBToolStripMenuItem.Name = "nXBToolStripMenuItem";
             this.nXBToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.nXBToolStripMenuItem.Text = "NXB";
@@ -149,6 +150,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             // yêuCầuToolStripMenuItem
             // 
+            this.yêuCầuToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.yêuCầuToolStripMenuItem.Name = "yêuCầuToolStripMenuItem";
             this.yêuCầuToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.yêuCầuToolStripMenuItem.Text = "Yêu cầu";
@@ -156,7 +158,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(141)))), ((int)(((byte)(240)))));
+            this.menuStrip1.BackColor = System.Drawing.Color.RoyalBlue;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -165,17 +167,25 @@ namespace QUANLITHUVIENWINFORM
             this.mượnToolStripMenuItem,
             this.trảToolStripMenuItem,
             this.thôngTinTàiKhoảnToolStripMenuItem,
-            this.thôngTinTàiKhoảnToolStripMenuItem1,
             this.theeToolStripMenuItem,
             this.tácGiảToolStripMenuItem,
             this.nXBToolStripMenuItem,
-            this.yêuCầuToolStripMenuItem});
+            this.yêuCầuToolStripMenuItem,
+            this.đăngXuấtToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1182, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // đăngXuấtToolStripMenuItem
+            // 
+            this.đăngXuấtToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -474,6 +484,7 @@ namespace QUANLITHUVIENWINFORM
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FmMain";
             this.Text = "Main";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FmMain_FormClosed);
             this.Load += new System.EventHandler(this.FmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -507,7 +518,6 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.ToolStripMenuItem mượnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem theeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tácGiảToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nXBToolStripMenuItem;
@@ -535,5 +545,6 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
     }
 }
