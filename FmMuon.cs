@@ -23,10 +23,17 @@ namespace QUANLITHUVIENWINFORM
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            
-            /*var listTimKiem = (from muon in db.Muons where muon.MaMuon.ToString().Contains(txtSearch)
-                           select new { id = muon.MaMuon, mathe = muon.MaThe, ngay = muon.NgayMuon, ghichu = muon.GhiChu });
-            dgvMuon.DataSource = listTimKiem.Distinct().ToList();*/
+            if (txtSearch.Text != "")
+            {
+                var listTimKiem = (from muon in db.Muons
+                                   where muon.MaMuon.ToString().Contains(txtSearch.Text)
+                                   select new { id = muon.MaMuon, mathe = muon.MaThe, ngay = muon.NgayMuon, ghichu = muon.GhiChu });
+                dgvMuon.DataSource = listTimKiem.Distinct().ToList();
+            }
+            else
+            {
+                this.FmMuon_Load(sender, e);
+            }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -42,10 +49,10 @@ namespace QUANLITHUVIENWINFORM
                 db.Muons.Add(muon);                   
                 db.SaveChanges();                   
                 FmThemChiTietMuon fmThemChiTietMuon = new FmThemChiTietMuon();
-                fmThemChiTietMuon.textBoxID = textBoxID;
                 fmThemChiTietMuon.cbBoxmaThe = cbBoxmaThe;
                 fmThemChiTietMuon.Show();
                 FmMuon_Load(sender, e);
+                this.Hide();
             }
             catch (Exception err)
             {

@@ -113,7 +113,6 @@ namespace QUANLITHUVIENWINFORM
         {
             Application.Exit();
         }
-
         private void txbPassword_Click(object sender, EventArgs e)
         {
             txbPassword.PasswordChar = '*';
@@ -124,7 +123,5 @@ namespace QUANLITHUVIENWINFORM
         {
             txbUsername.Clear();
         }
-
- 
     }
 }

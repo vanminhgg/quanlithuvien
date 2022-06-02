@@ -127,13 +127,10 @@ namespace QUANLITHUVIENWINFORM
                                    select new { id = tl.MaTheLoai, ten = tl.TenTheLoai });
 
                 dgvTheLoai.DataSource = listTimKiem.ToList();
-
-
             }
             else
             {
                 this.FmTheLoai_Load(sender, e);
-
             }
         }
 
