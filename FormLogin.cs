@@ -101,7 +101,7 @@ namespace QUANLITHUVIENWINFORM
         {
             txbUsername.Text = "Nhập mã thẻ";
             txbUsername.Visible = true;
-            txbPassword.Visible = false;
+            txbPassword.Visible = false;    
             pictureBox2.Visible = true;
             pictureBox3.Visible = false;
             rbtnDocgia.Checked = true;

@@ -28,6 +28,9 @@ namespace QUANLITHUVIENWINFORM
 
         }
 
-      
+        private void btnXacnhan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

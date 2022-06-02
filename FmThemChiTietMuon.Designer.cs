@@ -132,6 +132,7 @@ namespace QUANLITHUVIENWINFORM
             this.btnXacnhan.TabIndex = 24;
             this.btnXacnhan.Text = "Xác nhận";
             this.btnXacnhan.UseVisualStyleBackColor = false;
+            this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
             // 
             // lbNgaymuon
             // 
