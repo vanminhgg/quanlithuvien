@@ -79,13 +79,12 @@ namespace QUANLITHUVIENWINFORM
             // txtGhiChu
             // 
             this.txtGhiChu.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+
             this.txtGhiChu.Location = new System.Drawing.Point(593, 219);
             this.txtGhiChu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
+
             this.txtGhiChu.Location = new System.Drawing.Point(445, 178);
             this.txtGhiChu.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> e6917e4f23b8e6766ccb17742f12c123878de584
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(277, 28);
             this.txtGhiChu.TabIndex = 31;
@@ -106,13 +105,11 @@ namespace QUANLITHUVIENWINFORM
             this.dTp_ngayMuon.CustomFormat = "dd/MM/yyyy";
             this.dTp_ngayMuon.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dTp_ngayMuon.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-<<<<<<< HEAD
+
             this.dTp_ngayMuon.Location = new System.Drawing.Point(595, 162);
             this.dTp_ngayMuon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-=======
             this.dTp_ngayMuon.Location = new System.Drawing.Point(446, 132);
             this.dTp_ngayMuon.Margin = new System.Windows.Forms.Padding(2);
->>>>>>> e6917e4f23b8e6766ccb17742f12c123878de584
             this.dTp_ngayMuon.Name = "dTp_ngayMuon";
             this.dTp_ngayMuon.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dTp_ngayMuon.Size = new System.Drawing.Size(276, 28);
@@ -136,13 +133,12 @@ namespace QUANLITHUVIENWINFORM
             this.btnCTMuon.FlatAppearance.BorderSize = 0;
             this.btnCTMuon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCTMuon.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+
             this.btnCTMuon.Location = new System.Drawing.Point(739, 302);
             this.btnCTMuon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
+
             this.btnCTMuon.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCTMuon.Location = new System.Drawing.Point(566, 245);
->>>>>>> e6917e4f23b8e6766ccb17742f12c123878de584
             this.btnCTMuon.Name = "btnCTMuon";
             this.btnCTMuon.Size = new System.Drawing.Size(116, 53);
             this.btnCTMuon.TabIndex = 27;
@@ -158,12 +154,10 @@ namespace QUANLITHUVIENWINFORM
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-<<<<<<< HEAD
+
             this.btnThem.Location = new System.Drawing.Point(549, 302);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-=======
             this.btnThem.Location = new System.Drawing.Point(445, 245);
->>>>>>> e6917e4f23b8e6766ccb17742f12c123878de584
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(119, 53);
             this.btnThem.TabIndex = 24;
