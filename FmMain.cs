@@ -28,7 +28,15 @@ namespace QUANLITHUVIENWINFORM
 
         private void FmMain_Load(object sender, EventArgs e)
         {
-            var totalBook = (from sach in db.Saches select sach.SoLuong);
+            DateTime today = DateTime.Now;
+            var totalBook = db.Saches.Sum(s => s.SoLuong);
+            label2.Text = totalBook.ToString();
+            var borrowed = db.ChiTietMuons.Where(s => s.DaTra != 1).Count();
+            label3.Text = (totalBook - borrowed).ToString();
+            var dateExit = db.ChiTietMuons.Where(s => DateTime.Compare(today, s.NgayHetHan) > 0 && s.DaTra == 0).Count();
+            label5.Text = dateExit.ToString();
+            var numDocGia = db.DocGias.Count();
+            label7.Text = numDocGia.ToString();
         }
 
         private void đọcGiảToolStripMenuItem_Click(object sender, EventArgs e)
