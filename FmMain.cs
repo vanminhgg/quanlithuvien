@@ -47,10 +47,28 @@ namespace QUANLITHUVIENWINFORM
                                     theloai = theloai.First().TenTheLoai,
                                     soluong = theloai.Count(),
                                 };
-            chart1.DataSource = sachToTheLoai.ToList();
-            chart1.Series["SoLuong"].XValueMember = "theloai";
-            chart1.Series["SoLuong"].YValueMembers = "soluong";
-            chart1.Titles.Add("");
+            string[] x = (from i in sachToTheLoai
+                          orderby i.theloai ascending
+                          select i.theloai).ToArray();
+            int[] y = (from i in sachToTheLoai
+                          orderby i.theloai ascending
+                          select i.soluong).ToArray();
+            chart1.Series[0].Points.DataBindXY(x, y);
+            chart1.Legends[0].Enabled = true;
+            if (startDate.Value < endDate.Value) { MessageBox.Show("Ngày bắt đầu nhỏ hơn ngày kết thúc", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
+
+            var sachMuonTheoTime = from ct in db.ChiTietMuons
+                                   join m in db.Muons on ct.MaMuon equals m.MaMuon
+                                   where m.NgayMuon >= startDate.Value && m.NgayMuon < endDate.Value
+                                   group m by m.NgayMuon into nm
+                                   select new
+                                   {
+                                       ngay = nm.First().NgayMuon,
+                                       soluong = nm.Count(),
+                                   };
+            chart2.DataSource = sachMuonTheoTime.ToList();
+            chart2.Series["Series1"].XValueMember = "ngay";
+            chart2.Series["Series1"].YValueMembers = "soluong";
         }
 
         private void đọcGiảToolStripMenuItem_Click(object sender, EventArgs e)
@@ -133,6 +151,11 @@ namespace QUANLITHUVIENWINFORM
         private void FmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
