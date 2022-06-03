@@ -12,19 +12,19 @@ namespace QUANLITHUVIENWINFORM
 {
     public partial class AppDocGia : Form
     {
-        
         QLTVContext db = new QLTVContext();
         public AppDocGia()
         {
             InitializeComponent();
-            dgvSach.RowHeadersVisible = false;
-            dgvSach.AllowUserToResizeColumns = false;
-            dgvSach.AllowUserToResizeRows = false;
+            dgvDocGia.RowHeadersVisible = false;
+            dgvDocGia.AllowUserToResizeColumns = false;
+            dgvDocGia.AllowUserToResizeRows = false;
         }
 
         private void AppDocGia_Load(object sender, EventArgs e)
         {
             txtSearch.Clear();
+
             var listSach = from s in db.Saches
                            select new
                            {
@@ -35,6 +35,7 @@ namespace QUANLITHUVIENWINFORM
                                nxb = s.NXB.TenNXB,
                                soluong = s.SoLuong
                            };
+
             dgvSach.DataSource = listSach.Distinct().ToList();
             dgvSach.Columns["id"].HeaderText = "Mã sách";
             dgvSach.Columns["name"].HeaderText = "Tên sách";
@@ -55,12 +56,14 @@ namespace QUANLITHUVIENWINFORM
         {
             string mathe = mt;
             cbMathe.Text = mathe;
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
@@ -116,5 +119,6 @@ namespace QUANLITHUVIENWINFORM
             FormLogin fmlogin = new FormLogin();
             fmlogin.Show();
         }
+
     }
 }

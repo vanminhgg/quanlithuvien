@@ -1,8 +1,18 @@
-.vs
-<<<<<<< HEAD
-bin
-obj
-=======
-obj
-bin
->>>>>>> f8fc1047dda57faa199632b3681331e7adc6d8fc
+# Visual Studio 2015 cache/options directory
+.vs/
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/

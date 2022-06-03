@@ -37,6 +37,7 @@ namespace QUANLITHUVIENWINFORM
             this.cbMathe = new System.Windows.Forms.ComboBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+
             this.dgvSach = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.ptbSearch = new System.Windows.Forms.PictureBox();
@@ -44,6 +45,7 @@ namespace QUANLITHUVIENWINFORM
             this.label2 = new System.Windows.Forms.Label();
             this.txtGhichu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).BeginInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,6 +128,7 @@ namespace QUANLITHUVIENWINFORM
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(216, 20);
             this.txtSearch.TabIndex = 64;
+
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgvSach
@@ -139,6 +142,7 @@ namespace QUANLITHUVIENWINFORM
             this.dgvSach.RowHeadersVisible = false;
             this.dgvSach.Size = new System.Drawing.Size(446, 461);
             this.dgvSach.TabIndex = 63;
+
             // 
             // Column1
             // 
@@ -157,6 +161,7 @@ namespace QUANLITHUVIENWINFORM
             this.ptbSearch.TabIndex = 65;
             this.ptbSearch.TabStop = false;
             // 
+
             // dtp_ngayMuon
             // 
             this.dtp_ngayMuon.CustomFormat = "dd/MM/yyyy";
@@ -187,6 +192,7 @@ namespace QUANLITHUVIENWINFORM
             this.txtGhichu.Size = new System.Drawing.Size(212, 20);
             this.txtGhichu.TabIndex = 68;
             // 
+
             // AppDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -197,7 +203,7 @@ namespace QUANLITHUVIENWINFORM
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtp_ngayMuon);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.dgvSach);
+            this.Controls.Add(this.dgvDocGia);
             this.Controls.Add(this.ptbSearch);
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.label1);
@@ -211,7 +217,9 @@ namespace QUANLITHUVIENWINFORM
             this.Name = "AppDocGia";
             this.Text = "Độc giả";
             this.Load += new System.EventHandler(this.AppDocGia_Load);
+
             ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -227,11 +235,12 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.ComboBox cbMathe;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.DataGridView dgvSach;
+        private System.Windows.Forms.DataGridView dgvDocGia;
         private System.Windows.Forms.PictureBox ptbSearch;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.DateTimePicker dtp_ngayMuon;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtGhichu;
+
     }
 }
