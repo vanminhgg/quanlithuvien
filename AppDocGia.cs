@@ -25,12 +25,10 @@ namespace QUANLITHUVIENWINFORM
         private void AppDocGia_Load(object sender, EventArgs e)
         {
             txtSearch.Clear();
-            txtNgayPhaiTra.Clear();
-            nud_soluong.Value = 1;
-            txtNgayPhaiTra.Enabled = false;
             var listSach = from s in db.Saches
                            select new
                            {
+                               id = s.MaSach,
                                name = s.TenSach,
                                tacgia = s.TacGia.TenTacGia,
                                theloai = s.TheLoai.TenTheLoai,
@@ -38,12 +36,14 @@ namespace QUANLITHUVIENWINFORM
                                soluong = s.SoLuong
                            };
             dgvSach.DataSource = listSach.Distinct().ToList();
+            dgvSach.Columns["id"].HeaderText = "Mã sách";
             dgvSach.Columns["name"].HeaderText = "Tên sách";
             dgvSach.Columns["tacgia"].HeaderText = "Tác giả";
             dgvSach.Columns["theloai"].HeaderText = "Thể loại";
             dgvSach.Columns["nxb"].HeaderText = "Nhà xuất bản";
             dgvSach.Columns["soluong"].HeaderText = "Số lượng";
-            
+
+            dgvSach.Columns["id"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvSach.Columns["name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvSach.Columns["tacgia"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dgvSach.Columns["theloai"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
@@ -78,6 +78,43 @@ namespace QUANLITHUVIENWINFORM
                 this.AppDocGia_Load(sender, e);
 
             }
+        }
+
+        private void btnXacnhan_Click(object sender, EventArgs e)
+        {
+            var ycm = new YeuCauMuon()
+            {
+                MaThe = Convert.ToInt32(cbMathe.Text),
+                NgayYeuCau = dtp_ngayMuon.Value,
+            };
+            db.YeuCauMuons.Add(ycm);
+            db.SaveChanges();
+            for (int i = 0; i < dgvSach.Rows.Count; i++)
+            {
+                bool isCellChecked;
+                if (dgvSach.Rows[i].Cells[0].Value == null) isCellChecked = false;
+                else isCellChecked = (bool)(dgvSach.Rows[i].Cells[0].Value);
+                if (isCellChecked == true)
+                {
+                    var mayeucau = db.YeuCauMuons.Max(m => m.MaYC);
+                    
+                    var ctyeucau = new ChiTietYeuCau()
+                    {
+                        MaYC = mayeucau,
+                        MaSach = Convert.ToInt32(dgvSach.Rows[i].Cells[1].Value),
+                    };
+                    db.ChiTietYeuCaus.Add(ctyeucau);
+                    db.SaveChanges();
+                }
+            }
+            MessageBox.Show("Yêu Cầu thành công");
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormLogin fmlogin = new FormLogin();
+            fmlogin.Show();
         }
     }
 }
