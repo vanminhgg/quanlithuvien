@@ -39,12 +39,13 @@ namespace QUANLITHUVIENWINFORM
             this.cbMathe = new System.Windows.Forms.ComboBox();
             this.lbNgaymuon = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
-            this.lbId = new System.Windows.Forms.Label();
+            this.lbMaYC = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvYeucau = new System.Windows.Forms.DataGridView();
+            this.btnChitiet = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvYeucau)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,15 +72,16 @@ namespace QUANLITHUVIENWINFORM
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnChitiet);
             this.panel2.Controls.Add(this.txtGhiChu);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.dTp_ngayMuon);
             this.panel2.Controls.Add(this.cbMathe);
             this.panel2.Controls.Add(this.lbNgaymuon);
             this.panel2.Controls.Add(this.lbName);
-            this.panel2.Controls.Add(this.lbId);
+            this.panel2.Controls.Add(this.lbMaYC);
             this.panel2.Controls.Add(this.txtId);
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.dgvYeucau);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 55);
             this.panel2.Name = "panel2";
@@ -131,11 +133,11 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.lbNgaymuon.AutoSize = true;
             this.lbNgaymuon.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgaymuon.Location = new System.Drawing.Point(404, 154);
+            this.lbNgaymuon.Location = new System.Drawing.Point(392, 154);
             this.lbNgaymuon.Name = "lbNgaymuon";
-            this.lbNgaymuon.Size = new System.Drawing.Size(80, 17);
+            this.lbNgaymuon.Size = new System.Drawing.Size(93, 17);
             this.lbNgaymuon.TabIndex = 35;
-            this.lbNgaymuon.Text = "Ngày Mượn";
+            this.lbNgaymuon.Text = "Ngày yêu cầu";
             // 
             // lbName
             // 
@@ -147,15 +149,15 @@ namespace QUANLITHUVIENWINFORM
             this.lbName.TabIndex = 34;
             this.lbName.Text = "Mã thẻ";
             // 
-            // lbId
+            // lbMaYC
             // 
-            this.lbId.AutoSize = true;
-            this.lbId.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbId.Location = new System.Drawing.Point(417, 100);
-            this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(67, 17);
-            this.lbId.TabIndex = 33;
-            this.lbId.Text = "Mã mượn";
+            this.lbMaYC.AutoSize = true;
+            this.lbMaYC.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaYC.Location = new System.Drawing.Point(405, 102);
+            this.lbMaYC.Name = "lbMaYC";
+            this.lbMaYC.Size = new System.Drawing.Size(79, 17);
+            this.lbMaYC.TabIndex = 33;
+            this.lbMaYC.Text = "Mã yêu cầu";
             // 
             // txtId
             // 
@@ -166,14 +168,31 @@ namespace QUANLITHUVIENWINFORM
             this.txtId.Size = new System.Drawing.Size(66, 24);
             this.txtId.TabIndex = 32;
             // 
-            // dataGridView1
+            // dgvYeucau
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 54);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(376, 331);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvYeucau.BackgroundColor = System.Drawing.Color.White;
+            this.dgvYeucau.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvYeucau.Location = new System.Drawing.Point(10, 54);
+            this.dgvYeucau.Name = "dgvYeucau";
+            this.dgvYeucau.RowHeadersVisible = false;
+            this.dgvYeucau.Size = new System.Drawing.Size(376, 331);
+            this.dgvYeucau.TabIndex = 0;
+            this.dgvYeucau.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvYeucau_CellMouseClick);
+            // 
+            // btnChitiet
+            // 
+            this.btnChitiet.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnChitiet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChitiet.FlatAppearance.BorderSize = 0;
+            this.btnChitiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChitiet.Font = new System.Drawing.Font("Bahnschrift SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChitiet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnChitiet.Location = new System.Drawing.Point(519, 268);
+            this.btnChitiet.Name = "btnChitiet";
+            this.btnChitiet.Size = new System.Drawing.Size(106, 43);
+            this.btnChitiet.TabIndex = 40;
+            this.btnChitiet.Text = "Chi tiết";
+            this.btnChitiet.UseVisualStyleBackColor = false;
             // 
             // FmYeuCau
             // 
@@ -188,11 +207,12 @@ namespace QUANLITHUVIENWINFORM
             this.MaximizeBox = false;
             this.Name = "FmYeuCau";
             this.Text = "Yêu cầu mượn sách";
+            this.Load += new System.EventHandler(this.FmYeuCau_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvYeucau)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,14 +222,15 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvYeucau;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dTp_ngayMuon;
         private System.Windows.Forms.ComboBox cbMathe;
         private System.Windows.Forms.Label lbNgaymuon;
         private System.Windows.Forms.Label lbName;
-        private System.Windows.Forms.Label lbId;
+        private System.Windows.Forms.Label lbMaYC;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Button btnChitiet;
     }
 }

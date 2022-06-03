@@ -79,6 +79,12 @@
     <Compile Include="FmChiTietMuon.Designer.cs">
       <DependentUpon>FmChiTietMuon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FmChiTietYC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmChiTietYC.Designer.cs">
+      <DependentUpon>FmChiTietYC.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmDocgia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FmChiTietMuon.resx">
       <DependentUpon>FmChiTietMuon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmChiTietYC.resx">
+      <DependentUpon>FmChiTietYC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FmDocgia.resx">
       <DependentUpon>FmDocgia.cs</DependentUpon>
