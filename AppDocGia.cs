@@ -16,9 +16,9 @@ namespace QUANLITHUVIENWINFORM
         public AppDocGia()
         {
             InitializeComponent();
-            dgvDocGia.RowHeadersVisible = false;
-            dgvDocGia.AllowUserToResizeColumns = false;
-            dgvDocGia.AllowUserToResizeRows = false;
+            dgvSach.RowHeadersVisible = false;
+            dgvSach.AllowUserToResizeColumns = false;
+            dgvSach.AllowUserToResizeRows = false;
         }
 
         private void AppDocGia_Load(object sender, EventArgs e)
