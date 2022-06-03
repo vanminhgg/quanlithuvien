@@ -1,0 +1,754 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModelQLTV.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ModelQLTVStoreContainer">
+    <EntitySet Name="NXBs" EntityType="ModelQLTV.Store.NXBs" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TheLoais" EntityType="ModelQLTV.Store.TheLoais" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TacGias" EntityType="ModelQLTV.Store.TacGias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Saches" EntityType="ModelQLTV.Store.Saches" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Thes" EntityType="ModelQLTV.Store.Thes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Muons" EntityType="ModelQLTV.Store.Muons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DocGias" EntityType="ModelQLTV.Store.DocGias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChiTietMuons" EntityType="ModelQLTV.Store.ChiTietMuons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="YeuCauMuons" EntityType="ModelQLTV.Store.YeuCauMuons" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChiTietYeuCaus" EntityType="ModelQLTV.Store.ChiTietYeuCaus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TaiKhoans" EntityType="ModelQLTV.Store.TaiKhoans" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="NXBSach" Association="ModelQLTV.Store.NXBSach">
+      <End Role="NXB" EntitySet="NXBs" />
+      <End Role="Sach" EntitySet="Saches" />
+    </AssociationSet>
+    <AssociationSet Name="TheLoaiSach" Association="ModelQLTV.Store.TheLoaiSach">
+      <End Role="TheLoai" EntitySet="TheLoais" />
+      <End Role="Sach" EntitySet="Saches" />
+    </AssociationSet>
+    <AssociationSet Name="SachTacGia" Association="ModelQLTV.Store.SachTacGia">
+      <End Role="Sach" EntitySet="Saches" />
+      <End Role="TacGia" EntitySet="TacGias" />
+    </AssociationSet>
+    <AssociationSet Name="TheMuon" Association="ModelQLTV.Store.TheMuon">
+      <End Role="The" EntitySet="Thes" />
+      <End Role="Muon" EntitySet="Muons" />
+    </AssociationSet>
+    <AssociationSet Name="MuonChiTietMuon" Association="ModelQLTV.Store.MuonChiTietMuon">
+      <End Role="Muon" EntitySet="Muons" />
+      <End Role="ChiTietMuon" EntitySet="ChiTietMuons" />
+    </AssociationSet>
+    <AssociationSet Name="SachChiTietMuon" Association="ModelQLTV.Store.SachChiTietMuon">
+      <End Role="Sach" EntitySet="Saches" />
+      <End Role="ChiTietMuon" EntitySet="ChiTietMuons" />
+    </AssociationSet>
+    <AssociationSet Name="YeuCauMuonThe" Association="ModelQLTV.Store.YeuCauMuonThe">
+      <End Role="YeuCauMuon" EntitySet="YeuCauMuons" />
+      <End Role="The" EntitySet="Thes" />
+    </AssociationSet>
+    <AssociationSet Name="YeuCauMuonChiTietYeuCau" Association="ModelQLTV.Store.YeuCauMuonChiTietYeuCau">
+      <End Role="YeuCauMuon" EntitySet="YeuCauMuons" />
+      <End Role="ChiTietYeuCau" EntitySet="ChiTietYeuCaus" />
+    </AssociationSet>
+    <AssociationSet Name="SachChiTietYeuCau" Association="ModelQLTV.Store.SachChiTietYeuCau">
+      <End Role="Sach" EntitySet="Saches" />
+      <End Role="ChiTietYeuCau" EntitySet="ChiTietYeuCaus" />
+    </AssociationSet>
+    <AssociationSet Name="TheDocGia" Association="ModelQLTV.Store.TheDocGia">
+      <End Role="The" EntitySet="Thes" />
+      <End Role="DocGia" EntitySet="DocGias" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="NXBs">
+    <Key>
+      <PropertyRef Name="MaNXB" />
+    </Key>
+    <Property Name="MaNXB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenNXB" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TheLoais">
+    <Key>
+      <PropertyRef Name="MaTheLoai" />
+    </Key>
+    <Property Name="MaTheLoai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTheLoai" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TacGias">
+    <Key>
+      <PropertyRef Name="MaTacGia" />
+    </Key>
+    <Property Name="MaTacGia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTacGia" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Saches">
+    <Key>
+      <PropertyRef Name="MaSach" />
+    </Key>
+    <Property Name="MaSach" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaNXB" Type="int" Nullable="false" />
+    <Property Name="MaTheLoai" Type="int" Nullable="false" />
+    <Property Name="MaTacGia" Type="int" Nullable="false" />
+    <Property Name="TenSach" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NamXB" Type="int" Nullable="false" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Thes">
+    <Key>
+      <PropertyRef Name="MaThe" />
+    </Key>
+    <Property Name="MaThe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NgayBatDau" Type="datetime" Nullable="false" />
+    <Property Name="NgayKetThuc" Type="datetime" Nullable="false" />
+    <Property Name="GhiChu" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="MaDG" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Muons">
+    <Key>
+      <PropertyRef Name="MaMuon" />
+    </Key>
+    <Property Name="MaMuon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaThe" Type="int" Nullable="false" />
+    <Property Name="NgayMuon" Type="datetime" Nullable="false" />
+    <Property Name="GhiChu" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="DocGias">
+    <Key>
+      <PropertyRef Name="MaDG" />
+    </Key>
+    <Property Name="MaDG" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenDG" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DiaChi" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="SDT" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChiTietMuons">
+    <Key>
+      <PropertyRef Name="MaSach" />
+      <PropertyRef Name="MaMuon" />
+    </Key>
+    <Property Name="MaMuon" Type="int" Nullable="false" />
+    <Property Name="MaSach" Type="int" Nullable="false" />
+    <Property Name="DaTra" Type="int" Nullable="false" />
+    <Property Name="NgayTra" Type="datetime" Nullable="true" />
+    <Property Name="NgayHetHan" Type="datetime" Nullable="false" />
+    <Property Name="TinhTrangSach" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="YeuCauMuons">
+    <Key>
+      <PropertyRef Name="MaYC" />
+    </Key>
+    <Property Name="MaYC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaThe" Type="int" Nullable="false" />
+    <Property Name="NgayYeuCau" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChiTietYeuCaus">
+    <Key>
+      <PropertyRef Name="MaYC" />
+      <PropertyRef Name="MaSach" />
+    </Key>
+    <Property Name="MaYC" Type="int" Nullable="false" />
+    <Property Name="MaSach" Type="int" Nullable="false" />
+    <Property Name="SoLuong" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TaiKhoans">
+    <Key>
+      <PropertyRef Name="MaTaiKhoan" />
+    </Key>
+    <Property Name="MaTaiKhoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenDangNhap" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MatKhau" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="NXBSach">
+    <End Role="NXB" Type="ModelQLTV.Store.NXBs" Multiplicity="1" />
+    <End Role="Sach" Type="ModelQLTV.Store.Saches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NXB">
+        <PropertyRef Name="MaNXB" />
+      </Principal>
+      <Dependent Role="Sach">
+        <PropertyRef Name="MaNXB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TheLoaiSach">
+    <End Role="TheLoai" Type="ModelQLTV.Store.TheLoais" Multiplicity="1" />
+    <End Role="Sach" Type="ModelQLTV.Store.Saches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TheLoai">
+        <PropertyRef Name="MaTheLoai" />
+      </Principal>
+      <Dependent Role="Sach">
+        <PropertyRef Name="MaTheLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SachTacGia">
+    <End Role="Sach" Type="ModelQLTV.Store.Saches" Multiplicity="*" />
+    <End Role="TacGia" Type="ModelQLTV.Store.TacGias" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="TacGia">
+        <PropertyRef Name="MaTacGia" />
+      </Principal>
+      <Dependent Role="Sach">
+        <PropertyRef Name="MaTacGia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TheMuon">
+    <End Role="The" Type="ModelQLTV.Store.Thes" Multiplicity="1" />
+    <End Role="Muon" Type="ModelQLTV.Store.Muons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="The">
+        <PropertyRef Name="MaThe" />
+      </Principal>
+      <Dependent Role="Muon">
+        <PropertyRef Name="MaThe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MuonChiTietMuon">
+    <End Role="Muon" Type="ModelQLTV.Store.Muons" Multiplicity="1" />
+    <End Role="ChiTietMuon" Type="ModelQLTV.Store.ChiTietMuons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Muon">
+        <PropertyRef Name="MaMuon" />
+      </Principal>
+      <Dependent Role="ChiTietMuon">
+        <PropertyRef Name="MaMuon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SachChiTietMuon">
+    <End Role="Sach" Type="ModelQLTV.Store.Saches" Multiplicity="1" />
+    <End Role="ChiTietMuon" Type="ModelQLTV.Store.ChiTietMuons" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sach">
+        <PropertyRef Name="MaSach" />
+      </Principal>
+      <Dependent Role="ChiTietMuon">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="YeuCauMuonThe">
+    <End Role="YeuCauMuon" Type="ModelQLTV.Store.YeuCauMuons" Multiplicity="*" />
+    <End Role="The" Type="ModelQLTV.Store.Thes" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="The">
+        <PropertyRef Name="MaThe" />
+      </Principal>
+      <Dependent Role="YeuCauMuon">
+        <PropertyRef Name="MaThe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="YeuCauMuonChiTietYeuCau">
+    <End Role="YeuCauMuon" Type="ModelQLTV.Store.YeuCauMuons" Multiplicity="1" />
+    <End Role="ChiTietYeuCau" Type="ModelQLTV.Store.ChiTietYeuCaus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="YeuCauMuon">
+        <PropertyRef Name="MaYC" />
+      </Principal>
+      <Dependent Role="ChiTietYeuCau">
+        <PropertyRef Name="MaYC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SachChiTietYeuCau">
+    <End Role="Sach" Type="ModelQLTV.Store.Saches" Multiplicity="1" />
+    <End Role="ChiTietYeuCau" Type="ModelQLTV.Store.ChiTietYeuCaus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sach">
+        <PropertyRef Name="MaSach" />
+      </Principal>
+      <Dependent Role="ChiTietYeuCau">
+        <PropertyRef Name="MaSach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TheDocGia">
+    <End Role="The" Type="ModelQLTV.Store.Thes" Multiplicity="*" />
+    <End Role="DocGia" Type="ModelQLTV.Store.DocGias" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="DocGia">
+        <PropertyRef Name="MaDG" />
+      </Principal>
+      <Dependent Role="The">
+        <PropertyRef Name="MaDG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModelQLTV" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="QLTVContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NXBs" EntityType="ModelQLTV.NXB" />
+          <EntitySet Name="TheLoais" EntityType="ModelQLTV.TheLoai" />
+          <EntitySet Name="TacGias" EntityType="ModelQLTV.TacGia" />
+          <EntitySet Name="Saches" EntityType="ModelQLTV.Sach" />
+          <AssociationSet Name="NXBSach" Association="ModelQLTV.NXBSach">
+            <End Role="NXB" EntitySet="NXBs" />
+            <End Role="Sach" EntitySet="Saches" />
+          </AssociationSet>
+          <AssociationSet Name="TheLoaiSach" Association="ModelQLTV.TheLoaiSach">
+            <End Role="TheLoai" EntitySet="TheLoais" />
+            <End Role="Sach" EntitySet="Saches" />
+          </AssociationSet>
+          <AssociationSet Name="SachTacGia" Association="ModelQLTV.SachTacGia">
+            <End Role="Sach" EntitySet="Saches" />
+            <End Role="TacGia" EntitySet="TacGias" />
+          </AssociationSet>
+          <EntitySet Name="Thes" EntityType="ModelQLTV.The" />
+          <EntitySet Name="Muons" EntityType="ModelQLTV.Muon" />
+          <AssociationSet Name="TheMuon" Association="ModelQLTV.TheMuon">
+            <End Role="The" EntitySet="Thes" />
+            <End Role="Muon" EntitySet="Muons" />
+          </AssociationSet>
+          <EntitySet Name="DocGias" EntityType="ModelQLTV.DocGia" />
+          <EntitySet Name="ChiTietMuons" EntityType="ModelQLTV.ChiTietMuon" />
+          <AssociationSet Name="MuonChiTietMuon" Association="ModelQLTV.MuonChiTietMuon">
+            <End Role="Muon" EntitySet="Muons" />
+            <End Role="ChiTietMuon" EntitySet="ChiTietMuons" />
+          </AssociationSet>
+          <AssociationSet Name="SachChiTietMuon" Association="ModelQLTV.SachChiTietMuon">
+            <End Role="Sach" EntitySet="Saches" />
+            <End Role="ChiTietMuon" EntitySet="ChiTietMuons" />
+          </AssociationSet>
+          <EntitySet Name="YeuCauMuons" EntityType="ModelQLTV.YeuCauMuon" />
+          <AssociationSet Name="YeuCauMuonThe" Association="ModelQLTV.YeuCauMuonThe">
+            <End Role="YeuCauMuon" EntitySet="YeuCauMuons" />
+            <End Role="The" EntitySet="Thes" />
+          </AssociationSet>
+          <EntitySet Name="ChiTietYeuCaus" EntityType="ModelQLTV.ChiTietYeuCau" />
+          <AssociationSet Name="YeuCauMuonChiTietYeuCau" Association="ModelQLTV.YeuCauMuonChiTietYeuCau">
+            <End Role="YeuCauMuon" EntitySet="YeuCauMuons" />
+            <End Role="ChiTietYeuCau" EntitySet="ChiTietYeuCaus" />
+          </AssociationSet>
+          <AssociationSet Name="SachChiTietYeuCau" Association="ModelQLTV.SachChiTietYeuCau">
+            <End Role="Sach" EntitySet="Saches" />
+            <End Role="ChiTietYeuCau" EntitySet="ChiTietYeuCaus" />
+          </AssociationSet>
+          <AssociationSet Name="TheDocGia" Association="ModelQLTV.TheDocGia">
+            <End Role="The" EntitySet="Thes" />
+            <End Role="DocGia" EntitySet="DocGias" />
+          </AssociationSet>
+          <EntitySet Name="TaiKhoans" EntityType="ModelQLTV.TaiKhoan" />
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(ModelQLTV.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(ModelQLTV.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+        </EntityContainer>
+        <EntityType Name="NXB">
+          <Key>
+            <PropertyRef Name="MaNXB" />
+          </Key>
+          <Property Name="MaNXB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenNXB" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Saches" Relationship="ModelQLTV.NXBSach" FromRole="NXB" ToRole="Sach" />
+        </EntityType>
+        <EntityType Name="TheLoai">
+          <Key>
+            <PropertyRef Name="MaTheLoai" />
+          </Key>
+          <Property Name="MaTheLoai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenTheLoai" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Saches" Relationship="ModelQLTV.TheLoaiSach" FromRole="TheLoai" ToRole="Sach" />
+        </EntityType>
+        <EntityType Name="TacGia">
+          <Key>
+            <PropertyRef Name="MaTacGia" />
+          </Key>
+          <Property Name="MaTacGia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenTacGia" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Saches" Relationship="ModelQLTV.SachTacGia" FromRole="TacGia" ToRole="Sach" />
+        </EntityType>
+        <EntityType Name="Sach">
+          <Key>
+            <PropertyRef Name="MaSach" />
+          </Key>
+          <Property Name="MaSach" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="NXB" Relationship="ModelQLTV.NXBSach" FromRole="Sach" ToRole="NXB" />
+          <Property Name="MaNXB" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TheLoai" Relationship="ModelQLTV.TheLoaiSach" FromRole="Sach" ToRole="TheLoai" />
+          <Property Name="MaTheLoai" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="TacGia" Relationship="ModelQLTV.SachTacGia" FromRole="Sach" ToRole="TacGia" />
+          <Property Name="MaTacGia" Type="Int32" Nullable="false" />
+          <Property Name="TenSach" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="NamXB" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ChiTietMuons" Relationship="ModelQLTV.SachChiTietMuon" FromRole="Sach" ToRole="ChiTietMuon" />
+          <NavigationProperty Name="ChiTietYeuCaus" Relationship="ModelQLTV.SachChiTietYeuCau" FromRole="Sach" ToRole="ChiTietYeuCau" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="NXBSach">
+          <End Type="ModelQLTV.NXB" Role="NXB" Multiplicity="1" />
+          <End Type="ModelQLTV.Sach" Role="Sach" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NXB">
+              <PropertyRef Name="MaNXB" />
+            </Principal>
+            <Dependent Role="Sach">
+              <PropertyRef Name="MaNXB" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TheLoaiSach">
+          <End Type="ModelQLTV.TheLoai" Role="TheLoai" Multiplicity="1" />
+          <End Type="ModelQLTV.Sach" Role="Sach" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TheLoai">
+              <PropertyRef Name="MaTheLoai" />
+            </Principal>
+            <Dependent Role="Sach">
+              <PropertyRef Name="MaTheLoai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SachTacGia">
+          <End Type="ModelQLTV.Sach" Role="Sach" Multiplicity="*" />
+          <End Type="ModelQLTV.TacGia" Role="TacGia" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="TacGia">
+              <PropertyRef Name="MaTacGia" />
+            </Principal>
+            <Dependent Role="Sach">
+              <PropertyRef Name="MaTacGia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="The">
+          <Key>
+            <PropertyRef Name="MaThe" />
+          </Key>
+          <Property Name="MaThe" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NgayBatDau" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NgayKetThuc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="GhiChu" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Muons" Relationship="ModelQLTV.TheMuon" FromRole="The" ToRole="Muon" />
+          <NavigationProperty Name="YeuCauMuons" Relationship="ModelQLTV.YeuCauMuonThe" FromRole="The" ToRole="YeuCauMuon" />
+          <NavigationProperty Name="DocGia" Relationship="ModelQLTV.TheDocGia" FromRole="The" ToRole="DocGia" />
+          <Property Name="MaDG" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Muon">
+          <Key>
+            <PropertyRef Name="MaMuon" />
+          </Key>
+          <Property Name="MaMuon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="The" Relationship="ModelQLTV.TheMuon" FromRole="Muon" ToRole="The" />
+          <Property Name="MaThe" Type="Int32" Nullable="false" />
+          <Property Name="NgayMuon" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="GhiChu" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ChiTietMuons" Relationship="ModelQLTV.MuonChiTietMuon" FromRole="Muon" ToRole="ChiTietMuon" />
+        </EntityType>
+        <Association Name="TheMuon">
+          <End Type="ModelQLTV.The" Role="The" Multiplicity="1" />
+          <End Type="ModelQLTV.Muon" Role="Muon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="The">
+              <PropertyRef Name="MaThe" />
+            </Principal>
+            <Dependent Role="Muon">
+              <PropertyRef Name="MaThe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="DocGia">
+          <Key>
+            <PropertyRef Name="MaDG" />
+          </Key>
+          <Property Name="MaDG" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenDG" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="DiaChi" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="SDT" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Thes" Relationship="ModelQLTV.TheDocGia" FromRole="DocGia" ToRole="The" />
+          <Property Name="Email" Type="String" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ChiTietMuon">
+          <Key>
+            <PropertyRef Name="MaSach" />
+            <PropertyRef Name="MaMuon" />
+          </Key>
+          <NavigationProperty Name="Muon" Relationship="ModelQLTV.MuonChiTietMuon" FromRole="ChiTietMuon" ToRole="Muon" />
+          <Property Name="MaMuon" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Sach" Relationship="ModelQLTV.SachChiTietMuon" FromRole="ChiTietMuon" ToRole="Sach" />
+          <Property Name="MaSach" Type="Int32" Nullable="false" />
+          <Property Name="DaTra" Type="Int32" Nullable="false" />
+          <Property Name="NgayTra" Type="DateTime" Nullable="true" Precision="3" />
+          <Property Name="NgayHetHan" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TinhTrangSach" Type="String" Nullable="true" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <Association Name="MuonChiTietMuon">
+          <End Type="ModelQLTV.Muon" Role="Muon" Multiplicity="1" />
+          <End Type="ModelQLTV.ChiTietMuon" Role="ChiTietMuon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Muon">
+              <PropertyRef Name="MaMuon" />
+            </Principal>
+            <Dependent Role="ChiTietMuon">
+              <PropertyRef Name="MaMuon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SachChiTietMuon">
+          <End Type="ModelQLTV.Sach" Role="Sach" Multiplicity="1" />
+          <End Type="ModelQLTV.ChiTietMuon" Role="ChiTietMuon" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sach">
+              <PropertyRef Name="MaSach" />
+            </Principal>
+            <Dependent Role="ChiTietMuon">
+              <PropertyRef Name="MaSach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="YeuCauMuon">
+          <Key>
+            <PropertyRef Name="MaYC" />
+          </Key>
+          <Property Name="MaYC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="The" Relationship="ModelQLTV.YeuCauMuonThe" FromRole="YeuCauMuon" ToRole="The" />
+          <Property Name="MaThe" Type="Int32" Nullable="false" />
+          <Property Name="NgayYeuCau" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="ChiTietYeuCaus" Relationship="ModelQLTV.YeuCauMuonChiTietYeuCau" FromRole="YeuCauMuon" ToRole="ChiTietYeuCau" />
+        </EntityType>
+        <Association Name="YeuCauMuonThe">
+          <End Type="ModelQLTV.YeuCauMuon" Role="YeuCauMuon" Multiplicity="*" />
+          <End Type="ModelQLTV.The" Role="The" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="The">
+              <PropertyRef Name="MaThe" />
+            </Principal>
+            <Dependent Role="YeuCauMuon">
+              <PropertyRef Name="MaThe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ChiTietYeuCau">
+          <Key>
+            <PropertyRef Name="MaYC" />
+            <PropertyRef Name="MaSach" />
+          </Key>
+          <NavigationProperty Name="YeuCauMuon" Relationship="ModelQLTV.YeuCauMuonChiTietYeuCau" FromRole="ChiTietYeuCau" ToRole="YeuCauMuon" />
+          <Property Name="MaYC" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Sach" Relationship="ModelQLTV.SachChiTietYeuCau" FromRole="ChiTietYeuCau" ToRole="Sach" />
+          <Property Name="MaSach" Type="Int32" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="YeuCauMuonChiTietYeuCau">
+          <End Type="ModelQLTV.YeuCauMuon" Role="YeuCauMuon" Multiplicity="1" />
+          <End Type="ModelQLTV.ChiTietYeuCau" Role="ChiTietYeuCau" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="YeuCauMuon">
+              <PropertyRef Name="MaYC" />
+            </Principal>
+            <Dependent Role="ChiTietYeuCau">
+              <PropertyRef Name="MaYC" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SachChiTietYeuCau">
+          <End Type="ModelQLTV.Sach" Role="Sach" Multiplicity="1" />
+          <End Type="ModelQLTV.ChiTietYeuCau" Role="ChiTietYeuCau" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sach">
+              <PropertyRef Name="MaSach" />
+            </Principal>
+            <Dependent Role="ChiTietYeuCau">
+              <PropertyRef Name="MaSach" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="TheDocGia">
+          <End Type="ModelQLTV.The" Role="The" Multiplicity="*" />
+          <End Type="ModelQLTV.DocGia" Role="DocGia" Multiplicity="1" />
+          <ReferentialConstraint>
+            <Principal Role="DocGia">
+              <PropertyRef Name="MaDG" />
+            </Principal>
+            <Dependent Role="The">
+              <PropertyRef Name="MaDG" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="TaiKhoan">
+          <Key>
+            <PropertyRef Name="MaTaiKhoan" />
+          </Key>
+          <Property Name="MaTaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenDangNhap" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="MatKhau" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelQLTVStoreContainer" CdmEntityContainer="QLTVContext">
+    <EntitySetMapping Name="NXBs">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.NXB)">
+        <MappingFragment StoreEntitySet="NXBs">
+          <ScalarProperty Name="MaNXB" ColumnName="MaNXB" />
+          <ScalarProperty Name="TenNXB" ColumnName="TenNXB" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TheLoais">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.TheLoai)">
+        <MappingFragment StoreEntitySet="TheLoais">
+          <ScalarProperty Name="MaTheLoai" ColumnName="MaTheLoai" />
+          <ScalarProperty Name="TenTheLoai" ColumnName="TenTheLoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TacGias">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.TacGia)">
+        <MappingFragment StoreEntitySet="TacGias">
+          <ScalarProperty Name="MaTacGia" ColumnName="MaTacGia" />
+          <ScalarProperty Name="TenTacGia" ColumnName="TenTacGia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Saches">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.Sach)">
+        <MappingFragment StoreEntitySet="Saches">
+          <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+          <ScalarProperty Name="MaNXB" ColumnName="MaNXB" />
+          <ScalarProperty Name="MaTheLoai" ColumnName="MaTheLoai" />
+          <ScalarProperty Name="MaTacGia" ColumnName="MaTacGia" />
+          <ScalarProperty Name="TenSach" ColumnName="TenSach" />
+          <ScalarProperty Name="NamXB" ColumnName="NamXB" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Thes">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.The)">
+        <MappingFragment StoreEntitySet="Thes">
+          <ScalarProperty Name="MaThe" ColumnName="MaThe" />
+          <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+          <ScalarProperty Name="NgayKetThuc" ColumnName="NgayKetThuc" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+          <ScalarProperty Name="MaDG" ColumnName="MaDG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Muons">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.Muon)">
+        <MappingFragment StoreEntitySet="Muons">
+          <ScalarProperty Name="MaMuon" ColumnName="MaMuon" />
+          <ScalarProperty Name="MaThe" ColumnName="MaThe" />
+          <ScalarProperty Name="NgayMuon" ColumnName="NgayMuon" />
+          <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocGias">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.DocGia)">
+        <MappingFragment StoreEntitySet="DocGias">
+          <ScalarProperty Name="MaDG" ColumnName="MaDG" />
+          <ScalarProperty Name="TenDG" ColumnName="TenDG" />
+          <ScalarProperty Name="DiaChi" ColumnName="DiaChi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietMuons">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.ChiTietMuon)">
+        <MappingFragment StoreEntitySet="ChiTietMuons">
+          <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+          <ScalarProperty Name="MaMuon" ColumnName="MaMuon" />
+          <ScalarProperty Name="DaTra" ColumnName="DaTra" />
+          <ScalarProperty Name="NgayTra" ColumnName="NgayTra" />
+          <ScalarProperty Name="NgayHetHan" ColumnName="NgayHetHan" />
+          <ScalarProperty Name="TinhTrangSach" ColumnName="TinhTrangSach" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YeuCauMuons">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.YeuCauMuon)">
+        <MappingFragment StoreEntitySet="YeuCauMuons">
+          <ScalarProperty Name="MaYC" ColumnName="MaYC" />
+          <ScalarProperty Name="MaThe" ColumnName="MaThe" />
+          <ScalarProperty Name="NgayYeuCau" ColumnName="NgayYeuCau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChiTietYeuCaus">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.ChiTietYeuCau)">
+        <MappingFragment StoreEntitySet="ChiTietYeuCaus">
+          <ScalarProperty Name="MaYC" ColumnName="MaYC" />
+          <ScalarProperty Name="MaSach" ColumnName="MaSach" />
+          <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaiKhoans">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelQLTV.TaiKhoan)">
+        <MappingFragment StoreEntitySet="TaiKhoans">
+          <ScalarProperty Name="MaTaiKhoan" ColumnName="MaTaiKhoan" />
+          <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
