@@ -1,3 +1,24 @@
+<<<<<<< HEAD
 .vs
 bin
 obj
+=======
+# Visual Studio 2015 cache/options directory
+.vs/
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+>>>>>>> 1019d93fa96b019019c697fbee2fa152205d3667

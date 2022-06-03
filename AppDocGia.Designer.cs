@@ -40,11 +40,10 @@ namespace QUANLITHUVIENWINFORM
             this.cbMathe = new System.Windows.Forms.ComboBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.dgvSach = new System.Windows.Forms.DataGridView();
+            this.dgvDocGia = new System.Windows.Forms.DataGridView();
             this.ptbSearch = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nud_soluong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +81,7 @@ namespace QUANLITHUVIENWINFORM
             // 
             this.nud_soluong.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nud_soluong.Location = new System.Drawing.Point(655, 288);
-            this.nud_soluong.Margin = new System.Windows.Forms.Padding(2);
+            this.nud_soluong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nud_soluong.Maximum = new decimal(new int[] {
             10,
             0,
@@ -168,22 +167,19 @@ namespace QUANLITHUVIENWINFORM
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(216, 20);
             this.txtSearch.TabIndex = 64;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // dgvSach
+            // dgvDocGia
             // 
-            this.dgvSach.AllowUserToAddRows = false;
-            this.dgvSach.AllowUserToDeleteRows = false;
-            this.dgvSach.BackgroundColor = System.Drawing.Color.White;
-            this.dgvSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1});
-            this.dgvSach.Location = new System.Drawing.Point(32, 78);
-            this.dgvSach.Name = "dgvSach";
-            this.dgvSach.ReadOnly = true;
-            this.dgvSach.RowHeadersVisible = false;
-            this.dgvSach.Size = new System.Drawing.Size(446, 461);
-            this.dgvSach.TabIndex = 63;
+            this.dgvDocGia.AllowUserToAddRows = false;
+            this.dgvDocGia.AllowUserToDeleteRows = false;
+            this.dgvDocGia.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDocGia.Location = new System.Drawing.Point(32, 78);
+            this.dgvDocGia.Name = "dgvDocGia";
+            this.dgvDocGia.ReadOnly = true;
+            this.dgvDocGia.RowHeadersVisible = false;
+            this.dgvDocGia.Size = new System.Drawing.Size(446, 461);
+            this.dgvDocGia.TabIndex = 63;
             // 
             // ptbSearch
             // 
@@ -196,13 +192,6 @@ namespace QUANLITHUVIENWINFORM
             this.ptbSearch.TabIndex = 65;
             this.ptbSearch.TabStop = false;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Check";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 50;
-            // 
             // AppDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,7 +199,7 @@ namespace QUANLITHUVIENWINFORM
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(943, 572);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.dgvSach);
+            this.Controls.Add(this.dgvDocGia);
             this.Controls.Add(this.ptbSearch);
             this.Controls.Add(this.lbName);
             this.Controls.Add(this.label1);
@@ -228,7 +217,7 @@ namespace QUANLITHUVIENWINFORM
             this.Text = "Độc giả";
             this.Load += new System.EventHandler(this.AppDocGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nud_soluong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSach)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSearch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -247,8 +236,7 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.ComboBox cbMathe;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.DataGridView dgvSach;
+        private System.Windows.Forms.DataGridView dgvDocGia;
         private System.Windows.Forms.PictureBox ptbSearch;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
     }
 }
