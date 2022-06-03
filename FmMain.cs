@@ -37,6 +37,20 @@ namespace QUANLITHUVIENWINFORM
             label5.Text = dateExit.ToString();
             var numDocGia = db.DocGias.Count();
             label7.Text = numDocGia.ToString();
+            var sachToTheLoai = from ct in db.ChiTietMuons
+                                join s in db.Saches on ct.MaSach equals s.MaSach
+                                join tl in db.TheLoais on s.MaTheLoai equals tl.MaTheLoai
+                                where ct.NgayTra != null
+                                group tl by tl.TenTheLoai into theloai
+                                select new
+                                {
+                                    theloai = theloai.First().TenTheLoai,
+                                    soluong = theloai.Count(),
+                                };
+            chart1.DataSource = sachToTheLoai.ToList();
+            chart1.Series["SoLuong"].XValueMember = "theloai";
+            chart1.Series["SoLuong"].YValueMembers = "soluong";
+            chart1.Titles.Add("");
         }
 
         private void đọcGiảToolStripMenuItem_Click(object sender, EventArgs e)
