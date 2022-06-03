@@ -66,9 +66,11 @@ namespace QUANLITHUVIENWINFORM
             this.label10 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label9 = new System.Windows.Forms.Label();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.startDate = new System.Windows.Forms.DateTimePicker();
+            this.endDate = new System.Windows.Forms.DateTimePicker();
+            this.label11 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -80,7 +82,6 @@ namespace QUANLITHUVIENWINFORM
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -431,7 +432,9 @@ namespace QUANLITHUVIENWINFORM
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.numericUpDown1);
+            this.panel7.Controls.Add(this.label11);
+            this.panel7.Controls.Add(this.endDate);
+            this.panel7.Controls.Add(this.startDate);
             this.panel7.Controls.Add(this.label9);
             this.panel7.Controls.Add(this.chart2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -441,29 +444,6 @@ namespace QUANLITHUVIENWINFORM
             this.panel7.Size = new System.Drawing.Size(780, 653);
             this.panel7.TabIndex = 1;
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(521, 26);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(68, 22);
-            this.numericUpDown1.TabIndex = 7;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -472,9 +452,10 @@ namespace QUANLITHUVIENWINFORM
             this.label9.Location = new System.Drawing.Point(45, 26);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(351, 23);
+            this.label9.Size = new System.Drawing.Size(253, 23);
             this.label9.TabIndex = 6;
-            this.label9.Text = "Số lượng sách mượn theo tháng    Tháng";
+            this.label9.Text = "Số lượng sách mượn từ ngày";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // chart2
             // 
@@ -495,6 +476,36 @@ namespace QUANLITHUVIENWINFORM
             this.chart2.Size = new System.Drawing.Size(780, 595);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
+            // 
+            // startDate
+            // 
+            this.startDate.CustomFormat = "dd/MM/yyyy";
+            this.startDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.startDate.Location = new System.Drawing.Point(305, 29);
+            this.startDate.Name = "startDate";
+            this.startDate.Size = new System.Drawing.Size(117, 22);
+            this.startDate.TabIndex = 7;
+            // 
+            // endDate
+            // 
+            this.endDate.CustomFormat = "dd/MM/yyyy";
+            this.endDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.endDate.Location = new System.Drawing.Point(535, 29);
+            this.endDate.Name = "endDate";
+            this.endDate.Size = new System.Drawing.Size(117, 22);
+            this.endDate.TabIndex = 8;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Bahnschrift SemiBold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(442, 26);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(86, 23);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "đến ngày";
             // 
             // FmMain
             // 
@@ -530,7 +541,6 @@ namespace QUANLITHUVIENWINFORM
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -565,12 +575,14 @@ namespace QUANLITHUVIENWINFORM
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker endDate;
+        private System.Windows.Forms.DateTimePicker startDate;
     }
 }
