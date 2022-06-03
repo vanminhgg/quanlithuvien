@@ -55,6 +55,7 @@ namespace QUANLITHUVIENWINFORM
                           select i.soluong).ToArray();
             chart1.Series[0].Points.DataBindXY(x, y);
             chart1.Legends[0].Enabled = true;
+
             if (startDate.Value < endDate.Value) { MessageBox.Show("Ngày bắt đầu nhỏ hơn ngày kết thúc", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning); return; }
 
             var sachMuonTheoTime = from ct in db.ChiTietMuons
